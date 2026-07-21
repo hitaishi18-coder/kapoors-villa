@@ -46,7 +46,7 @@ export default function AboutPage() {
 
                 <section className="relative h-[75vh] overflow-hidden">
                     <Image
-                        src="/about-hero.jpg"
+                        src="/outer/hero.webp"
                         alt="Kapoor Villa Heritage"
                         fill
                         priority
@@ -62,7 +62,7 @@ export default function AboutPage() {
                             Our Heritage
                         </p>
 
-                        <h1 className="font-serif text-5xl font-bold text-white md:text-7xl">
+                        <h1 className="font-serif text-3xl font-bold text-amber-500 md:text-3xl">
                             A Private Sanctuary
                         </h1>
 
@@ -229,8 +229,8 @@ export default function AboutPage() {
                     <section className="container mx-auto px-6 pb-32">
                         <Card className="relative overflow-hidden rounded-3xl border-amber-500/20">
                             <Image
-                                src="/about-hero.jpg"
-                                alt="Luxury Villa"
+                                src="/outer/about-story.jpg"
+                                alt="Villa Interior"
                                 fill
                                 className="object-cover"
                             />

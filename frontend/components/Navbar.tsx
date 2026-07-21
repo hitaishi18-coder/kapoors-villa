@@ -174,7 +174,7 @@ export default function Navbar() {
                             asChild
                             className="rounded-full bg-amber-500 px-7 text-black shadow-lg shadow-amber-500/20 transition-all duration-300 hover:bg-amber-400 hover:shadow-xl hover:shadow-amber-500/30"
                         >
-                            <Link href="/book">Book Now</Link>
+                            <Link href="/contact">Book Now</Link>
                         </Button>
                     </motion.div>
                 </div>

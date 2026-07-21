@@ -26,7 +26,6 @@ export default function ContactPage() {
 
             <main>
                 {/* HERO */}
-
                 <section className="relative h-[75vh] overflow-hidden">
                     <Image
                         src="/contact/contact-hero.jpg"
@@ -58,7 +57,6 @@ export default function ContactPage() {
                 </section>
 
                 {/* CONTACT CARDS */}
-
                 <FadeUp>
                     <section className="container mx-auto px-6 py-24">
                         <Stagger className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
@@ -75,7 +73,7 @@ export default function ContactPage() {
                                             </h3>
 
                                             <p className="mt-4 text-muted-foreground">
-                                                +91 98202 92830
+                                                +91 83559 92830
                                             </p>
                                         </CardContent>
                                     </Card>
@@ -95,7 +93,7 @@ export default function ContactPage() {
                                             </h3>
 
                                             <p className="mt-4 text-muted-foreground">
-                                                reservations@kapoorvilla.com
+                                                kapoorsvillapanchgani@gmail.com
                                             </p>
                                         </CardContent>
                                     </Card>
@@ -115,7 +113,7 @@ export default function ContactPage() {
                                             </h3>
 
                                             <p className="mt-4 text-muted-foreground">
-                                                Lonavala, Maharashtra
+                                                Panchgani, Maharashtra
                                             </p>
                                         </CardContent>
                                     </Card>
@@ -146,12 +144,10 @@ export default function ContactPage() {
                 </FadeUp>
 
                 {/* CONTACT FORM */}
-
                 <FadeUp>
                     <section className="container mx-auto px-6 pb-32">
                         <div className="grid gap-20 lg:grid-cols-2">
                             {/* LEFT */}
-
                             <div>
                                 <p className="text-xs uppercase tracking-[0.45em] text-amber-500">
                                     Luxury Concierge
@@ -183,7 +179,7 @@ export default function ContactPage() {
                                             </h4>
 
                                             <p className="mt-2 text-muted-foreground">
-                                                +91 98202 92830
+                                                +91 83559 92830
                                             </p>
                                         </div>
                                     </div>
@@ -199,7 +195,7 @@ export default function ContactPage() {
                                             </h4>
 
                                             <p className="mt-2 text-muted-foreground">
-                                                reservations@kapoorvilla.com
+                                                kapoorsvillapanchgani@gmail.com
                                             </p>
                                         </div>
                                     </div>
@@ -215,7 +211,7 @@ export default function ContactPage() {
                                             </h4>
 
                                             <p className="mt-2 text-muted-foreground">
-                                                Lonavala, Maharashtra, India
+                                                Panchgani, Maharashtra, India
                                             </p>
                                         </div>
                                     </div>
@@ -223,7 +219,6 @@ export default function ContactPage() {
                             </div>
 
                             {/* FORM */}
-
                             <ScaleIn>
                                 <Card className="border-amber-500/20 bg-background/70 backdrop-blur">
                                     <CardContent className="p-10">
@@ -233,7 +228,6 @@ export default function ContactPage() {
                                                     placeholder="Full Name"
                                                     className="h-12"
                                                 />
-
                                                 <Input
                                                     type="email"
                                                     placeholder="Email Address"
@@ -246,7 +240,6 @@ export default function ContactPage() {
                                                     placeholder="Phone Number"
                                                     className="h-12"
                                                 />
-
                                                 <Input
                                                     type="number"
                                                     placeholder="Guests"
@@ -259,7 +252,6 @@ export default function ContactPage() {
                                                     type="date"
                                                     className="h-12"
                                                 />
-
                                                 <Input
                                                     type="date"
                                                     className="h-12"
@@ -285,17 +277,16 @@ export default function ContactPage() {
                         </div>
                     </section>
                 </FadeUp>
-                {/* LOCATION */}
 
+                {/* LOCATION */}
                 <FadeUp>
                     <section className="relative overflow-hidden border-y">
                         <div className="grid lg:grid-cols-2">
                             {/* MAP */}
-
                             <div className="relative min-h-162.5">
                                 <iframe
                                     title="Kapoor's Villa Location"
-                                    src="https://www.google.com/maps?q=Lonavala,+Maharashtra&output=embed"
+                                    src="https://www.google.com/maps?q=Kapoor's+Villa,+Panchgani,+Maharashtra&output=embed"
                                     className="absolute inset-0 h-full w-full border-0 grayscale transition duration-700 hover:grayscale-0"
                                     loading="lazy"
                                     referrerPolicy="no-referrer-when-downgrade"
@@ -303,7 +294,6 @@ export default function ContactPage() {
                             </div>
 
                             {/* DETAILS */}
-
                             <div className="flex items-center">
                                 <div className="mx-auto max-w-xl px-8 py-24">
                                     <p className="text-xs uppercase tracking-[0.45em] text-amber-500">
@@ -321,16 +311,15 @@ export default function ContactPage() {
                                         unforgettable hospitality meet.
                                     </p>
 
-                                    <div className="mt-12 space-y-10">
+                                    <div className="mt-12 grid gap-10 sm:grid-cols-2">
                                         <div>
                                             <h3 className="font-serif text-2xl">
                                                 Address
                                             </h3>
-
                                             <p className="mt-3 leading-7 text-muted-foreground">
                                                 Kapoor&apos;s Villa
                                                 <br />
-                                                Lonavala, Maharashtra
+                                                Panchgani, Maharashtra
                                                 <br />
                                                 India
                                             </p>
@@ -338,9 +327,21 @@ export default function ContactPage() {
 
                                         <div>
                                             <h3 className="font-serif text-2xl">
+                                                Distances
+                                            </h3>
+                                            <ul className="mt-3 leading-7 text-muted-foreground">
+                                                <li>Nirwana - 2 km</li>
+                                                <li>Bhillar - 12 km</li>
+                                                <li>Mepro - 16 km</li>
+                                                <li>Panchgani - 17 km</li>
+                                                <li>Mahabaleshwar - 26 km</li>
+                                            </ul>
+                                        </div>
+
+                                        <div>
+                                            <h3 className="font-serif text-2xl">
                                                 Reservation Hours
                                             </h3>
-
                                             <p className="mt-3 leading-7 text-muted-foreground">
                                                 Monday – Sunday
                                                 <br />
@@ -352,7 +353,6 @@ export default function ContactPage() {
                                             <h3 className="font-serif text-2xl">
                                                 Concierge
                                             </h3>
-
                                             <p className="mt-3 leading-7 text-muted-foreground">
                                                 Our concierge team is available
                                                 around the clock to assist with
@@ -378,7 +378,6 @@ export default function ContactPage() {
                 </FadeUp>
 
                 {/* LUXURY CTA */}
-
                 <FadeUp>
                     <section className="relative overflow-hidden">
                         <Image
@@ -417,7 +416,7 @@ export default function ContactPage() {
                                         className="bg-amber-500 px-8 text-black hover:bg-amber-400"
                                     >
                                         <a
-                                            href="https://wa.me/919820292830"
+                                            href="https://wa.me/918355992830"
                                             target="_blank"
                                             rel="noopener noreferrer"
                                         >

@@ -23,29 +23,30 @@ import {
     Gift,
     ChevronDown,
     Star,
+    Trees,
+    Car,
 } from "lucide-react";
 
 const amenities = [
     {
         title: "Private Pool",
-        description:
-            "Temperature controlled infinity pool overlooking the valley.",
+        description: "Temperature controlled infinity pool overlooking the valley.",
         icon: Waves,
     },
     {
-        title: "BBQ Grill",
-        description: "Outdoor gourmet grilling station perfect for evenings.",
-        icon: ChefHat,
+        title: "10,000 Sqft Garden",
+        description: "Expansive, beautifully landscaped private green space for relaxation.",
+        icon: Trees,
     },
     {
-        title: "Luxury Rooms",
-        description: "Spacious suites featuring premium interiors.",
-        icon: BedDouble,
+        title: "7-Car Parking",
+        description: "Secure and spacious dedicated parking for you and your guests.",
+        icon: Car,
     },
     {
         title: "Modern Kitchen",
-        description: "Fully equipped chef-grade kitchen.",
-        icon: Gift,
+        description: "Fully equipped chef-grade kitchen for culinary excellence.",
+        icon: ChefHat,
     },
 ];
 
@@ -74,30 +75,23 @@ export default function HomePage() {
 
             <main>
                 {/* HERO */}
-
-                {/* HERO */}
-
                 <section className="relative min-h-screen overflow-hidden">
                     {/* Background Image */}
-
                     <Image
-                        src="/hero.jpg"
-                        alt="Kapoor's Villa"
+                        src="/outer/hero.webp"
+                        alt="Villa"
                         fill
                         priority
                         className="object-cover"
                     />
 
                     {/* Dark Overlay */}
-
                     <div className="absolute inset-0 bg-black/55" />
 
                     {/* Luxury Gradient */}
-
                     <div className="absolute inset-0 bg-linear-to-b from-black/20 via-transparent to-black/70" />
 
                     {/* Hero Content */}
-
                     <HeroReveal className="relative z-10 flex min-h-screen flex-col items-center justify-center px-6 text-center">
                         <p className="mb-4 text-xs font-medium uppercase tracking-[0.45em] text-amber-500 md:text-sm">
                             Luxury • Comfort • Serenity
@@ -119,7 +113,6 @@ export default function HomePage() {
                         </p>
 
                         {/* Buttons */}
-
                         <div className="mt-12 flex flex-wrap justify-center gap-5">
                             <Button
                                 size="lg"
@@ -138,7 +131,6 @@ export default function HomePage() {
                         </div>
 
                         {/* Stats */}
-
                         <div className="mt-20 grid w-full max-w-4xl grid-cols-3 gap-8 border-t border-white/20 pt-10">
                             <div>
                                 <h3 className="font-serif text-3xl font-bold text-amber-500">
@@ -172,7 +164,6 @@ export default function HomePage() {
                         </div>
 
                         {/* Scroll Indicator */}
-
                         <div className="absolute bottom-10 flex flex-col items-center">
                             <p className="mb-2 text-[10px] uppercase tracking-[0.4em] text-neutral-300">
                                 Scroll
@@ -228,7 +219,6 @@ export default function HomePage() {
                 </FadeUp>
 
                 {/* TESTIMONIALS */}
-
                 <FadeUp>
                     <section className="relative overflow-hidden border-y py-32">
                         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(245,158,11,0.08),transparent_60%)]" />
@@ -256,7 +246,6 @@ export default function HomePage() {
                                             <Card className="group h-full border-amber-500/20 bg-background/60 backdrop-blur transition-all duration-500 hover:-translate-y-3 hover:border-amber-500 hover:shadow-2xl hover:shadow-amber-500/10">
                                                 <CardContent className="flex h-full flex-col p-8">
                                                     {/* Stars */}
-
                                                     <div className="mb-6 flex gap-1">
                                                         {Array.from({
                                                             length: 5,
@@ -269,7 +258,6 @@ export default function HomePage() {
                                                     </div>
 
                                                     {/* Quote */}
-
                                                     <p className="flex-1 text-lg italic leading-8 text-muted-foreground">
                                                         {review.text}
                                                     </p>
@@ -294,7 +282,6 @@ export default function HomePage() {
                 </FadeUp>
 
                 {/* FEATURED SPACES */}
-
                 <FadeUp>
                     <section className="container mx-auto px-6 py-32">
                         <div className="mb-16 text-center">
@@ -315,12 +302,11 @@ export default function HomePage() {
 
                         <div className="grid gap-8 lg:grid-cols-2">
                             {/* Suites */}
-
                             <FadeLeft>
                                 <Link href="/rooms">
                                     <div className="group relative h-162.5 overflow-hidden rounded-3xl">
                                         <Image
-                                            src="/suite.jpg"
+                                            src="/gallery/room-1.jpg"
                                             alt="Luxury Suites"
                                             fill
                                             className="object-cover transition-all duration-1800 group-hover:scale-110"
@@ -356,12 +342,11 @@ export default function HomePage() {
                             </FadeLeft>
 
                             {/* Outdoors */}
-
                             <FadeRight>
                                 <Link href="/gallery">
                                     <div className="group relative h-162.5 overflow-hidden rounded-3xl">
                                         <Image
-                                            src="/outdoor.jpg"
+                                            src="/outer/suite.jpg"
                                             alt="Outdoor Spaces"
                                             fill
                                             className="object-cover transition-all duration-1800 group-hover:scale-110"
@@ -400,7 +385,6 @@ export default function HomePage() {
             </main>
 
             {/* FINAL CTA */}
-
             <FadeUp>
                 <section className="relative overflow-hidden">
                     <Image

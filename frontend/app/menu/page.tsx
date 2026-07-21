@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import React from "react";
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -7,447 +10,502 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 
-import {
-    HeroReveal,
-    FadeUp,
-    FadeLeft,
-    FadeRight,
-    ScaleIn,
-    Stagger,
-    StaggerItem,
-} from "@/components/animations";
+// Icon components for clean presentation
+function DownloadIcon(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+      <polyline points="7 10 12 15 17 10" />
+      <line x1="12" x2="12" y1="15" y2="3" />
+    </svg>
+  );
+}
 
-const bbqMenu = [
-    {
-        name: "Signature BBQ Platter",
-        description:
-            "A lavish assortment of grilled meats, seasonal vegetables and handcrafted sauces.",
-        price: "₹2,499",
-    },
-    {
-        name: "Smoked Chicken Supreme",
-        description:
-            "Slow-smoked chicken finished with herb butter and aromatic spices.",
-        price: "₹1,499",
-    },
-    {
-        name: "Charcoal Lamb Chops",
-        description:
-            "Tender lamb chops grilled over charcoal with rosemary glaze.",
-        price: "₹2,199",
-    },
+function SparklesIcon(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z" />
+    </svg>
+  );
+}
+
+const menuSections = [
+  {
+    id: "breakfast",
+    title: "Breakfast",
+    subtitle: "Fresh Morning Delights",
+    badge: "Popular Morning Picks",
+    gridClass: "md:col-span-2 lg:col-span-2",
+    accent: "border-amber-500/30 bg-amber-950/10",
+    items: [
+      { name: "Poha", price: "₹80" },
+      { name: "Upma", price: "₹70" },
+      { name: "Idli", price: "₹100" },
+      { name: "Aloo Paratha (Curd & Pickle)", price: "₹130" },
+      { name: "Gobhi Paratha", price: "₹130" },
+      { name: "Paneer Paratha", price: "₹150" },
+      { name: "Bread Butter / Jam", price: "₹60" },
+      { name: "Misal Pav", price: "₹110" },
+      { name: "Vada Pav", price: "₹30" },
+      { name: "Kanda / Batata Bhaji", price: "₹90" },
+      { name: "Paneer Pakoda", price: "₹130" },
+      { name: "Paneer Special Pakoda", price: "₹150" },
+      { name: "Puri Bhaji", price: "₹160" },
+      { name: "Maggi", price: "₹60" },
+    ],
+  },
+  {
+    id: "sandwich",
+    title: "Sandwiches",
+    subtitle: "Quick Bites",
+    badge: "Light & Crunchy",
+    gridClass: "md:col-span-1 lg:col-span-1",
+    accent: "border-amber-500/20 bg-background/70",
+    items: [
+      { name: "Veg Sandwich", price: "₹80" },
+      { name: "Veg Grill Sandwich", price: "₹120" },
+      { name: "French Toast", price: "₹100" },
+    ],
+  },
+  {
+    id: "appetizers",
+    title: "Appetizers",
+    subtitle: "Starters",
+    badge: "Crispy Starters",
+    gridClass: "md:col-span-1 lg:col-span-1",
+    accent: "border-amber-500/20 bg-background/70",
+    items: [
+      { name: "Plain Papad", price: "₹35" },
+      { name: "Masala Papad", price: "₹60" },
+      { name: "Peanut Chaat", price: "₹110" },
+    ],
+  },
+  {
+    id: "main-course",
+    title: "Main Course",
+    subtitle: "Authentic Indian Delicacies",
+    badge: "Chef Specialities",
+    gridClass: "md:col-span-2 lg:col-span-3",
+    accent: "border-amber-500/40 bg-gradient-to-br from-amber-500/10 via-background to-background",
+    isFeatured: true,
+    items: [
+      { name: "Dal Fry", price: "₹150" },
+      { name: "Dal Tadka", price: "₹170" },
+      { name: "Akha Masoor Dal", price: "₹170" },
+      { name: "Jeera / Shimla / Matar Aloo", price: "₹220" },
+      { name: "Bhindi Fry", price: "₹220" },
+      { name: "Baingan Masala / Bharta", price: "₹220" },
+      { name: "Gobhi Aloo / Mix Veg", price: "₹240" },
+      { name: "Veg Kolhapuri", price: "₹240" },
+      { name: "Matar Paneer", price: "₹240" },
+      { name: "Paneer Masala / Bhurji", price: "₹270" },
+      { name: "Palak Paneer", price: "₹270" },
+      { name: "Kaju Masala", price: "₹270" },
+    ],
+  },
+  {
+    id: "bread",
+    title: "Indian Bread",
+    subtitle: "Freshly Made",
+    badge: "Hot & Tandoori",
+    gridClass: "md:col-span-1 lg:col-span-1",
+    accent: "border-amber-500/20 bg-background/70",
+    items: [
+      { name: "Chapati", price: "₹25" },
+      { name: "Butter Chapati", price: "₹30" },
+      { name: "Bhakri (Rice)", price: "₹35" },
+      { name: "Bhakri (Jowar)", price: "₹35" },
+    ],
+  },
+  {
+    id: "rice",
+    title: "Rice Specialities",
+    subtitle: "Aromatic Basmati & Regional",
+    badge: "Flavourful",
+    gridClass: "md:col-span-2 lg:col-span-2",
+    accent: "border-amber-500/20 bg-background/70",
+    items: [
+      { name: "Indrani Rice", price: "₹160" },
+      { name: "Steam Rice", price: "₹170" },
+      { name: "Jeera Rice", price: "₹180" },
+      { name: "Dal Khichdi Tadka", price: "₹220" },
+      { name: "Veg Pulao", price: "₹270" },
+      { name: "Veg Biryani", price: "₹320" },
+    ],
+  },
+  {
+    id: "barbeque",
+    title: "Live Barbeque & Packages",
+    subtitle: "Outdoor Specials",
+    badge: "Featured Experience",
+    gridClass: "md:col-span-2 lg:col-span-2",
+    accent: "border-amber-500/50 bg-neutral-900 text-white shadow-xl",
+    isDark: true,
+    items: [
+      { name: "BBQ Veg (Per Person)", price: "₹600" },
+      { name: "BBQ Veg (Per Kg)", price: "₹1750" },
+      { name: "3 Course Meal Veg (Per Person)", price: "₹1500" },
+    ],
+    note: "Includes Masala Bhat / Pulao / Dal Khichdi",
+  },
+  {
+    id: "thali",
+    title: "Traditional Thali",
+    subtitle: "Complete Meals",
+    badge: "Traditional",
+    gridClass: "md:col-span-1 lg:col-span-1",
+    accent: "border-amber-500/20 bg-background/70",
+    items: [
+      { name: "Sadhi Veg Thali", price: "₹220" },
+      { name: "Pithale Bhakri Thali", price: "₹230" },
+      { name: "Veg Thali", price: "₹270" },
+    ],
+  },
+  {
+    id: "desserts",
+    title: "Desserts",
+    subtitle: "Sweet Treats",
+    badge: "Delightful Sweets",
+    gridClass: "md:col-span-1 lg:col-span-1",
+    accent: "border-amber-500/20 bg-background/70",
+    items: [
+      { name: "Sevai Kheer", price: "₹45" },
+      { name: "Gulab Jamun (2 Pcs)", price: "₹65" },
+      { name: "Gajar Halwa", price: "₹85" },
+      { name: "Sweet Sheera", price: "₹85" },
+    ],
+  },
+  {
+    id: "beverages",
+    title: "Beverages",
+    subtitle: "Hot & Cold Drinks",
+    badge: "Refreshing",
+    gridClass: "md:col-span-2 lg:col-span-2",
+    accent: "border-amber-500/20 bg-background/70",
+    items: [
+      { name: "Tea / Black Tea / Black Coffee", price: "₹25 - ₹30" },
+      { name: "Coffee / Milk / Fresh Lime Water", price: "₹50" },
+      { name: "Bournvita", price: "₹60" },
+      { name: "Mineral Water", price: "₹25" },
+    ],
+  },
 ];
 
-const breakfast = [
-    {
-        name: "Continental Breakfast",
-        description: "Fresh pastries, fruits, juices and artisan coffee.",
-        price: "₹799",
-    },
-    {
-        name: "Indian Breakfast",
-        description:
-            "Traditional regional breakfast with seasonal specialties.",
-        price: "₹699",
-    },
-    {
-        name: "Healthy Bowl",
-        description: "Greek yogurt, granola, berries and organic honey.",
-        price: "₹599",
-    },
-];
-
-const beverages = [
-    {
-        name: "Fresh Fruit Mocktails",
-        description: "Prepared using freshly squeezed seasonal fruits.",
-        price: "₹349",
-    },
-    {
-        name: "Premium Coffee Selection",
-        description: "Single-origin coffees prepared by expert baristas.",
-        price: "₹299",
-    },
-    {
-        name: "Herbal Tea Collection",
-        description: "Curated luxury teas sourced from premium estates.",
-        price: "₹249",
-    },
+const kitchenImages = [
+  "/kitchen/kitchen.jpg",
+  "/kitchen/kitchen1.jpg",
+  "/kitchen/kitchen2.jpg",
+  "/kitchen/kitchen3.jpg",
 ];
 
 export default function MenuPage() {
-    return (
-        <>
-            <Navbar />
+  return (
+    <>
+      <Navbar />
 
-            <main>
-                {/* HERO */}
+      <main className="bg-slate-50/50 dark:bg-neutral-950">
+        {/* ================= HERO ================= */}
+        <section className="relative h-[80vh] min-h-[550px] w-full overflow-hidden">
+          <Image
+            src="/kitchen/kitchen-home.jpg"
+            alt="Kapoor's Villa Dining"
+            fill
+            priority
+            className="object-cover transition-transform duration-[12000ms] hover:scale-110"
+          />
 
-                <section className="relative h-[75vh] overflow-hidden">
-                    <Image
-                        src="/menu/menu-hero.jpg"
-                        alt="Luxury Dining"
-                        fill
-                        priority
-                        className="object-cover transition-transform duration-12000 hover:scale-110"
-                    />
+          <div className="absolute inset-0 bg-black/65" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/90" />
 
-                    <div className="absolute inset-0 bg-black/65" />
+          <div className="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center">
+            <span className="inline-flex items-center gap-2 rounded-full border border-amber-500/40 bg-amber-500/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.35em] text-amber-400 backdrop-blur-md">
+              <SparklesIcon className="h-3.5 w-3.5" /> PRIVATE DINING EXPERIENCE
+            </span>
 
-                    <div className="absolute inset-0 bg-linear-to-b from-black/20 via-transparent to-black/80" />
+            <h1 className="mt-6 font-serif text-5xl font-bold text-white md:text-7xl">
+              Our Food Menu
+            </h1>
 
-                    <HeroReveal className="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center">
-                        <p className="text-xs uppercase tracking-[0.45em] text-amber-500">
-                            PRIVATE DINING EXPERIENCE
-                        </p>
+            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-neutral-200">
+              Freshly prepared 100% Pure Veg delicacies crafted with premium
+              ingredients, authentic Indian spices, and warm homely hospitality.
+            </p>
 
-                        <h1 className="mt-6 font-serif text-5xl font-bold text-white md:text-7xl">
-                            Curated Culinary Journey
-                        </h1>
+            {/* ACTION BUTTONS */}
+            <div className="mt-10 flex flex-wrap justify-center gap-4">
+              <a href="/kapoors_villa_menu.pdf" download="Kapoor_Villa_Menu.pdf">
+                <Button size="lg" className="gap-2.5 bg-amber-500 text-black hover:bg-amber-400 font-semibold px-7 shadow-lg shadow-amber-500/20">
+                  <DownloadIcon className="h-4 w-4" /> Download PDF Menu
+                </Button>
+              </a>
 
-                        <p className="mt-8 max-w-3xl leading-8 text-neutral-200">
-                            Every meal is thoughtfully crafted using seasonal
-                            ingredients, refined culinary techniques and
-                            exceptional hospitality.
-                        </p>
-                    </HeroReveal>
-                </section>
+              <Button
+                asChild
+                variant="outline"
+                size="lg"
+                className="border-white/30 bg-white/10 px-7 text-white backdrop-blur-md hover:bg-white/20"
+              >
+                <Link href="#menu-bento">Explore Bento Menu</Link>
+              </Button>
+            </div>
+          </div>
+        </section>
 
-                {/* CHEF'S SIGNATURE */}
+        {/* ================= DOWNLOAD BANNER BAR ================= */}
+        <section className="border-y border-amber-500/20 bg-amber-500/10 py-6 backdrop-blur-md">
+          <div className="container mx-auto flex flex-col items-center justify-between gap-4 px-6 md:flex-row">
+            <div className="flex items-center gap-3 text-center md:text-left">
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-amber-500/20 text-amber-600 dark:text-amber-400">
+                <DownloadIcon className="h-5 w-5" />
+              </div>
+              <div>
+                <h3 className="font-serif text-lg font-bold">Looking for a printable copy?</h3>
+                <p className="text-sm text-muted-foreground">Download our complete Pure Veg menu card in PDF format.</p>
+              </div>
+            </div>
 
-                <FadeUp>
-                    <section className="container mx-auto px-6 py-24">
-                        <div className="text-center">
-                            <p className="text-xs uppercase tracking-[0.45em] text-amber-500">
-                                Chef&apos;s Recommendation
-                            </p>
+            <a href="/kapoors_villa_menu.pdf" download="Kapoor_Villa_Menu.pdf">
+              <Button variant="default" className="gap-2 bg-amber-500 text-black hover:bg-amber-400 font-medium">
+                <DownloadIcon className="h-4 w-4" /> Download PDF (2 Pages)
+              </Button>
+            </a>
+          </div>
+        </section>
 
-                            <h2 className="mt-4 font-serif text-5xl font-bold">
-                                Signature BBQ Collection
-                            </h2>
+        {/* ================= BENTO GRID MENU SECTION ================= */}
+        <section id="menu-bento" className="container mx-auto px-6 py-24">
+          <div className="text-center">
+            <p className="text-xs font-semibold uppercase tracking-[0.45em] text-amber-500">
+              OUR SPECIALITIES
+            </p>
 
-                            <p className="mx-auto mt-6 max-w-2xl leading-8 text-muted-foreground">
-                                Experience handcrafted flavours prepared over
-                                open flames using premium ingredients and
-                                timeless culinary traditions.
-                            </p>
-                        </div>
+            <h2 className="mt-3 font-serif text-4xl font-bold md:text-5xl">
+              Curated Menu
+            </h2>
 
-                        <Stagger className="mt-20 grid gap-8 lg:grid-cols-3">
-                            {bbqMenu.map((item) => (
-                                <StaggerItem key={item.name}>
-                                    <ScaleIn>
-                                        <Card className="group border-amber-500/20 bg-background/70 backdrop-blur transition-all duration-500 hover:-translate-y-3 hover:border-amber-500 hover:shadow-2xl hover:shadow-amber-500/10">
-                                            <CardContent className="p-10">
-                                                <div className="flex items-start justify-between gap-4">
-                                                    <h3 className="font-serif text-2xl">
-                                                        {item.name}
-                                                    </h3>
+            <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
+              Browse through our structured menu options. Every dish is cooked fresh to order after your arrival confirmation.
+            </p>
+          </div>
 
-                                                    <span className="rounded-full bg-amber-500/10 px-4 py-2 text-lg font-semibold text-amber-500">
-                                                        {item.price}
-                                                    </span>
-                                                </div>
+          {/* BENTO GRID */}
+          <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {menuSections.map((section) => (
+              <Card
+                key={section.id}
+                className={`relative overflow-hidden rounded-3xl border transition-all duration-300 hover:shadow-xl hover:shadow-amber-500/5 ${section.gridClass} ${section.accent}`}
+              >
+                <CardContent className="p-7">
+                  {/* Category Header */}
+                  <div className="flex items-start justify-between gap-4 border-b border-border/60 pb-5">
+                    <div>
+                      <span className="text-[11px] font-bold uppercase tracking-widest text-amber-500">
+                        {section.subtitle}
+                      </span>
+                      <h3
+                        className={`mt-1 font-serif text-2xl font-bold ${
+                          section.isDark ? "text-white" : ""
+                        }`}
+                      >
+                        {section.title}
+                      </h3>
+                    </div>
 
-                                                <div className="my-8 h-px bg-border" />
+                    <span
+                      className={`rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-wider ${
+                        section.isDark
+                          ? "bg-amber-500/20 text-amber-400 border border-amber-500/30"
+                          : "bg-amber-500/10 text-amber-600 dark:text-amber-400"
+                      }`}
+                    >
+                      {section.badge}
+                    </span>
+                  </div>
 
-                                                <p className="leading-8 text-muted-foreground">
-                                                    {item.description}
-                                                </p>
-                                            </CardContent>
-                                        </Card>
-                                    </ScaleIn>
-                                </StaggerItem>
-                            ))}
-                        </Stagger>
-                    </section>
-                </FadeUp>
+                  {/* Food Items List */}
+                  <div
+                    className={`mt-6 gap-x-8 gap-y-4 ${
+                      section.isFeatured
+                        ? "grid grid-cols-1 md:grid-cols-2"
+                        : "space-y-4"
+                    }`}
+                  >
+                    {section.items.map((item) => (
+                      <div
+                        key={item.name}
+                        className="group flex items-baseline justify-between gap-3 text-sm"
+                      >
+                        <span
+                          className={`font-medium transition-colors group-hover:text-amber-500 ${
+                            section.isDark ? "text-neutral-200" : "text-foreground"
+                          }`}
+                        >
+                          {item.name}
+                        </span>
 
-                {/* MENU CATEGORIES */}
+                        <span className="grow border-b border-dotted border-border/60" />
 
-                <FadeUp>
-                    <section className="relative overflow-hidden border-y py-24">
-                        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(245,158,11,0.08),transparent_60%)]" />
+                        <span
+                          className={`font-bold font-mono ${
+                            section.isDark ? "text-amber-400" : "text-amber-600 dark:text-amber-400"
+                          }`}
+                        >
+                          {item.price}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
 
-                        <div className="container relative mx-auto grid gap-20 px-6 lg:grid-cols-2">
-                            {/* BREAKFAST */}
+                  {/* Special Note for BBQ or Featured Cards */}
+                  {section.note && (
+                    <div className="mt-6 rounded-xl border border-amber-500/30 bg-amber-500/10 p-3 text-xs text-amber-200 italic">
+                      💡 {section.note}
+                    </div>
+                  )}
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </section>
 
-                            <FadeLeft>
-                                <div>
-                                    <div className="mb-12">
-                                        <p className="text-xs uppercase tracking-[0.45em] text-amber-500">
-                                            Morning Delights
-                                        </p>
+        {/* ================= KITCHEN GALLERY ================= */}
+        <section className="container mx-auto px-6 py-20 border-t">
+          <div className="text-center">
+            <p className="text-xs uppercase tracking-[0.45em] text-amber-500">
+              Behind Every Delicious Meal
+            </p>
+            <h2 className="mt-3 font-serif text-4xl font-bold">Our Kitchen</h2>
+            <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
+              Hygienic, freshly sourced ingredients prepared by experienced cooks in a sparkling clean environment.
+            </p>
+          </div>
 
-                                        <h2 className="mt-4 font-serif text-5xl font-bold">
-                                            Breakfast
-                                        </h2>
-                                    </div>
+          <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+            {kitchenImages.map((image, index) => (
+              <Card
+                key={index}
+                className="group overflow-hidden rounded-2xl border border-amber-500/20 shadow-md"
+              >
+                <div className="relative h-64 overflow-hidden">
+                  <Image
+                    src={image}
+                    alt={`Kitchen ${index + 1}`}
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+                  <div className="absolute bottom-4 left-4">
+                    <h3 className="font-serif text-lg font-bold text-white">
+                      Kitchen View {index + 1}
+                    </h3>
+                    <p className="text-xs text-neutral-300">Fresh • Hygienic • Pure</p>
+                  </div>
+                </div>
+              </Card>
+            ))}
+          </div>
+        </section>
 
-                                    <Stagger className="space-y-10">
-                                        {breakfast.map((item) => (
-                                            <StaggerItem key={item.name}>
-                                                <div className="group">
-                                                    <div className="flex items-start justify-between gap-6">
-                                                        <div>
-                                                            <h3 className="font-serif text-2xl transition-colors duration-300 group-hover:text-amber-500">
-                                                                {item.name}
-                                                            </h3>
+        {/* ================= DINING INFORMATION ================= */}
+        <section className="relative overflow-hidden border-y py-20 bg-amber-500/5">
+          <div className="container relative mx-auto px-6">
+            <div className="mx-auto max-w-4xl rounded-3xl border border-amber-500/20 bg-background/80 p-8 md:p-12 backdrop-blur">
+              <div className="text-center">
+                <p className="text-xs uppercase tracking-[0.45em] text-amber-500">
+                  Dining Guidelines
+                </p>
+                <h2 className="mt-2 font-serif text-3xl font-bold">
+                  Important Information
+                </h2>
+              </div>
 
-                                                            <p className="mt-3 leading-8 text-muted-foreground">
-                                                                {
-                                                                    item.description
-                                                                }
-                                                            </p>
-                                                        </div>
+              <div className="mt-8 grid gap-6 md:grid-cols-2">
+                <div className="rounded-2xl border border-amber-500/20 bg-amber-500/5 p-6">
+                  <h3 className="font-serif text-xl font-bold text-amber-600 dark:text-amber-400">
+                    👨‍🍳 Fresh Preparation
+                  </h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                    All meals are cooked fresh after confirmation to guarantee maximum flavor, warmth, and high nutrition.
+                  </p>
+                </div>
 
-                                                        <span className="rounded-full bg-amber-500/10 px-4 py-2 text-lg font-semibold text-amber-500">
-                                                            {item.price}
-                                                        </span>
-                                                    </div>
+                <div className="rounded-2xl border border-amber-500/20 bg-amber-500/5 p-6">
+                  <h3 className="font-serif text-xl font-bold text-amber-600 dark:text-amber-400">
+                    📅 Advance Confirmation
+                  </h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                    Kindly share your menu selections 1 day prior to arrival to allow us to source fresh ingredients.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
-                                                    <div className="mt-8 h-px bg-border transition-colors group-hover:bg-amber-500/30" />
-                                                </div>
-                                            </StaggerItem>
-                                        ))}
-                                    </Stagger>
-                                </div>
-                            </FadeLeft>
+        {/* ================= RESERVATION & PDF DOWNLOAD CTA ================= */}
+        <section className="relative w-full overflow-hidden py-24">
+          <Image
+            src="/dining/dining9.jpg"
+            alt="Reserve Table"
+            fill
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-black/80" />
 
-                            {/* BEVERAGES */}
+          <div className="relative container mx-auto text-center px-6">
+            <p className="text-xs uppercase tracking-[0.45em] text-amber-500">
+              Kapoor's Villa Experience
+            </p>
+            <h2 className="mt-4 font-serif text-4xl font-bold text-white md:text-6xl">
+              Good Food. Great Memories.
+            </h2>
+            <p className="mx-auto mt-6 max-w-2xl text-neutral-300">
+              Download our menu or reach out to reserve your private dining dates for family gatherings, vacations, and celebrations.
+            </p>
 
-                            <FadeRight>
-                                <div>
-                                    <div className="mb-12">
-                                        <p className="text-xs uppercase tracking-[0.45em] text-amber-500">
-                                            Refreshments
-                                        </p>
+            <div className="mt-10 flex flex-wrap justify-center gap-4">
+              <a href="/kapoors_villa_menu.pdf" download="Kapoor_Villa_Menu.pdf">
+                <Button size="lg" className="gap-2 bg-amber-500 text-black hover:bg-amber-400 font-semibold px-8">
+                  <DownloadIcon className="h-4 w-4" /> Download PDF Menu
+                </Button>
+              </a>
 
-                                        <h2 className="mt-4 font-serif text-5xl font-bold">
-                                            Beverages
-                                        </h2>
-                                    </div>
+              <Button
+                asChild
+                variant="outline"
+                size="lg"
+                className="border-white/40 bg-transparent px-8 text-white hover:bg-white/10"
+              >
+                <Link href="/contact">Reserve Your Table</Link>
+              </Button>
+            </div>
+          </div>
+        </section>
+      </main>
 
-                                    <Stagger className="space-y-10">
-                                        {beverages.map((item) => (
-                                            <StaggerItem key={item.name}>
-                                                <div className="group">
-                                                    <div className="flex items-start justify-between gap-6">
-                                                        <div>
-                                                            <h3 className="font-serif text-2xl transition-colors duration-300 group-hover:text-amber-500">
-                                                                {item.name}
-                                                            </h3>
-
-                                                            <p className="mt-3 leading-8 text-muted-foreground">
-                                                                {
-                                                                    item.description
-                                                                }
-                                                            </p>
-                                                        </div>
-
-                                                        <span className="rounded-full bg-amber-500/10 px-4 py-2 text-lg font-semibold text-amber-500">
-                                                            {item.price}
-                                                        </span>
-                                                    </div>
-
-                                                    <div className="mt-8 h-px bg-border transition-colors group-hover:bg-amber-500/30" />
-                                                </div>
-                                            </StaggerItem>
-                                        ))}
-                                    </Stagger>
-                                </div>
-                            </FadeRight>
-                        </div>
-                    </section>
-                </FadeUp>
-
-                {/* DINING EXPERIENCE */}
-
-                <FadeUp>
-                    <section className="container mx-auto px-6 py-32">
-                        <div className="grid items-center gap-20 lg:grid-cols-2">
-                            <FadeLeft>
-                                <div className="group relative h-162.5 overflow-hidden rounded-3xl">
-                                    <Image
-                                        src="/menu/private-dining.jpg"
-                                        alt="Private Dining"
-                                        fill
-                                        className="object-cover transition-all duration-1800 group-hover:scale-110"
-                                    />
-
-                                    <div className="absolute inset-0 bg-linear-to-t from-black/40 to-transparent" />
-                                </div>
-                            </FadeLeft>
-
-                            <FadeRight>
-                                <div>
-                                    <p className="text-xs uppercase tracking-[0.45em] text-amber-500">
-                                        Fine Dining
-                                    </p>
-
-                                    <h2 className="mt-5 font-serif text-5xl font-bold leading-tight">
-                                        More Than A Meal
-                                    </h2>
-
-                                    <p className="mt-8 leading-8 text-muted-foreground">
-                                        Dining at Kapoor&apos;s Villa is
-                                        designed as an immersive culinary
-                                        experience where exceptional cuisine
-                                        meets breathtaking surroundings and
-                                        personalized hospitality.
-                                    </p>
-
-                                    <p className="mt-6 leading-8 text-muted-foreground">
-                                        Every dish is crafted using fresh
-                                        seasonal ingredients, refined techniques
-                                        and curated flavours to create lasting
-                                        memories with every meal.
-                                    </p>
-
-                                    <div className="mt-12 grid gap-8 sm:grid-cols-2">
-                                        <ScaleIn>
-                                            <div>
-                                                <h3 className="font-serif text-4xl text-amber-500">
-                                                    100%
-                                                </h3>
-
-                                                <p className="mt-2 text-sm uppercase tracking-[0.3em] text-muted-foreground">
-                                                    Fresh Ingredients
-                                                </p>
-                                            </div>
-                                        </ScaleIn>
-
-                                        <ScaleIn>
-                                            <div>
-                                                <h3 className="font-serif text-4xl text-amber-500">
-                                                    Private
-                                                </h3>
-
-                                                <p className="mt-2 text-sm uppercase tracking-[0.3em] text-muted-foreground">
-                                                    Dining
-                                                </p>
-                                            </div>
-                                        </ScaleIn>
-
-                                        <ScaleIn>
-                                            <div>
-                                                <h3 className="font-serif text-4xl text-amber-500">
-                                                    Chef
-                                                </h3>
-
-                                                <p className="mt-2 text-sm uppercase tracking-[0.3em] text-muted-foreground">
-                                                    Curated Menus
-                                                </p>
-                                            </div>
-                                        </ScaleIn>
-
-                                        <ScaleIn>
-                                            <div>
-                                                <h3 className="font-serif text-4xl text-amber-500">
-                                                    BBQ
-                                                </h3>
-
-                                                <p className="mt-2 text-sm uppercase tracking-[0.3em] text-muted-foreground">
-                                                    Outdoor Evenings
-                                                </p>
-                                            </div>
-                                        </ScaleIn>
-                                    </div>
-                                </div>
-                            </FadeRight>
-                        </div>
-                    </section>
-                </FadeUp>
-
-                {/* PREMIUM RESERVATION CTA */}
-
-                <FadeUp>
-                    <section className="relative overflow-hidden">
-                        <Image
-                            src="/menu/menu-cta.jpg"
-                            alt="Luxury Dining Experience"
-                            fill
-                            className="object-cover"
-                        />
-
-                        <div className="absolute inset-0 bg-black/75" />
-
-                        <div className="absolute inset-0 bg-linear-to-r from-black/80 via-black/60 to-black/30" />
-
-                        <div className="relative container mx-auto flex min-h-140 items-center justify-center px-6 py-24">
-                            <div className="max-w-4xl text-center">
-                                <p className="text-xs uppercase tracking-[0.45em] text-amber-500">
-                                    Reserve Your Experience
-                                </p>
-
-                                <h2 className="mt-6 font-serif text-5xl font-bold text-white md:text-6xl">
-                                    Every Celebration
-                                    <br />
-                                    Deserves Exceptional Dining
-                                </h2>
-
-                                <p className="mx-auto mt-8 max-w-2xl leading-8 text-neutral-300">
-                                    Whether it&apaos;s an intimate dinner, a
-                                    weekend barbecue or a family celebration,
-                                    our curated culinary experiences promise
-                                    unforgettable moments.
-                                </p>
-
-                                <div className="mt-12 flex flex-wrap justify-center gap-4">
-                                    <Button
-                                        asChild
-                                        size="lg"
-                                        className="bg-amber-500 px-8 text-black hover:bg-amber-400"
-                                    >
-                                        <Link href="/contact">
-                                            Reserve A Table
-                                        </Link>
-                                    </Button>
-
-                                    <Button
-                                        asChild
-                                        size="lg"
-                                        variant="outline"
-                                        className="border-white/40 bg-transparent px-8 text-white hover:bg-white/10"
-                                    >
-                                        <Link href="/contact">
-                                            Contact Concierge
-                                        </Link>
-                                    </Button>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                </FadeUp>
-
-                {/* CLOSING QUOTE */}
-
-                <FadeUp>
-                    <section className="container mx-auto px-6 py-28">
-                        <div className="mx-auto max-w-5xl text-center">
-                            <p className="text-xs uppercase tracking-[0.45em] text-amber-500">
-                                The Kapoor&apos;s Villa Promise
-                            </p>
-
-                            <blockquote className="mt-8 font-serif text-4xl leading-tight md:text-6xl">
-                                &quot;Luxury isn&apos;t simply about what you
-                                eat— it&apos;s about the atmosphere, the company
-                                and the memories created around the table.&quot;
-                            </blockquote>
-
-                            <div className="mx-auto mt-12 h-px w-40 bg-amber-500/40" />
-
-                            <p className="mx-auto mt-10 max-w-3xl leading-8 text-muted-foreground">
-                                Every meal is designed to bring people together,
-                                celebrate life&apos;s special moments and create
-                                unforgettable memories at Kapoor&apos;s Villa.
-                            </p>
-                        </div>
-                    </section>
-                </FadeUp>
-            </main>
-
-            <Footer />
-        </>
-    );
+      <Footer />
+    </>
+  );
 }

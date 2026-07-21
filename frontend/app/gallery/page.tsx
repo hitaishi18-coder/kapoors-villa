@@ -37,7 +37,7 @@ const gallery = [
     {
         title: "Outdoor Lounge",
         category: "Exterior",
-        image: "/gallery/outdoor.jpg",
+        image: "/gallery/outdoor.webp",
         height: "h-[520px]",
     },
     {
@@ -55,7 +55,7 @@ const gallery = [
     {
         title: "Garden Walk",
         category: "Exterior",
-        image: "/gallery/garden.jpg",
+        image: "/gallery/garden.webp",
         height: "h-[520px]",
     },
     {
@@ -75,7 +75,7 @@ export default function GalleryPage() {
                 {/* Hero */}
                 <section className="relative h-[75vh] overflow-hidden">
                     <Image
-                        src="/gallery/gallery-hero.jpg"
+                        src="/gallery/gallery-hero.webp"
                         alt="Kapoor's Villa Gallery"
                         fill
                         priority
