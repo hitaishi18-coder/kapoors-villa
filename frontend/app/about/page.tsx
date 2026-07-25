@@ -30,6 +30,8 @@ import {
     Sparkles,
     Users
 } from "lucide-react";
+import FAQSection from "@/components/FAQsection";
+import LocationSection from "@/components/LocationSection";
 
 const stats = [
     { value: "10+", label: "Years of Excellence" },
@@ -340,6 +342,8 @@ export default function AboutPage() {
                         </Card>
                     </section>
                 </FadeUp>
+                <LocationSection />
+                <FAQSection />
             </main>
 
             <Footer />

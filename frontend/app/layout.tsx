@@ -2,7 +2,13 @@ import type { Metadata, Viewport } from "next";
 import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
 import { cn } from "@/lib/utils";
+import { Playfair_Display, Inter } from "next/font/google";
 
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-playfair",
+});
 const siteUrl = "https://kapoorsvilla.com"; // Replace with your actual domain
 
 export const viewport: Viewport = {
@@ -12,20 +18,19 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
   title: {
-    default: "Kapoor's Villa | Luxury Villa & Boutique Stay",
+    default: "Kapoor's Villa | Luxury Stay in Panchgani & Mahabaleshwar",
     template: "%s | Kapoor's Villa",
   },
   description:
-    "Experience luxury hospitality at Kapoor's Villa. Featuring premium suites, serene ambiance, private dining menu, and top-tier amenities.",
+    "Experience luxury living at Kapoor's Villa near Panchgani & Mahabaleshwar. Located just 16 km from Mapro Garden and 12 km from Bhilar. Featuring a private pool and gourmet dining.",
   keywords: [
     "Kapoor's Villa",
-    "Luxury Villa Rental",
-    "Boutique Stay",
-    "Villa with Pool",
-    "Private Dining Homestay",
-    "Resort Suites",
+    "Villa in Panchgani",
+    "Villa in Mahabaleshwar",
+    "Private Pool Villa near Mapro Garden",
+    "Boutique Stay Bhilar Panchgani",
+    "Homestay near Nirwana Panchgani",
   ],
   alternates: {
     canonical: "./",
@@ -113,7 +118,11 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html
+      lang="en"
+      className={`${inter.variable} ${playfair.variable}`}
+      suppressHydrationWarning
+    >
       <body>
         <script
           type="application/ld+json"
