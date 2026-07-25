@@ -20,7 +20,6 @@ import {
     Waves,
     BedDouble,
     ChefHat,
-    Gift,
     ChevronDown,
     Star,
     Trees,
@@ -70,13 +69,12 @@ const testimonials = [
 
 export default function HomePage() {
     return (
-        <>
+        <div className="dark:bg-black dark:text-[#FDFBF7] transition-colors duration-300">
             <Navbar />
 
             <main>
                 {/* HERO */}
                 <section className="relative min-h-screen overflow-hidden">
-                    {/* Background Image */}
                     <Image
                         src="/outer/hero.webp"
                         alt="Villa"
@@ -85,35 +83,32 @@ export default function HomePage() {
                         className="object-cover"
                     />
 
-                    {/* Dark Overlay */}
-                    <div className="absolute inset-0 bg-black/55" />
+                    {/* Neutral Dark Overlay */}
+                    <div className="absolute inset-0 bg-black/55 dark:bg-black/60" />
 
-                    {/* Luxury Gradient */}
-                    <div className="absolute inset-0 bg-linear-to-b from-black/20 via-transparent to-black/70" />
+                    {/* Neutral Luxury Gradient */}
+                    <div className="absolute inset-0 bg-linear-to-b from-black/20 via-transparent to-black/70 dark:from-black/40 dark:to-black/80" />
 
-                    {/* Hero Content */}
                     <HeroReveal className="relative z-10 flex min-h-screen flex-col items-center justify-center px-6 text-center">
                         <p className="mb-9 text-xs font-medium uppercase tracking-[0.45em] text-[#fcd34d] md:text-sm">
                             Luxury • Comfort • Serenity
                         </p>
 
-                        <h1 className="font-serif text-5xl font-bold leading-tight text-white md:text-7xl lg:text-6xl">
+                        <h1 className="font-serif text-5xl font-bold leading-tight text-white dark:text-[#fcd34d] md:text-7xl lg:text-6xl">
                             Kapoor&apos;s Villa
                         </h1>
 
-                        <p className="mt-5 text-lg uppercase tracking-[0.35em] text-neutral-200 md:text-2xl">
+                        <p className="mt-5 text-lg uppercase tracking-[0.35em] text-neutral-200 dark:text-[#FDFBF7]/90 md:text-2xl">
                             A Perfect Holiday Home
                         </p>
 
-                        <p className="mt-8 max-w-3xl text-base leading-8 text-neutral-300 md:text-lg">
+                        <p className="mt-8 max-w-3xl text-base leading-8 text-neutral-300 dark:text-[#FDFBF7]/80 md:text-lg">
                             Escape into timeless elegance where breathtaking
                             views, personalized hospitality and luxurious
                             comfort come together to create unforgettable
                             memories.
                         </p>
 
-                        {/* Buttons */}
-                       {/* Buttons */}
                         <div className="mt-12 flex flex-wrap justify-center gap-5">
                             <Button
                                 asChild
@@ -127,57 +122,35 @@ export default function HomePage() {
                                 asChild
                                 variant="outline"
                                 size="lg"
-                                className="border-white/60 bg-transparent px-8 text-white backdrop-blur-sm transition-all duration-300 hover:border-[#fcd34d] hover:bg-white/10"
+                                className="border-white/60 bg-transparent px-8 text-white backdrop-blur-sm transition-all duration-300 hover:border-[#fcd34d] hover:bg-white/10 dark:border-[#fcd34d]/50 dark:text-[#fcd34d] dark:hover:bg-[#fcd34d]/10"
                             >
                                 <Link href="/gallery">Explore Villa</Link>
                             </Button>
                         </div>
 
-                        {/* Stats */}
-                        <div className="mt-20 grid w-full max-w-4xl grid-cols-3 gap-8 border-t border-white/20 pt-10">
+                        <div className="mt-20 grid w-full max-w-4xl grid-cols-3 gap-8 border-t border-white/20 dark:border-[#fcd34d]/20 pt-10">
                             <div>
-                                <h3 className="font-serif text-3xl font-bold text-[#fcd34d]">
-                                    500+
-                                </h3>
-
-                                <p className="mt-2 text-xs uppercase tracking-[0.3em] text-neutral-300">
-                                    Happy Guests
-                                </p>
+                                <h3 className="font-serif text-3xl font-bold text-[#fcd34d]">500+</h3>
+                                <p className="mt-2 text-xs uppercase tracking-[0.3em] text-neutral-300 dark:text-[#FDFBF7]/70">Happy Guests</p>
                             </div>
-
                             <div>
-                                <h3 className="font-serif text-3xl font-bold text-[#fcd34d]">
-                                    10+
-                                </h3>
-
-                                <p className="mt-2 text-xs uppercase tracking-[0.3em] text-neutral-300">
-                                    Years Experience
-                                </p>
+                                <h3 className="font-serif text-3xl font-bold text-[#fcd34d]">10+</h3>
+                                <p className="mt-2 text-xs uppercase tracking-[0.3em] text-neutral-300 dark:text-[#FDFBF7]/70">Years Experience</p>
                             </div>
-
                             <div>
-                                <h3 className="font-serif text-3xl font-bold text-[#fcd34d]">
-                                    ★ 4.9
-                                </h3>
-
-                                <p className="mt-2 text-xs uppercase tracking-[0.3em] text-neutral-300">
-                                    Guest Rating
-                                </p>
+                                <h3 className="font-serif text-3xl font-bold text-[#fcd34d]">★ 4.9</h3>
+                                <p className="mt-2 text-xs uppercase tracking-[0.3em] text-neutral-300 dark:text-[#FDFBF7]/70">Guest Rating</p>
                             </div>
                         </div>
 
-                        {/* Scroll Indicator */}
                         <div className="absolute bottom-10 flex flex-col items-center">
-                            <p className="mb-2 text-[10px] uppercase tracking-[0.4em] text-neutral-300">
-                                Scroll
-                            </p>
-
+                            <p className="mb-2 text-[10px] uppercase tracking-[0.4em] text-neutral-300 dark:text-[#FDFBF7]/70">Scroll</p>
                             <ChevronDown className="h-8 w-8 animate-bounce text-[#fcd34d]" />
                         </div>
                     </HeroReveal>
                 </section>
 
-               {/* AMENITIES */}
+                {/* AMENITIES - Classy Editorial Layout */}
                 <FadeUp>
                     <section className="container mx-auto px-6 py-24 md:py-32">
                         <div className="mb-16 text-center">
@@ -219,9 +192,9 @@ export default function HomePage() {
                     </section>
                 </FadeUp>
 
-                {/* TESTIMONIALS */}
+                {/* TESTIMONIALS - Classy Editorial Layout */}
                 <FadeUp>
-                    <section className="relative overflow-hidden border-y border-[#fcd34d]/10 bg-gradient-to-b from-[#FDFBF7] to-[#fcd34d]/5 py-24 dark:from-[#112A46] dark:to-[#0C1E33] md:py-32">
+                    <section className="relative overflow-hidden border-y border-[#fcd34d]/10 bg-gradient-to-b from-[#FDFBF7] to-[#fcd34d]/5 py-24 dark:from-black dark:to-neutral-950 md:py-32">
                         {/* Subtle glow */}
                         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#fcd34d]/10 via-transparent to-transparent" />
 
@@ -242,7 +215,6 @@ export default function HomePage() {
                                         <ScaleIn>
                                             <div className="group flex h-full flex-col justify-between border-l border-[#fcd34d]/20 pl-8 transition-all duration-500 hover:border-[#fcd34d]">
                                                 <div>
-                                                    {/* Refined Stars */}
                                                     <div className="mb-6 flex gap-1.5 opacity-80 transition-opacity duration-500 group-hover:opacity-100">
                                                         {Array.from({ length: 5 }).map((_, index) => (
                                                             <Star
@@ -252,7 +224,6 @@ export default function HomePage() {
                                                         ))}
                                                     </div>
 
-                                                    {/* Quote */}
                                                     <p className="text-lg font-light italic leading-loose text-[#112A46]/80 dark:text-[#FDFBF7]/80">
                                                         {review.text}
                                                     </p>
@@ -274,6 +245,7 @@ export default function HomePage() {
                         </div>
                     </section>
                 </FadeUp>
+
                 {/* FEATURED SPACES */}
                 <FadeUp>
                     <section className="container mx-auto px-6 py-32">
@@ -281,12 +253,10 @@ export default function HomePage() {
                             <p className="text-xs uppercase tracking-[0.45em] text-[#fcd34d]">
                                 Discover
                             </p>
-
-                            <h2 className="mt-4 font-serif text-5xl font-bold">
+                            <h2 className="mt-4 font-serif text-5xl font-bold dark:text-[#FDFBF7]">
                                 Signature Experiences
                             </h2>
-
-                            <p className="mx-auto mt-6 max-w-2xl leading-8 text-muted-foreground">
+                            <p className="mx-auto mt-6 max-w-2xl leading-8 text-muted-foreground dark:text-[#FDFBF7]/70">
                                 From luxurious suites to breathtaking outdoor
                                 spaces, every corner of Kapoor&apos;s Villa has
                                 been thoughtfully designed to elevate your stay.
@@ -294,7 +264,6 @@ export default function HomePage() {
                         </div>
 
                         <div className="grid gap-8 lg:grid-cols-2">
-                            {/* Suites */}
                             <FadeLeft>
                                 <Link href="/room">
                                     <div className="group relative h-162.5 overflow-hidden rounded-3xl">
@@ -304,29 +273,14 @@ export default function HomePage() {
                                             fill
                                             className="object-cover transition-all duration-1800 group-hover:scale-110"
                                         />
-
-                                        <div className="absolute inset-0 bg-linear-to-t from-black via-black/30 to-transparent" />
-
+                                        <div className="absolute inset-0 bg-linear-to-t from-black via-black/30 to-transparent dark:from-black/80 dark:via-black/40" />
                                         <div className="absolute inset-0 flex flex-col justify-end p-10">
-                                            <p className="text-xs uppercase tracking-[0.4em] text-[#fcd34d]">
-                                                Stay
+                                            <p className="text-xs uppercase tracking-[0.4em] text-[#fcd34d]">Stay</p>
+                                            <h3 className="mt-3 font-serif text-5xl font-bold text-white">Luxury Suites</h3>
+                                            <p className="mt-5 max-w-md leading-7 text-neutral-200 dark:text-[#FDFBF7]/90">
+                                                Spacious interiors, elegant décor and panoramic views create a private sanctuary unlike any other.
                                             </p>
-
-                                            <h3 className="mt-3 font-serif text-5xl font-bold text-white">
-                                                Luxury Suites
-                                            </h3>
-
-                                            <p className="mt-5 max-w-md leading-7 text-neutral-200">
-                                                Spacious interiors, elegant
-                                                décor and panoramic views create
-                                                a private sanctuary unlike any
-                                                other.
-                                            </p>
-
-                                            <Button
-                                                variant="secondary"
-                                                className="mt-8 w-fit"
-                                            >
+                                            <Button variant="secondary" className="mt-8 w-fit dark:bg-[#fcd34d] dark:text-black dark:border-none dark:hover:bg-[#fcd34d]/80">
                                                 Explore Rooms
                                             </Button>
                                         </div>
@@ -334,7 +288,6 @@ export default function HomePage() {
                                 </Link>
                             </FadeLeft>
 
-                            {/* Outdoors */}
                             <FadeRight>
                                 <Link href="/gallery">
                                     <div className="group relative h-162.5 overflow-hidden rounded-3xl">
@@ -344,28 +297,14 @@ export default function HomePage() {
                                             fill
                                             className="object-cover transition-all duration-1800 group-hover:scale-110"
                                         />
-
-                                        <div className="absolute inset-0 bg-linear-to-t from-black via-black/30 to-transparent" />
-
+                                        <div className="absolute inset-0 bg-linear-to-t from-black via-black/30 to-transparent dark:from-black/80 dark:via-black/40" />
                                         <div className="absolute inset-0 flex flex-col justify-end p-10">
-                                            <p className="text-xs uppercase tracking-[0.4em] text-[#fcd34d]">
-                                                Experience
+                                            <p className="text-xs uppercase tracking-[0.4em] text-[#fcd34d]">Experience</p>
+                                            <h3 className="mt-3 font-serif text-5xl font-bold text-white">Scenic Outdoors</h3>
+                                            <p className="mt-5 max-w-md leading-7 text-neutral-200 dark:text-[#FDFBF7]/90">
+                                                Infinity pool, lush gardens and peaceful open spaces designed for unforgettable moments.
                                             </p>
-
-                                            <h3 className="mt-3 font-serif text-5xl font-bold text-white">
-                                                Scenic Outdoors
-                                            </h3>
-
-                                            <p className="mt-5 max-w-md leading-7 text-neutral-200">
-                                                Infinity pool, lush gardens and
-                                                peaceful open spaces designed
-                                                for unforgettable moments.
-                                            </p>
-
-                                            <Button
-                                                variant="secondary"
-                                                className="mt-8 w-fit"
-                                            >
+                                            <Button variant="secondary" className="mt-8 w-fit dark:bg-[#fcd34d] dark:text-black dark:border-none dark:hover:bg-[#fcd34d]/80">
                                                 View Gallery
                                             </Button>
                                         </div>
@@ -377,7 +316,7 @@ export default function HomePage() {
                 </FadeUp>
             </main>
 
-      {/* FINAL CTA */}
+            {/* FINAL CTA */}
             <FadeUp>
                 <section className="relative overflow-hidden">
                     <Image
@@ -387,41 +326,21 @@ export default function HomePage() {
                         className="object-cover"
                     />
 
-                    {/* Reduced overlay opacity from 75% to 40% for better image visibility */}
-                    <div className="absolute inset-0 bg-black/40" />
+                    <div className="absolute inset-0 bg-black/60" />
 
                     <div className="relative container mx-auto flex min-h-125 flex-col items-center justify-center px-6 py-24 text-center">
-                        <p className="text-xs uppercase tracking-[0.45em] text-[#fcd34d]">
-                            Escape Into Luxury
-                        </p>
-
-                        {/* Added text-white to ensure the heading is readable against the background */}
-                        <h2 className="mt-6 max-w-4xl font-serif text-5xl font-bold text-white md:text-6xl">
+                        <p className="text-xs uppercase tracking-[0.45em] text-[#fcd34d]">Escape Into Luxury</p>
+                        <h2 className="mt-6 max-w-4xl font-serif text-5xl font-bold text-white dark:text-[#fcd34d] md:text-6xl">
                             Experience Timeless Comfort
                         </h2>
-
-                        <p className="mt-8 max-w-2xl leading-8 text-neutral-200">
-                            Whether it&apos;s a weekend getaway, family vacation
-                            or special celebration, Kapoor&apos;s Villa promises
-                            unforgettable hospitality and luxury.
+                        <p className="mt-8 max-w-2xl leading-8 text-neutral-200 dark:text-[#FDFBF7]/90">
+                            Whether it&apos;s a weekend getaway, family vacation or special celebration, Kapoor&apos;s Villa promises unforgettable hospitality and luxury.
                         </p>
-
                         <div className="mt-12 flex flex-wrap justify-center gap-4">
-                            <Button
-                                asChild
-                                size="lg"
-                                className="bg-[#fcd34d] text-black hover:bg-[#fcd34d]/80"
-                            >
+                            <Button asChild size="lg" className="bg-[#fcd34d] text-black hover:bg-[#fcd34d]/80">
                                 <Link href="/contact">Plan Your Stay</Link>
                             </Button>
-
-                            <Button
-                                asChild
-                                size="lg"
-                                variant="outline"
-                                /* Forced text-white instead of allowing text-black in light mode */
-                                className="border-white/40 text-white hover:bg-white/10 text-black"
-                            >
+                            <Button asChild size="lg" variant="outline" className="border-white/40 text-white hover:bg-white/10 dark:border-[#fcd34d]/50 dark:text-[#fcd34d] dark:hover:bg-[#fcd34d]/10">
                                 <Link href="/gallery">Explore Gallery</Link>
                             </Button>
                         </div>
@@ -430,6 +349,6 @@ export default function HomePage() {
             </FadeUp>
 
             <Footer />
-        </>
+        </div>
     );
 }
