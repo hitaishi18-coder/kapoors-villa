@@ -98,17 +98,26 @@ export default function RoomsPage() {
       <main>
         {/* HERO */}
         <section className="relative h-[75vh] overflow-hidden">
-          <Image src="/bedroom/room-hero.jpg" alt="Luxury Rooms" fill priority className="object-cover" />
+          <Image
+            src="/bedroom/room-hero.jpg"
+            alt="Luxury Rooms"
+            fill
+            priority
+            className="object-cover"
+          />
           <div className="absolute inset-0 bg-black/60" />
           <HeroReveal className="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center">
-            <h1 className="font-serif text-5xl font-bold text-white md:text-7xl">Rooms & Suites</h1>
+            <h1 className="font-serif text-5xl font-bold text-white md:text-7xl">
+              Rooms & Suites
+            </h1>
           </HeroReveal>
         </section>
 
         {/* QUOTE SECTION */}
         <section className="py-20 px-6 text-center bg-neutral-50">
           <blockquote className="font-serif text-3xl italic text-neutral-800 max-w-3xl mx-auto">
-            "Luxury is the art of being perfectly at home while surrounded by the extraordinary."
+            &quot;Luxury is the art of being perfectly at home while surrounded
+            by the extraordinary.&quot;
           </blockquote>
         </section>
 
@@ -117,39 +126,46 @@ export default function RoomsPage() {
           <Tabs defaultValue="rooms" className="w-full">
             <div className="text-center mb-12">
               <TabsList className="bg-neutral-900/10 p-1 rounded-full">
-                <TabsTrigger value="rooms" className="rounded-full px-8">Suite Views</TabsTrigger>
-                <TabsTrigger value="baths" className="rounded-full px-8">Bathroom Amenities</TabsTrigger>
+                <TabsTrigger value="rooms" className="rounded-full px-8">
+                  Suite Views
+                </TabsTrigger>
+                <TabsTrigger value="baths" className="rounded-full px-8">
+                  Bathroom Amenities
+                </TabsTrigger>
               </TabsList>
             </div>
-            <TabsContent value="rooms"><Carousel images={roomImages} /></TabsContent>
-            <TabsContent value="baths"><Carousel images={bathImages} /></TabsContent>
+            <TabsContent value="rooms">
+              <Carousel images={roomImages} />
+            </TabsContent>
+            <TabsContent value="baths">
+              <Carousel images={bathImages} />
+            </TabsContent>
           </Tabs>
         </section>
 
-                {/* AMENITIES */}
+                {/* TABBED GALLERY */}
                 <FadeUp>
-                    <section className="container mx-auto px-6 pb-24 md:pb-32">
-                        <div className="mb-16 text-center">
-                            <p className="text-xs font-medium uppercase tracking-[0.4em] text-[#fcd34d]">Room Comforts</p>
-                            <h2 className="mt-4 font-serif text-4xl font-light tracking-wide text-[#112A46] dark:text-[#FDFBF7]">Premium Amenities</h2>
-                            <div className="mx-auto mt-6 h-[1px] w-12 bg-[#fcd34d]/50" />
-                        </div>
-                        <Stagger className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-                            {amenities.map((item) => (
-                                <StaggerItem key={item.title}>
-                                    <ScaleIn>
-                                        <div className="group flex h-full cursor-default flex-col items-center justify-center gap-4 border border-[#fcd34d]/10 bg-white/40 dark:bg-[#173454]/40 p-8 rounded-xl backdrop-blur-md transition-all duration-500 hover:-translate-y-1 hover:border-[#fcd34d]/30 hover:bg-white/80 hover:shadow-xl hover:shadow-[#fcd34d]/5 dark:hover:bg-[#173454]/80">
-                                            <div className="flex h-14 w-14 items-center justify-center rounded-full border border-[#fcd34d]/30 bg-transparent text-[#fcd34d] transition-colors duration-500 group-hover:bg-[#fcd34d] group-hover:text-[#112A46]">
-                                                <item.icon className="h-6 w-6 stroke-[1.5]" />
-                                            </div>
-                                            <span className="text-center text-sm font-light tracking-wide text-[#112A46] dark:text-[#FDFBF7]">
-                                                {item.title}
-                                            </span>
-                                        </div>
-                                    </ScaleIn>
-                                </StaggerItem>
-                            ))}
-                        </Stagger>
+                    <section className="container mx-auto px-6 py-24 md:py-32">
+                        <Tabs defaultValue="rooms" className="w-full">
+                            <div className="text-center mb-16">
+                                <TabsList className="bg-transparent border border-[#fcd34d]/30 p-1.5 rounded-full h-auto backdrop-blur-md">
+                                    <TabsTrigger 
+                                        value="rooms" 
+                                        className="rounded-full px-8 py-3 text-xs font-medium uppercase tracking-widest text-[#112A46]/70 dark:text-[#FDFBF7]/70 data-[state=active]:bg-[#fcd34d] data-[state=active]:text-[#112A46] transition-all duration-500"
+                                    >
+                                        Suite Views
+                                    </TabsTrigger>
+                                    <TabsTrigger 
+                                        value="baths" 
+                                        className="rounded-full px-8 py-3 text-xs font-medium uppercase tracking-widest text-[#112A46]/70 dark:text-[#FDFBF7]/70 data-[state=active]:bg-[#fcd34d] data-[state=active]:text-[#112A46] transition-all duration-500"
+                                    >
+                                        Bathroom Amenities
+                                    </TabsTrigger>
+                                </TabsList>
+                            </div>
+                            <TabsContent value="rooms" className="mt-0 outline-none"><Carousel images={roomImages} /></TabsContent>
+                            <TabsContent value="baths" className="mt-0 outline-none"><Carousel images={bathImages} /></TabsContent>
+                        </Tabs>
                     </section>
                 </FadeUp>
 
@@ -157,16 +173,28 @@ export default function RoomsPage() {
         <section className="container mx-auto px-6 py-24 border-t">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="font-serif text-4xl font-bold mb-6">Designed for Discerning Guests</h2>
+              <h2 className="font-serif text-4xl font-bold mb-6">
+                Designed for Discerning Guests
+              </h2>
               <p className="text-lg leading-relaxed text-neutral-600 mb-6">
-                Every detail in our suites has been meticulously curated to transcend the ordinary. From hand-selected linens to custom ambient lighting, we ensure that your environment reflects your standards of excellence.
+                Every detail in our suites has been meticulously curated to
+                transcend the ordinary. From hand-selected linens to custom
+                ambient lighting, we ensure that your environment reflects your
+                standards of excellence.
               </p>
               <p className="text-lg leading-relaxed text-neutral-600">
-                Whether escaping the hum of daily life or seeking a sophisticated base for exploration, our rooms provide a cocoon of serenity that promises unparalleled rejuvenation.
+                Whether escaping the hum of daily life or seeking a
+                sophisticated base for exploration, our rooms provide a cocoon
+                of serenity that promises unparalleled rejuvenation.
               </p>
             </div>
             <div className="relative h-[400px] w-full rounded-3xl overflow-hidden shadow-2xl">
-              <Image src="/bedroom/mirror.jpg" alt="Detail" fill className="object-cover" />
+              <Image
+                src="/bedroom/mirror.jpg"
+                alt="Detail"
+                fill
+                className="object-cover"
+              />
             </div>
           </div>
         </section>
