@@ -388,7 +388,7 @@ export default function HomePage() {
             <FadeUp>
                 <section className="relative overflow-hidden">
                     <Image
-                        src="/hero.jpg"
+                        src="/extraas/cushions.png"
                         alt="Kapoor's Villa"
                         fill
                         className="object-cover"

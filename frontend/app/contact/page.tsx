@@ -6,8 +6,6 @@ import Footer from "@/components/Footer";
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 
 import {
     HeroReveal,
@@ -17,7 +15,7 @@ import {
     StaggerItem,
 } from "@/components/animations";
 
-import { MapPin, Phone, Mail, Clock, ArrowRight } from "lucide-react";
+import { MapPin, Phone, Mail, Clock } from "lucide-react";
 
 export default function ContactPage() {
     return (
@@ -140,141 +138,6 @@ export default function ContactPage() {
                                 </ScaleIn>
                             </StaggerItem>
                         </Stagger>
-                    </section>
-                </FadeUp>
-
-                {/* CONTACT FORM */}
-                <FadeUp>
-                    <section className="container mx-auto px-6 pb-32">
-                        <div className="grid gap-20 lg:grid-cols-2">
-                            {/* LEFT */}
-                            <div>
-                                <p className="text-xs uppercase tracking-[0.45em] text-amber-500">
-                                    Luxury Concierge
-                                </p>
-
-                                <h2 className="mt-4 font-serif text-5xl font-bold leading-tight">
-                                    Let&apos;s Plan
-                                    <br />
-                                    Your Perfect Stay
-                                </h2>
-
-                                <p className="mt-8 leading-8 text-muted-foreground">
-                                    Whether you&apos;re planning a romantic
-                                    getaway, family vacation or weekend
-                                    celebration, our hospitality team is here to
-                                    create an unforgettable experience tailored
-                                    just for you.
-                                </p>
-
-                                <div className="mt-12 space-y-10">
-                                    <div className="flex gap-5">
-                                        <div className="flex h-14 w-14 items-center justify-center rounded-full bg-amber-500/10">
-                                            <Phone className="h-6 w-6 text-amber-500" />
-                                        </div>
-
-                                        <div>
-                                            <h4 className="font-serif text-2xl">
-                                                Reservations
-                                            </h4>
-
-                                            <p className="mt-2 text-muted-foreground">
-                                                +91 83559 92830
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <div className="flex gap-5">
-                                        <div className="flex h-14 w-14 items-center justify-center rounded-full bg-amber-500/10">
-                                            <Mail className="h-6 w-6 text-amber-500" />
-                                        </div>
-
-                                        <div>
-                                            <h4 className="font-serif text-2xl">
-                                                Email
-                                            </h4>
-
-                                            <p className="mt-2 text-muted-foreground">
-                                                kapoorsvillapanchgani@gmail.com
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <div className="flex gap-5">
-                                        <div className="flex h-14 w-14 items-center justify-center rounded-full bg-amber-500/10">
-                                            <MapPin className="h-6 w-6 text-amber-500" />
-                                        </div>
-
-                                        <div>
-                                            <h4 className="font-serif text-2xl">
-                                                Address
-                                            </h4>
-
-                                            <p className="mt-2 text-muted-foreground">
-                                                Panchgani, Maharashtra, India
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            {/* FORM */}
-                            <ScaleIn>
-                                <Card className="border-amber-500/20 bg-background/70 backdrop-blur">
-                                    <CardContent className="p-10">
-                                        <form className="space-y-6">
-                                            <div className="grid gap-6 md:grid-cols-2">
-                                                <Input
-                                                    placeholder="Full Name"
-                                                    className="h-12"
-                                                />
-                                                <Input
-                                                    type="email"
-                                                    placeholder="Email Address"
-                                                    className="h-12"
-                                                />
-                                            </div>
-
-                                            <div className="grid gap-6 md:grid-cols-2">
-                                                <Input
-                                                    placeholder="Phone Number"
-                                                    className="h-12"
-                                                />
-                                                <Input
-                                                    type="number"
-                                                    placeholder="Guests"
-                                                    className="h-12"
-                                                />
-                                            </div>
-
-                                            <div className="grid gap-6 md:grid-cols-2">
-                                                <Input
-                                                    type="date"
-                                                    className="h-12"
-                                                />
-                                                <Input
-                                                    type="date"
-                                                    className="h-12"
-                                                />
-                                            </div>
-
-                                            <Textarea
-                                                rows={6}
-                                                placeholder="Tell us about your stay..."
-                                            />
-
-                                            <Button
-                                                className="w-full bg-amber-500 text-black hover:bg-amber-400"
-                                                size="lg"
-                                            >
-                                                Send Inquiry
-                                                <ArrowRight className="ml-2 h-4 w-4" />
-                                            </Button>
-                                        </form>
-                                    </CardContent>
-                                </Card>
-                            </ScaleIn>
-                        </div>
                     </section>
                 </FadeUp>
 

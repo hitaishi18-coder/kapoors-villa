@@ -64,6 +64,12 @@ const gallery = [
         image: "/gallery/room-3.jpg",
         height: "h-[380px]",
     },
+      {
+        title: "Rain Dance ",
+        category: "Exterior",
+        image: "/extraas/rain-dance.png",
+        height: "h-[460px]",
+    },
 ];
 
 export default function GalleryPage() {
@@ -102,7 +108,8 @@ export default function GalleryPage() {
                         </p>
                     </HeroReveal>
                 </section>
-
+                <br/>
+                <br/>
                 {/* GALLERY GRID */}
 
                 <FadeUp>
@@ -160,7 +167,7 @@ export default function GalleryPage() {
                                                     size="sm"
                                                     className="mt-6 translate-y-6 bg-amber-500 text-black opacity-0 transition-all duration-500 hover:bg-amber-400 group-hover:translate-y-0 group-hover:opacity-100"
                                                 >
-                                                    <Link href="/book">
+                                                    <Link href="/contact">
                                                         Reserve Stay
                                                     </Link>
                                                 </Button>
@@ -184,7 +191,7 @@ export default function GalleryPage() {
                                 Timeless Luxury
                             </p>
 
-                            <h2 className="mt-8 font-serif text-5xl leading-tight md:text-6xl">
+                            <h2 className="mt-8 font-serif text-4xl leading-tight md:text-6xl">
                                 Every photograph captures more than a
                                 destination— it preserves moments of elegance,
                                 comfort and unforgettable memories.
@@ -239,17 +246,10 @@ export default function GalleryPage() {
                                         size="lg"
                                         className="bg-amber-500 px-8 text-black hover:bg-amber-400"
                                     >
-                                        <Link href="/book">Book Your Stay</Link>
+                                        <Link href="/contact">Book Your Stay</Link>
                                     </Button>
 
-                                    <Button
-                                        asChild
-                                        size="lg"
-                                        variant="outline"
-                                        className="border-white/40 bg-transparent px-8 text-white hover:bg-white/10"
-                                    >
-                                        <Link href="/contact">Contact Us</Link>
-                                    </Button>
+                               
                                 </div>
                             </div>
                         </Card>
@@ -278,7 +278,7 @@ export default function GalleryPage() {
                                     Villa.
                                 </p>
 
-                                <div className="mt-10 flex flex-wrap gap-4">
+                                {/* <div className="mt-10 flex flex-wrap gap-4">
                                     <Button
                                         asChild
                                         size="lg"
@@ -295,7 +295,7 @@ export default function GalleryPage() {
                                     >
                                         <Link href="/contact">Contact Us</Link>
                                     </Button>
-                                </div>
+                                </div> */}
                             </div>
 
                             {/* Right */}
