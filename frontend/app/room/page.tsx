@@ -114,8 +114,8 @@ export default function RoomsPage() {
         </section>
 
         {/* QUOTE SECTION */}
-        <section className="py-20 px-6 text-center bg-neutral-50">
-          <blockquote className="font-serif text-3xl italic text-neutral-800 max-w-3xl mx-auto">
+        <section className="py-20 px-6 text-center bg-neutral-300 dark:bg-[#1E1E1E]">
+          <blockquote className="font-serif text-3xl italic text-neutral-800 dark:text-white max-w-3xl mx-auto">
             &quot;Luxury is the art of being perfectly at home while surrounded
             by the extraordinary.&quot;
           </blockquote>
