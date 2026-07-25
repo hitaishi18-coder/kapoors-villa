@@ -95,7 +95,7 @@ export default function Navbar() {
                         transition={{
                             duration: 0.3,
                         }}
-                        className="font-display text-2xl font-bold tracking-tight text-amber-500 md:text-4xl"
+                        className="font-display text-xl font-bold tracking-tight text-[#fcd34d] md:text-3xl"
                     >
                         Kapoor&apos;s Villa
                     </motion.h1>
@@ -122,7 +122,7 @@ export default function Navbar() {
                                             href={link.href}
                                             className={`relative flex items-center px-4 py-2 text-xs font-medium uppercase tracking-[0.25em] transition-colors duration-300 ${
                                                 active
-                                                    ? "text-amber-500"
+                                                    ? "text-[#fcd34d]"
                                                     : "text-muted-foreground hover:text-foreground"
                                             }`}
                                         >
@@ -131,7 +131,7 @@ export default function Navbar() {
                                             {active && (
                                                 <motion.span
                                                     layoutId="navbar-indicator"
-                                                    className="absolute -bottom-1 left-0 h-0.5 w-full rounded-full bg-amber-500"
+                                                    className="absolute -bottom-1 left-0 h-0.5 w-full rounded-full bg-[#fcd34d]"
                                                     transition={{
                                                         type: "spring",
                                                         stiffness: 350,
@@ -172,7 +172,7 @@ export default function Navbar() {
                     >
                         <Button
                             asChild
-                            className="rounded-full bg-amber-500 px-7 text-black shadow-lg shadow-amber-500/20 transition-all duration-300 hover:bg-amber-400 hover:shadow-xl hover:shadow-amber-500/30"
+                            className=" bg-[#fcd34d] px-7 text-black shadow-lg shadow-[#fcd34d]/20 transition-all duration-300 hover:bg-[#fcd34d]/80 hover:shadow-xl hover:shadow-[#fcd34d]/30"
                         >
                             <Link href="/contact">Book Now</Link>
                         </Button>
@@ -232,7 +232,7 @@ export default function Navbar() {
                                             href={link.href}
                                             className={`block rounded-lg px-4 py-3 text-sm uppercase tracking-[0.25em] transition-all duration-300 ${
                                                 active
-                                                    ? "bg-amber-500/10 text-amber-500"
+                                                    ? "bg-[#fcd34d]/10 text-[#fcd34d]"
                                                     : "text-muted-foreground hover:bg-accent hover:text-foreground"
                                             }`}
                                         >
@@ -262,7 +262,7 @@ export default function Navbar() {
                                     <Button
                                         asChild
                                         size="lg"
-                                        className="w-full rounded-full bg-amber-500 text-black hover:bg-amber-400"
+                                        className="w-full rounded-full bg-[#fcd34d] text-black hover:bg-[#fcd34d]/80"
                                     >
                                         <Link href="/book">Book Your Stay</Link>
                                     </Button>

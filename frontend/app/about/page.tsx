@@ -64,7 +64,7 @@ const paidAddons = [
 
 export default function AboutPage() {
     return (
-        <div className="min-h-screen bg-[#faf8f5] text-slate-800 selection:bg-amber-500 selection:text-slate-950 dark:bg-[#0a111e] dark:text-amber-50 transition-colors duration-300">
+        <div className="min-h-screen bg-[#FDFBF7] text-[#112A46] selection:bg-[#fcd34d] selection:text-[#112A46] dark:bg-[#112A46] dark:text-[#FDFBF7] transition-colors duration-300">
             <Navbar />
 
             <main>
@@ -78,30 +78,30 @@ export default function AboutPage() {
                         className="object-cover transition-transform duration-10000 hover:scale-105"
                     />
 
-                    {/* Sunset Dusk Overlay adapted for Light & Dark Themes */}
-                    <div className="absolute inset-0 bg-gradient-to-b from-[#0a111e]/80 via-[#0a111e]/60 to-[#faf8f5] dark:from-[#0a111e]/90 dark:via-[#0a111e]/50 dark:to-[#0a111e]" />
-                    <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-amber-600/30 via-amber-900/10 to-transparent" />
+                    {/* Sunset Dusk Overlay - Smoothed out for a classier fade */}
+                    <div className="absolute inset-0 bg-gradient-to-b from-[#112A46]/90 via-[#112A46]/40 to-[#FDFBF7] dark:from-[#112A46]/95 dark:via-[#112A46]/60 dark:to-[#112A46]" />
+                    <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-[#fcd34d]/20 via-transparent to-transparent" />
 
                     <HeroReveal className="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center">
                         {/* Decorative Header Accent */}
-                        <div className="mb-4 flex items-center justify-center gap-3">
-                            <span className="h-[1px] w-12 bg-gradient-to-r from-transparent to-amber-500 dark:to-amber-400" />
-                            <span className="text-xs font-serif uppercase tracking-[0.4em] text-amber-500 dark:text-amber-400 font-semibold">
+                        <div className="mb-6 flex items-center justify-center gap-4 opacity-90">
+                            <span className="h-[1px] w-16 bg-gradient-to-r from-transparent to-[#fcd34d]" />
+                            <span className="text-xs font-serif uppercase tracking-[0.5em] text-[#fcd34d] font-medium">
                                 Panchgani
                             </span>
-                            <span className="h-[1px] w-12 bg-gradient-to-l from-transparent to-amber-500 dark:to-amber-400" />
+                            <span className="h-[1px] w-16 bg-gradient-to-l from-transparent to-[#fcd34d]" />
                         </div>
 
                         {/* Gold Metallic Title */}
-                        <h1 className="font-serif text-4xl font-extrabold tracking-wide bg-gradient-to-r from-amber-200 via-amber-400 to-amber-500 bg-clip-text text-transparent md:text-6xl drop-shadow-md">
+                        <h1 className="font-serif text-5xl font-light tracking-widest text-[#fcd34d] md:text-7xl drop-shadow-lg">
                             KAPOOR&apos;S VILLA
                         </h1>
 
-                        <p className="mt-3 font-serif text-sm uppercase tracking-[0.3em] text-amber-300/90">
+                        <p className="mt-5 font-serif text-sm uppercase tracking-[0.4em] text-[#fcd34d]/80">
                             Luxury Sunset Sanctuary
                         </p>
 
-                        <p className="mt-6 max-w-2xl text-sm leading-relaxed text-amber-100/90 md:text-base">
+                        <p className="mt-8 max-w-2xl text-sm font-light leading-loose text-[#FDFBF7]/90 md:text-base">
                             Where architectural grandeur meets the warmth of Panchgani sunsets. Enjoy 10,000 sq. ft. of lush lawns, private poolside indulgence, and unforgettable mountain vistas.
                         </p>
                     </HeroReveal>
@@ -109,51 +109,51 @@ export default function AboutPage() {
 
                 {/* OUR STORY SECTION */}
                 <FadeUp>
-                    <section className="container mx-auto px-6 py-20 md:py-28">
-                        <div className="grid items-center gap-12 lg:grid-cols-2">
+                    <section className="container mx-auto px-6 py-24 md:py-32">
+                        <div className="grid items-center gap-16 lg:grid-cols-2">
                             <FadeLeft>
-                                <div>
-                                    <div className="mb-3 flex items-center gap-2">
-                                        <div className="h-2 w-2 rounded-full bg-amber-500 dark:bg-amber-400" />
-                                        <p className="text-xs font-semibold uppercase tracking-[0.35em] text-amber-600 dark:text-amber-400">
+                                <div className="pr-4 lg:pr-8">
+                                    <div className="mb-4 flex items-center gap-3">
+                                        <div className="h-[1px] w-8 bg-[#fcd34d]" />
+                                        <p className="text-xs font-medium uppercase tracking-[0.4em] text-[#fcd34d]">
                                             Our Heritage
                                         </p>
                                     </div>
 
-                                    <h2 className="font-serif text-3xl font-bold leading-tight text-slate-900 dark:text-white md:text-5xl">
+                                    <h2 className="font-serif text-4xl font-light leading-tight tracking-wide text-[#112A46] dark:text-[#FDFBF7] md:text-5xl">
                                         Crafted For <br />
-                                        <span className="bg-gradient-to-r from-amber-500 via-amber-600 to-amber-700 dark:from-amber-200 dark:via-amber-400 dark:to-amber-600 bg-clip-text text-transparent">
+                                        <span className="font-medium text-[#fcd34d] italic">
                                             Golden Moments
                                         </span>
                                     </h2>
 
-                                    <p className="mt-6 leading-relaxed text-slate-600 dark:text-amber-100/70">
+                                    <p className="mt-8 font-light leading-loose text-[#112A46]/70 dark:text-[#FDFBF7]/70">
                                         Kapoor&apos;s Villa Panchgani was envisioned as a haven where warm sunset hues meet refined luxury. Set against a 10,000 sq. ft. natural lawn with a private swimming pool and 4 grand suites, it provides an exquisite retreat for families and groups.
                                     </p>
 
-                                    <p className="mt-4 leading-relaxed text-slate-500 dark:text-amber-100/60">
+                                    <p className="mt-5 font-light leading-loose text-[#112A46]/60 dark:text-[#FDFBF7]/60">
                                         Designed to comfortably host 8–12 guests, every feature—from evening bonfires and barbeques under the stars to indoor games—is tailored for seamless comfort.
                                     </p>
 
                                     <Button
                                         asChild
-                                        className="mt-8 bg-gradient-to-r from-amber-500 via-amber-600 to-amber-700 dark:from-amber-400 dark:via-amber-500 dark:to-amber-600 text-white dark:text-slate-950 font-bold hover:brightness-110 shadow-lg shadow-amber-500/20 px-8 py-6 rounded-xl transition-all"
+                                        className="mt-10 rounded-none border border-[#fcd34d] bg-transparent text-[#112A46] dark:text-[#fcd34d] uppercase tracking-[0.2em] hover:bg-[#fcd34d] hover:text-[#112A46] px-10 py-7 transition-all duration-500"
                                     >
-                                        <Link href="/rooms">Explore Suites</Link>
+                                        <Link href="/room">Explore Suites</Link>
                                     </Button>
                                 </div>
                             </FadeLeft>
 
                             <FadeRight>
-                                <div className="group relative h-[480px] overflow-hidden rounded-2xl border border-amber-500/30 p-2 bg-amber-500/5 dark:bg-gradient-to-b dark:from-amber-500/10 dark:to-transparent">
-                                    <div className="relative h-full w-full overflow-hidden rounded-xl">
+                                <div className="group relative mx-auto h-[420px] w-full max-w-md overflow-hidden rounded-t-full rounded-b-md border border-[#fcd34d]/20 bg-[#fcd34d]/5 p-2 dark:bg-[#fcd34d]/5 shadow-2xl shadow-[#112A46]/5">
+                                    <div className="relative h-full w-full overflow-hidden rounded-t-full rounded-b-sm">
                                         <Image
-                                            src="/about-story.jpg"
+                                            src="/outdoor/sunset-view.webp"
                                             alt="Kapoor Villa Sunset View"
                                             fill
-                                            className="object-cover transition-transform duration-700 group-hover:scale-105"
+                                            className="object-cover transition-transform duration-1000 group-hover:scale-110"
                                         />
-                                        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent dark:from-[#0a111e] opacity-80" />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-[#112A46]/60 via-transparent to-transparent opacity-90 dark:from-[#112A46]" />
                                     </div>
                                 </div>
                             </FadeRight>
@@ -163,29 +163,30 @@ export default function AboutPage() {
 
                 {/* VILLA HIGHLIGHTS / AMENITIES */}
                 <FadeUp>
-                    <section className="border-y border-amber-500/20 bg-amber-500/5 dark:bg-[#070c16] py-20 md:py-28 relative">
+                    <section className="border-y border-[#fcd34d]/10 bg-gradient-to-b from-[#FDFBF7] to-[#fcd34d]/5 dark:from-[#112A46] dark:to-[#0C1E33] py-24 md:py-32 relative">
                         <div className="container mx-auto px-6">
-                            <div className="mb-14 text-center">
-                                <p className="text-xs uppercase tracking-[0.35em] text-amber-600 dark:text-amber-400 font-semibold">
+                            <div className="mb-16 text-center">
+                                <p className="text-xs font-medium uppercase tracking-[0.4em] text-[#fcd34d]">
                                     Exclusive Features
                                 </p>
-                                <h2 className="mt-2 font-serif text-3xl font-bold text-slate-900 dark:bg-gradient-to-r dark:from-amber-100 dark:via-amber-300 dark:to-amber-500 dark:bg-clip-text dark:text-transparent md:text-4xl">
+                                <h2 className="mt-4 font-serif text-4xl font-light tracking-wide text-[#112A46] dark:text-[#FDFBF7]">
                                     Villa Amenities
                                 </h2>
-                                <p className="mx-auto mt-3 max-w-md text-slate-600 dark:text-amber-100/60 text-sm">
+                                <div className="mx-auto mt-6 h-[1px] w-12 bg-[#fcd34d]/50" />
+                                <p className="mx-auto mt-6 max-w-md font-light text-[#112A46]/70 dark:text-[#FDFBF7]/60">
                                     Tailored amenities crafted for groups of 8 to 12 guests.
                                 </p>
                             </div>
 
-                            <Stagger className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+                            <Stagger className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
                                 {mainAmenities.map((item) => (
                                     <StaggerItem key={item.label}>
                                         <ScaleIn>
-                                            <Card className="flex items-center gap-4 border-amber-500/20 bg-white/80 dark:bg-[#0f192c]/90 p-5 backdrop-blur transition-all duration-300 hover:border-amber-500/50 hover:shadow-lg hover:shadow-amber-500/10 dark:hover:bg-[#132038]">
-                                                <div className="rounded-lg bg-gradient-to-br from-amber-400 to-amber-600 p-3 text-slate-950 shadow-md shadow-amber-500/20">
-                                                    <item.icon className="h-5 w-5" />
+                                            <Card className="group flex h-full cursor-default flex-col items-center justify-center gap-4 border-[#fcd34d]/10 bg-white/40 dark:bg-[#173454]/40 p-8 backdrop-blur-md transition-all duration-500 hover:-translate-y-1 hover:border-[#fcd34d]/30 hover:bg-white/80 hover:shadow-xl hover:shadow-[#fcd34d]/5 dark:hover:bg-[#173454]/80">
+                                                <div className="flex h-14 w-14 items-center justify-center rounded-full border border-[#fcd34d]/30 bg-transparent text-[#fcd34d] transition-colors duration-500 group-hover:bg-[#fcd34d] group-hover:text-[#112A46]">
+                                                    <item.icon className="h-6 w-6 stroke-[1.5]" />
                                                 </div>
-                                                <span className="font-medium text-slate-800 dark:text-amber-100 text-sm md:text-base">
+                                                <span className="text-center text-sm font-light tracking-wide text-[#112A46] dark:text-[#FDFBF7]">
                                                     {item.label}
                                                 </span>
                                             </Card>
@@ -199,73 +200,77 @@ export default function AboutPage() {
 
                 {/* TIMINGS, ADD-ONS & ACTIVITIES */}
                 <FadeUp>
-                    <section className="container mx-auto px-6 py-20 md:py-28">
-                        <div className="grid gap-8 lg:grid-cols-3">
+                    <section className="container mx-auto px-6 py-24 md:py-32">
+                        <div className="grid gap-12 lg:grid-cols-3 lg:gap-16">
                             
                             {/* Rules & Timings */}
-                            <Card className="border-amber-500/20 bg-white/70 dark:bg-[#0f192c]/80 backdrop-blur rounded-2xl shadow-sm">
-                                <CardHeader>
-                                    <CardTitle className="flex items-center gap-3 font-serif text-xl text-amber-600 dark:text-amber-300">
-                                        <Clock className="h-5 w-5 text-amber-500 dark:text-amber-400" /> Rules & Timings
-                                    </CardTitle>
-                                </CardHeader>
-                                <CardContent className="space-y-4 text-sm text-slate-700 dark:text-amber-100/80">
-                                    <div className="flex justify-between border-b border-amber-500/10 pb-3">
-                                        <span>Check-in:</span>
-                                        <span className="text-amber-600 dark:text-amber-300 font-semibold">2:00 PM</span>
+                            <div className="flex flex-col">
+                                <div className="mb-8 flex items-center gap-4 border-b border-[#fcd34d]/30 pb-4">
+                                    <Clock className="h-5 w-5 stroke-[1.5] text-[#fcd34d]" />
+                                    <h3 className="font-serif text-2xl font-light tracking-wide text-[#112A46] dark:text-[#FDFBF7]">
+                                        Rules & Timings
+                                    </h3>
+                                </div>
+                                <div className="space-y-4 text-sm font-light text-[#112A46]/80 dark:text-[#FDFBF7]/80">
+                                    <div className="flex justify-between border-b border-[#112A46]/5 pb-3 dark:border-[#FDFBF7]/5">
+                                        <span className="uppercase tracking-widest text-[#112A46]/60 dark:text-[#FDFBF7]/60 text-xs">Check-in</span>
+                                        <span className="font-medium text-[#fcd34d]">2:00 PM</span>
                                     </div>
-                                    <div className="flex justify-between border-b border-amber-500/10 pb-3">
-                                        <span>Check-out:</span>
-                                        <span className="text-amber-600 dark:text-amber-300 font-semibold">11:00 AM</span>
+                                    <div className="flex justify-between border-b border-[#112A46]/5 pb-3 dark:border-[#FDFBF7]/5">
+                                        <span className="uppercase tracking-widest text-[#112A46]/60 dark:text-[#FDFBF7]/60 text-xs">Check-out</span>
+                                        <span className="font-medium text-[#fcd34d]">11:00 AM</span>
                                     </div>
-                                    <div className="flex justify-between border-b border-amber-500/10 pb-3">
-                                        <span>Kitchen Timing:</span>
-                                        <span>7:00 AM – 11:00 PM</span>
+                                    <div className="flex justify-between border-b border-[#112A46]/5 pb-3 dark:border-[#FDFBF7]/5">
+                                        <span className="uppercase tracking-widest text-[#112A46]/60 dark:text-[#FDFBF7]/60 text-xs">Kitchen</span>
+                                        <span className="font-medium text-[#112A46] dark:text-[#FDFBF7]">7:00 AM – 11:00 PM</span>
                                     </div>
                                     <div className="flex justify-between pb-1">
-                                        <span>Support:</span>
-                                        <span>24 Hours Caretaker</span>
+                                        <span className="uppercase tracking-widest text-[#112A46]/60 dark:text-[#FDFBF7]/60 text-xs">Support</span>
+                                        <span className="font-medium text-[#112A46] dark:text-[#FDFBF7]">24 Hours Caretaker</span>
                                     </div>
-                                </CardContent>
-                            </Card>
+                                </div>
+                            </div>
 
                             {/* Extra Add-ons */}
-                            <Card className="border-amber-500/20 bg-white/70 dark:bg-[#0f192c]/80 backdrop-blur rounded-2xl shadow-sm">
-                                <CardHeader>
-                                    <CardTitle className="flex items-center gap-3 font-serif text-xl text-amber-600 dark:text-amber-300">
-                                        <Flame className="h-5 w-5 text-amber-500 dark:text-amber-400" /> Optional Services
-                                    </CardTitle>
-                                </CardHeader>
-                                <CardContent className="space-y-3 text-sm">
+                            <div className="flex flex-col">
+                                <div className="mb-8 flex items-center gap-4 border-b border-[#fcd34d]/30 pb-4">
+                                    <Flame className="h-5 w-5 stroke-[1.5] text-[#fcd34d]" />
+                                    <h3 className="font-serif text-2xl font-light tracking-wide text-[#112A46] dark:text-[#FDFBF7]">
+                                        Optional Services
+                                    </h3>
+                                </div>
+                                <div className="space-y-4 text-sm font-light">
                                     {paidAddons.map((addon) => (
-                                        <div key={addon.name} className="flex justify-between border-b border-amber-500/10 pb-2.5 text-slate-700 dark:text-amber-100/80">
+                                        <div key={addon.name} className="flex justify-between border-b border-[#112A46]/5 pb-3 text-[#112A46]/80 dark:border-[#FDFBF7]/5 dark:text-[#FDFBF7]/80">
                                             <span>{addon.name}</span>
-                                            <span className="font-semibold text-amber-600 dark:text-amber-400">{addon.price}</span>
+                                            <span className="font-medium tracking-wide text-[#fcd34d]">{addon.price}</span>
                                         </div>
                                     ))}
-                                </CardContent>
-                            </Card>
+                                </div>
+                            </div>
 
                             {/* Activities */}
-                            <Card className="border-amber-500/20 bg-white/70 dark:bg-[#0f192c]/80 backdrop-blur rounded-2xl shadow-sm">
-                                <CardHeader>
-                                    <CardTitle className="flex items-center gap-3 font-serif text-xl text-amber-600 dark:text-amber-300">
-                                        <Dices className="h-5 w-5 text-amber-500 dark:text-amber-400" /> On-site Activities
-                                    </CardTitle>
-                                </CardHeader>
-                                <CardContent className="space-y-4">
-                                    <p className="text-sm text-slate-500 dark:text-amber-100/60">
-                                        Indoor & outdoor recreation options available on site:
+                            <div className="flex flex-col">
+                                <div className="mb-8 flex items-center gap-4 border-b border-[#fcd34d]/30 pb-4">
+                                    <Dices className="h-5 w-5 stroke-[1.5] text-[#fcd34d]" />
+                                    <h3 className="font-serif text-2xl font-light tracking-wide text-[#112A46] dark:text-[#FDFBF7]">
+                                        On-site Activities
+                                    </h3>
+                                </div>
+                                <div className="flex flex-col space-y-6">
+                                    <p className="text-sm font-light leading-relaxed text-[#112A46]/70 dark:text-[#FDFBF7]/70">
+                                        Indoor & outdoor recreation options available on site for your entertainment:
                                     </p>
-                                    <ul className="grid grid-cols-2 gap-3 text-sm">
+                                    <ul className="grid grid-cols-2 gap-y-4 gap-x-2 text-sm font-light">
                                         {activities.map((act) => (
-                                            <li key={act} className="flex items-center gap-2 rounded-lg bg-amber-500/10 border border-amber-500/20 px-3 py-2 text-amber-800 dark:text-amber-200 font-medium">
-                                                <span className="text-amber-500 dark:text-amber-400">✦</span> {act}
+                                            <li key={act} className="flex items-center gap-3 text-[#112A46] dark:text-[#FDFBF7]">
+                                                <span className="block h-[1px] w-3 shrink-0 bg-[#fcd34d]" /> 
+                                                <span>{act}</span>
                                             </li>
                                         ))}
                                     </ul>
-                                </CardContent>
-                            </Card>
+                                </div>
+                            </div>
 
                         </div>
                     </section>
@@ -273,73 +278,85 @@ export default function AboutPage() {
 
                 {/* STATS SECTION */}
                 <FadeUp>
-                    <section className="container mx-auto px-6 pb-20">
-                        <Stagger className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-                            {stats.map((item) => (
-                                <StaggerItem key={item.label}>
-                                    <ScaleIn>
-                                        <div className="rounded-2xl border border-amber-500/20 bg-white/60 dark:bg-[#0f192c]/60 p-8 text-center backdrop-blur transition-all duration-300 hover:border-amber-500/50 hover:shadow-lg hover:shadow-amber-500/10">
-                                            <h3 className="font-serif text-5xl font-bold bg-gradient-to-r from-amber-500 via-amber-600 to-amber-700 dark:from-amber-200 dark:via-amber-400 dark:to-amber-500 bg-clip-text text-transparent">
-                                                {item.value}
-                                            </h3>
-                                            <p className="mt-3 text-xs uppercase tracking-[0.25em] text-slate-500 dark:text-amber-200/60">
-                                                {item.label}
-                                            </p>
-                                        </div>
-                                    </ScaleIn>
-                                </StaggerItem>
-                            ))}
-                        </Stagger>
+                    <section className="container mx-auto px-6 pb-24 md:pb-32">
+                        <div className="border-y border-[#fcd34d]/20 py-16 relative overflow-hidden">
+                            {/* Subtle background glow for the stats */}
+                            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#fcd34d]/5 via-transparent to-transparent" />
+                            
+                            <Stagger className="relative z-10 grid gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:divide-x divide-[#fcd34d]/20">
+                                {stats.map((item) => (
+                                    <StaggerItem key={item.label}>
+                                        <ScaleIn>
+                                            <div className="flex flex-col items-center justify-center text-center">
+                                                <h3 className="font-serif text-5xl font-light tracking-widest text-[#112A46] dark:text-[#FDFBF7] md:text-6xl">
+                                                    {item.value}
+                                                </h3>
+                                                <div className="my-5 h-[1px] w-8 bg-[#fcd34d]" />
+                                                <p className="text-xs font-medium uppercase tracking-[0.3em] text-[#fcd34d]">
+                                                    {item.label}
+                                                </p>
+                                            </div>
+                                        </ScaleIn>
+                                    </StaggerItem>
+                                ))}
+                            </Stagger>
+                        </div>
                     </section>
                 </FadeUp>
 
                 {/* CTA BANNER */}
+              {/* CTA BANNER */}
                 <FadeUp>
-                    <section className="container mx-auto px-6 pb-28">
-                        <Card className="relative overflow-hidden rounded-3xl border border-amber-500/30">
-                            <Image
-                                src="/outer/about-story.jpg"
-                                alt="Kapoor Villa Sunset"
-                                fill
-                                className="object-cover"
-                            />
+                    <section className="container mx-auto px-6 pb-32">
+                        <div className="relative overflow-hidden rounded-sm shadow-2xl shadow-[#112A46]/10">
+                            <div className="absolute inset-0">
+                                <Image
+                                    src="/outer/about-story.jpg"
+                                    alt="Kapoor Villa Experience"
+                                    fill
+                                    className="object-cover"
+                                />
+                                {/* Reduced the opacity from /95 and /80 to /80 and /40 so the image is much more visible */}
+                                <div className="absolute inset-0 bg-gradient-to-r from-[#112A46]/80 via-[#112A46]/40 to-transparent dark:from-[#112A46]/90 dark:via-[#112A46]/50" />
+                            </div>
 
-                            {/* Dark/Warm Gradient Overlay for High Readability */}
-                            <div className="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/80 to-transparent dark:from-[#0a111e]/95 dark:via-[#0a111e]/85" />
+                            <div className="relative z-10 flex min-h-[450px] max-w-3xl flex-col items-start justify-center p-10 md:p-20">
+                                <div className="mb-6 flex items-center gap-4 opacity-90">
+                                    <span className="h-[1px] w-12 bg-gradient-to-r from-transparent to-[#fcd34d]" />
+                                    <span className="text-xs font-serif uppercase tracking-[0.5em] text-[#fcd34d] font-medium">
+                                        Reserve Your Dates
+                                    </span>
+                                </div>
 
-                            <CardContent className="relative z-10 flex min-h-[400px] max-w-2xl flex-col items-start justify-center p-8 md:p-14">
-                                <p className="text-xs font-semibold uppercase tracking-[0.45em] text-amber-400">
-                                    Reserve Your Dates
-                                </p>
-
-                                <h2 className="mt-3 font-serif text-3xl font-bold text-white md:text-5xl">
-                                    Your Panchgani Gateway Awaits
+                                <h2 className="font-serif text-4xl font-light leading-tight tracking-wide text-white md:text-5xl">
+                                    Your Panchgani Gateway <br className="hidden md:block" />
+                                    <span className="font-medium text-[#fcd34d] italic">Awaits</span>
                                 </h2>
 
-                                <p className="mt-4 text-sm leading-relaxed text-amber-100/80 md:text-base">
-                                    Plan your luxury staycation or family celebration at Kapoor&apos;s Villa today.
+                                <p className="mt-6 text-sm font-light leading-loose text-[#FDFBF7]/90 md:text-base">
+                                    Plan your luxury staycation or family celebration at Kapoor&apos;s Villa today. Escape into comfort and create timeless memories.
                                 </p>
 
-                                <div className="mt-8 flex flex-wrap gap-4">
+                                <div className="mt-10 flex flex-wrap gap-5">
                                     <Button
                                         asChild
                                         size="lg"
-                                        className="bg-gradient-to-r from-amber-400 to-amber-600 px-8 font-bold text-slate-950 shadow-xl shadow-amber-500/20 hover:brightness-110"
+                                        className="rounded-none bg-[#fcd34d] px-10 py-6 uppercase tracking-[0.2em] text-[#112A46] transition-all duration-500 hover:bg-[#FDFBF7]"
                                     >
-                                        <Link href="/book">Book Your Stay</Link>
+                                        <Link href="/contact">Book Your Stay</Link>
                                     </Button>
 
                                     <Button
                                         asChild
                                         size="lg"
                                         variant="outline"
-                                        className="border-amber-400/40 bg-black/40 px-8 text-amber-300 hover:bg-amber-400/10"
+                                        className="rounded-none border-[#fcd34d]/40 bg-transparent px-10 py-6 uppercase tracking-[0.2em] text-[#fcd34d] transition-all duration-500 hover:bg-[#fcd34d]/10 hover:text-[#fcd34d]"
                                     >
                                         <Link href="/gallery">View Gallery</Link>
                                     </Button>
                                 </div>
-                            </CardContent>
-                        </Card>
+                            </div>
+                        </div>
                     </section>
                 </FadeUp>
                 <LocationSection />

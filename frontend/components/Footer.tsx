@@ -37,7 +37,7 @@ export default function Footer() {
     return (
         <footer className="relative overflow-hidden border-t bg-background">
             {/* Background Glow */}
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(245,158,11,0.04),transparent_50%)]" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(252,211,77,0.04),transparent_50%)]" />
 
             {/* Tightened Padding */}
             <div className="container relative mx-auto px-6 pt-10 pb-6">
@@ -47,7 +47,7 @@ export default function Footer() {
                     <div className="space-y-3 lg:col-span-2 lg:pr-12">
                         <motion.h2
                             whileHover={{ scale: 1.02, originX: 0 }}
-                            className="font-serif text-2xl font-bold text-amber-500"
+                            className="font-serif text-2xl font-bold text-[#fcd34d]"
                         >
                             Kapoor&apos;s Villa
                         </motion.h2>
@@ -62,7 +62,7 @@ export default function Footer() {
                                 href="https://instagram.com/yourpage"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="rounded-full border border-border p-2.5 text-muted-foreground transition-colors hover:border-amber-500 hover:text-amber-500"
+                                className="rounded-full border border-border p-2.5 text-muted-foreground transition-colors hover:border-[#fcd34d] hover:text-[#fcd34d]"
                             >
                                 <FaInstagram className="h-3.5 w-3.5" />
                             </motion.a>
@@ -87,7 +87,7 @@ export default function Footer() {
                                 <motion.li key={link.href} whileHover={{ x: 2 }}>
                                     <Link
                                         href={link.href}
-                                        className="group inline-flex items-center text-sm text-muted-foreground transition-colors hover:text-amber-500"
+                                        className="group inline-flex items-center text-sm text-muted-foreground transition-colors hover:text-[#fcd34d]"
                                     >
                                         {link.title}
                                         <ArrowUpRight className="ml-1 h-3 w-3 opacity-0 transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:opacity-100" />
@@ -107,12 +107,12 @@ export default function Footer() {
                                     whileHover={{ x: 2 }}
                                     className="flex items-center gap-2"
                                 >
-                                    <info.icon className="h-4 w-4 shrink-0 text-amber-500" />
+                                    <info.icon className="h-4 w-4 shrink-0 text-[#fcd34d]" />
                                     <a
                                         href={info.href}
                                         target={info.target}
                                         rel={info.target ? "noopener noreferrer" : undefined}
-                                        className="truncate text-sm text-muted-foreground transition-colors hover:text-amber-500"
+                                        className="truncate text-sm text-muted-foreground transition-colors hover:text-[#fcd34d]"
                                     >
                                         {info.text}
                                     </a>
@@ -128,14 +128,14 @@ export default function Footer() {
                 {/* Bottom */}
                 <div className="flex flex-col items-center justify-between gap-3 md:flex-row">
                     <p className="text-xs text-muted-foreground">
-                        © {new Date().getFullYear()} Kapoor&apos;s Villa. Crafted with elegance.
+                        © {new Date().getFullYear()} Kapoor&apos;s Villa. Crafted with elegance ❤️.
                     </p>
 
                     <motion.button
                         whileHover={{ y: -2 }}
                         whileTap={{ scale: 0.95 }}
                         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-                        className="rounded-full border border-border px-4 py-1.5 text-xs font-medium uppercase tracking-[0.15em] text-muted-foreground transition-colors hover:border-amber-500 hover:text-amber-500"
+                        className="rounded-full border border-border px-4 py-1.5 text-xs font-medium uppercase tracking-[0.15em] text-muted-foreground transition-colors hover:border-[#fcd34d] hover:text-[#fcd34d]"
                     >
                         Back to Top ↑
                     </motion.button>
