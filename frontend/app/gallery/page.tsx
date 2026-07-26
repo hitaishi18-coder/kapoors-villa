@@ -70,6 +70,78 @@ const gallery = [
         image: "/extraas/rain-dance.png",
         height: "h-[460px]",
     },
+    {
+        title: "Hill Top View",
+        category: "Exterior",
+        image: "/extraas/hill-top-view.jpeg",
+        height: "h-[420px]",
+    },
+    {
+        title: "Pool Side Walk",
+        category: "Pool",
+        image: "/extraas/pool-side-walk.jpeg",
+        height: "h-[560px]",
+    },
+    {
+        title: "Roof Top View",
+        category: "Exterior",
+        image: "/extraas/roof-top-view.jpeg",
+        height: "h-[360px]",
+    },
+    {
+        title: "Sunrise View Pool Side",
+        category: "Experiences",
+        image: "/outdoor/sunrise-view-pool-side.jpg",
+        height: "h-[380px]",
+    },
+    {
+        title: "Lawn View",
+        category: "Exterior",
+        image: "/lawn/lawn-view.jpg",
+        height: "h-[460px]",
+    },
+    {
+        title: "Balcony View",
+        category: "Rooms",
+        image: "/outdoor/balcony-view.jpg",
+        height: "h-[520px]",
+    },
+    {
+        title: "Balcony View 2",
+        category: "Rooms",
+        image: "/outdoor/balcony-view-2.jpg",
+        height: "h-[380px]",
+    },
+    {
+        title: "Dining Area for Dinner",
+        category: "Dining",
+        image: "/outdoor/dining-2.jpg",
+        height: "h-[460px]",
+    },
+    {
+        title: "Sofa Area",
+        category: "Rooms",
+        image: "/dining/dining7.jpg",
+        height: "h-[400px]",
+    },
+    {
+        title: "Sunset View Pool Side",
+        category: "Pool",
+        image: "/outdoor/pool.jpg",
+        height: "h-[500px]",
+    },
+    {
+        title: "Night View Villa",
+        category: "Exterior",
+        image: "/outer/night-view-villa.jpg",
+        height: "h-[480px]",
+    },
+    {
+        title: "Pool Side Chairs",
+        category: "Pool",
+        image: "/outer/pool-side-chairs.jpg",
+        height: "h-[380px]",
+    },
 ];
 
 export default function GalleryPage() {
@@ -81,14 +153,14 @@ export default function GalleryPage() {
                 {/* Hero */}
                 <section className="relative h-[75vh] overflow-hidden">
                     <Image
-                        src="/gallery/gallery-hero.webp"
+                        src="/outdoor/outdoor-3.webp"
                         alt="Kapoor's Villa Gallery"
                         fill
                         priority
                         className="object-cover transition-transform duration-12000 hover:scale-110"
                     />
 
-                    <div className="absolute inset-0 bg-black/60" />
+                    <div className="absolute inset-0 bg-black/10" />
 
                     <div className="absolute inset-0 bg-linear-to-b from-black/20 via-transparent to-black/80" />
 
@@ -220,7 +292,7 @@ export default function GalleryPage() {
                                 className="object-cover"
                             />
 
-                            <div className="absolute inset-0 bg-black/75" />
+                            <div className="absolute inset-0 bg-black/10" />
 
                             <div className="absolute inset-0 bg-linear-to-r from-black/80 via-black/55 to-black/30" />
 
@@ -278,7 +350,7 @@ export default function GalleryPage() {
                                     Villa.
                                 </p>
 
-                                {/* <div className="mt-10 flex flex-wrap gap-4">
+                                <div className="mt-10 flex flex-wrap gap-4">
                                     <Button
                                         asChild
                                         size="lg"
@@ -295,7 +367,7 @@ export default function GalleryPage() {
                                     >
                                         <Link href="/contact">Contact Us</Link>
                                     </Button>
-                                </div> */}
+                                </div>
                             </div>
 
                             {/* Right */}

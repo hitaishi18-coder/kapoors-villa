@@ -52,7 +52,7 @@ export default function FAQSection() {
         }}
       />
 
-      <h2 className="text-3xl font-bold text-center mb-8">
+      <h2 className="text-3xl font-bold text-center mb-8 dark:text-white">
         Frequently Asked Questions
       </h2>
 
@@ -60,11 +60,11 @@ export default function FAQSection() {
         {faqs.map((faq, index) => (
           <div
             key={index}
-            className="border border-slate-200 dark:border-slate-800 rounded-lg overflow-hidden"
+            className="border border-slate-200 dark:border-neutral-800 rounded-lg overflow-hidden"
           >
             <button
               onClick={() => setOpenIndex(openIndex === index ? null : index)}
-              className="w-full text-left p-4 font-semibold flex justify-between items-center bg-slate-50 dark:bg-slate-900 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+              className="w-full text-left p-4 font-semibold flex justify-between items-center bg-slate-50 dark:bg-neutral-900/50 hover:bg-slate-100 dark:hover:bg-neutral-900/80 transition-colors dark:text-white"
             >
               <span>{faq.question}</span>
               <span className="text-xl font-bold">
@@ -72,7 +72,7 @@ export default function FAQSection() {
               </span>
             </button>
             {openIndex === index && (
-              <div className="p-4 text-slate-600 dark:text-slate-300 bg-white dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800">
+              <div className="p-4 text-slate-600 dark:text-neutral-400 bg-white dark:bg-[#1E1E1E] border-t border-slate-200 dark:border-neutral-800">
                 {faq.answer}
               </div>
             )}

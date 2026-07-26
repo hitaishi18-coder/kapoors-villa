@@ -113,7 +113,6 @@ export default function HomePage() {
                         </p>
 
                         {/* Buttons */}
-                       {/* Buttons */}
                         <div className="mt-12 flex flex-wrap justify-center gap-5">
                             <Button
                                 asChild
@@ -177,18 +176,18 @@ export default function HomePage() {
                     </HeroReveal>
                 </section>
 
-               {/* AMENITIES */}
+                {/* AMENITIES */}
                 <FadeUp>
                     <section className="container mx-auto px-6 py-24 md:py-32">
                         <div className="mb-16 text-center">
                             <p className="text-xs font-medium uppercase tracking-[0.4em] text-[#fcd34d]">
                                 World Class Amenities
                             </p>
-                            <h2 className="mt-4 font-serif text-4xl font-light tracking-wide text-[#112A46] dark:text-[#FDFBF7]">
+                            <h2 className="mt-4 font-serif text-4xl font-light tracking-wide text-[#112A46] dark:text-white">
                                 Curated Luxury Experience
                             </h2>
                             <div className="mx-auto mt-6 h-[1px] w-12 bg-[#fcd34d]/50" />
-                            <p className="mx-auto mt-6 max-w-2xl font-light leading-loose text-[#112A46]/70 dark:text-[#FDFBF7]/60">
+                            <p className="mx-auto mt-6 max-w-2xl font-light leading-loose text-[#112A46]/70 dark:text-neutral-400">
                                 Every stay is thoughtfully designed to provide
                                 comfort, elegance and unforgettable experiences.
                             </p>
@@ -204,11 +203,11 @@ export default function HomePage() {
                                                 <item.icon className="h-6 w-6 stroke-[1.5] text-[#fcd34d]" />
                                             </div>
 
-                                            <h3 className="font-serif text-2xl font-light text-[#112A46] dark:text-[#FDFBF7]">
+                                            <h3 className="font-serif text-2xl font-light text-[#112A46] dark:text-white">
                                                 {item.title}
                                             </h3>
 
-                                            <p className="mt-4 text-sm font-light leading-loose text-[#112A46]/70 dark:text-[#FDFBF7]/60">
+                                            <p className="mt-4 text-sm font-light leading-loose text-[#112A46]/70 dark:text-neutral-400">
                                                 {item.description}
                                             </p>
                                         </div>
@@ -221,7 +220,7 @@ export default function HomePage() {
 
                 {/* TESTIMONIALS */}
                 <FadeUp>
-                    <section className="relative overflow-hidden border-y border-[#fcd34d]/10 bg-gradient-to-b from-[#FDFBF7] to-[#fcd34d]/5 py-24 dark:from-[#112A46] dark:to-[#0C1E33] md:py-32">
+                    <section className="relative overflow-hidden border-y border-[#fcd34d]/10 bg-gradient-to-b from-[#FDFBF7] to-[#fcd34d]/5 py-24 dark:from-[#1E1E1E] dark:to-neutral-900 md:py-32">
                         {/* Subtle glow */}
                         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#fcd34d]/10 via-transparent to-transparent" />
 
@@ -230,7 +229,7 @@ export default function HomePage() {
                                 <p className="text-xs font-medium uppercase tracking-[0.4em] text-[#fcd34d]">
                                     Guest Reviews
                                 </p>
-                                <h2 className="mt-4 font-serif text-4xl font-light tracking-wide text-[#112A46] dark:text-[#FDFBF7]">
+                                <h2 className="mt-4 font-serif text-4xl font-light tracking-wide text-[#112A46] dark:text-white">
                                     Echoes of Excellence
                                 </h2>
                                 <div className="mx-auto mt-6 h-[1px] w-12 bg-[#fcd34d]/50" />
@@ -253,13 +252,13 @@ export default function HomePage() {
                                                     </div>
 
                                                     {/* Quote */}
-                                                    <p className="text-lg font-light italic leading-loose text-[#112A46]/80 dark:text-[#FDFBF7]/80">
+                                                    <p className="text-lg font-light italic leading-loose text-[#112A46]/80 dark:text-neutral-400">
                                                         {review.text}
                                                     </p>
                                                 </div>
 
                                                 <div className="mt-10">
-                                                    <h4 className="font-serif text-xl tracking-wide text-[#112A46] dark:text-[#FDFBF7]">
+                                                    <h4 className="font-serif text-xl tracking-wide text-[#112A46] dark:text-white">
                                                         {review.name}
                                                     </h4>
                                                     <p className="mt-2 text-xs font-medium uppercase tracking-[0.3em] text-[#fcd34d]">
@@ -282,11 +281,11 @@ export default function HomePage() {
                                 Discover
                             </p>
 
-                            <h2 className="mt-4 font-serif text-5xl font-bold">
+                            <h2 className="mt-4 font-serif text-5xl font-bold dark:text-white">
                                 Signature Experiences
                             </h2>
 
-                            <p className="mx-auto mt-6 max-w-2xl leading-8 text-muted-foreground">
+                            <p className="mx-auto mt-6 max-w-2xl leading-8 text-muted-foreground dark:text-neutral-400">
                                 From luxurious suites to breathtaking outdoor
                                 spaces, every corner of Kapoor&apos;s Villa has
                                 been thoughtfully designed to elevate your stay.

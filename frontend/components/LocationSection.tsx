@@ -62,10 +62,10 @@ export default function LocationSection() {
       />
 
       <div className="text-center mb-10">
-        <h2 className="text-3xl font-bold tracking-tight">
+        <h2 className="text-3xl font-bold tracking-tight dark:text-white">
           Prime Location & Proximity
         </h2>
-        <p className="text-slate-600 dark:text-slate-400 mt-2">
+        <p className="text-slate-600 dark:text-neutral-400 mt-2">
           Nestled peacefully between Panchgani and Mahabaleshwar with seamless
           access to key tourist spots.
         </p>
@@ -75,14 +75,14 @@ export default function LocationSection() {
         {nearbyLandmarks.map((place, index) => (
           <div
             key={index}
-            className="p-5 border border-slate-200 dark:border-slate-800 rounded-xl bg-white dark:bg-slate-900 shadow-sm hover:shadow-md transition-shadow"
+            className="p-5 border border-slate-200 dark:border-neutral-800 rounded-xl bg-white dark:bg-[#1E1E1E] shadow-sm hover:shadow-md transition-shadow"
           >
-            <span className="text-xs font-semibold uppercase tracking-wider px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
+            <span className="text-xs font-semibold uppercase tracking-wider px-2.5 py-1 rounded-full bg-slate-100 dark:bg-neutral-800 text-slate-700 dark:text-neutral-300">
               {place.tag}
             </span>
-            <h3 className="text-lg font-bold mt-3">{place.name}</h3>
-            <div className="flex justify-between items-center mt-4 text-sm text-slate-600 dark:text-slate-400 border-t border-slate-100 dark:border-slate-800 pt-3">
-              <span className="font-semibold text-slate-900 dark:text-slate-100">
+            <h3 className="text-lg font-bold mt-3 dark:text-white">{place.name}</h3>
+            <div className="flex justify-between items-center mt-4 text-sm text-slate-600 dark:text-neutral-400 border-t border-slate-100 dark:border-neutral-800 pt-3">
+              <span className="font-semibold text-slate-900 dark:text-white">
                 {place.distance} away
               </span>
               <span>{place.driveTime}</span>

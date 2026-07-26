@@ -64,7 +64,7 @@ const paidAddons = [
 
 export default function AboutPage() {
     return (
-        <div className="min-h-screen bg-[#FDFBF7] text-[#112A46] selection:bg-[#fcd34d] selection:text-[#112A46] dark:bg-[#112A46] dark:text-[#FDFBF7] transition-colors duration-300">
+        <div className="min-h-screen bg-[#FDFBF7] text-[#112A46] selection:bg-[#fcd34d] selection:text-[#112A46] dark:bg-[#1E1E1E] dark:text-white transition-colors duration-300">
             <Navbar />
 
             <main>
@@ -79,7 +79,7 @@ export default function AboutPage() {
                     />
 
                     {/* Sunset Dusk Overlay - Smoothed out for a classier fade */}
-                    <div className="absolute inset-0 bg-gradient-to-b from-[#112A46]/90 via-[#112A46]/40 to-[#FDFBF7] dark:from-[#112A46]/95 dark:via-[#112A46]/60 dark:to-[#112A46]" />
+                    <div className="absolute inset-0 bg-gradient-to-b from-[#112A46]/90 via-[#112A46]/40 to-[#FDFBF7] dark:from-[#1E1E1E]/95 dark:via-[#1E1E1E]/60 dark:to-[#1E1E1E]" />
                     <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-[#fcd34d]/20 via-transparent to-transparent" />
 
                     <HeroReveal className="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center">
@@ -120,18 +120,18 @@ export default function AboutPage() {
                                         </p>
                                     </div>
 
-                                    <h2 className="font-serif text-4xl font-light leading-tight tracking-wide text-[#112A46] dark:text-[#FDFBF7] md:text-5xl">
+                                    <h2 className="font-serif text-4xl font-light leading-tight tracking-wide text-[#112A46] dark:text-white md:text-5xl">
                                         Crafted For <br />
                                         <span className="font-medium text-[#fcd34d] italic">
                                             Golden Moments
                                         </span>
                                     </h2>
 
-                                    <p className="mt-8 font-light leading-loose text-[#112A46]/70 dark:text-[#FDFBF7]/70">
+                                    <p className="mt-8 font-light leading-loose text-[#112A46]/70 dark:text-neutral-400">
                                         Kapoor&apos;s Villa Panchgani was envisioned as a haven where warm sunset hues meet refined luxury. Set against a 10,000 sq. ft. natural lawn with a private swimming pool and 4 grand suites, it provides an exquisite retreat for families and groups.
                                     </p>
 
-                                    <p className="mt-5 font-light leading-loose text-[#112A46]/60 dark:text-[#FDFBF7]/60">
+                                    <p className="mt-5 font-light leading-loose text-[#112A46]/60 dark:text-neutral-400">
                                         Designed to comfortably host 8–12 guests, every feature—from evening bonfires and barbeques under the stars to indoor games—is tailored for seamless comfort.
                                     </p>
 
@@ -153,7 +153,7 @@ export default function AboutPage() {
                                             fill
                                             className="object-cover transition-transform duration-1000 group-hover:scale-110"
                                         />
-                                        <div className="absolute inset-0 bg-gradient-to-t from-[#112A46]/60 via-transparent to-transparent opacity-90 dark:from-[#112A46]" />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-[#112A46]/60 via-transparent to-transparent opacity-90 dark:from-[#1E1E1E]" />
                                     </div>
                                 </div>
                             </FadeRight>
@@ -163,17 +163,17 @@ export default function AboutPage() {
 
                 {/* VILLA HIGHLIGHTS / AMENITIES */}
                 <FadeUp>
-                    <section className="border-y border-[#fcd34d]/10 bg-gradient-to-b from-[#FDFBF7] to-[#fcd34d]/5 dark:from-[#112A46] dark:to-[#0C1E33] py-24 md:py-32 relative">
+                    <section className="border-y border-[#fcd34d]/10 bg-gradient-to-b from-[#FDFBF7] to-[#fcd34d]/5 dark:from-[#1E1E1E] dark:to-neutral-900 py-24 md:py-32 relative">
                         <div className="container mx-auto px-6">
                             <div className="mb-16 text-center">
                                 <p className="text-xs font-medium uppercase tracking-[0.4em] text-[#fcd34d]">
                                     Exclusive Features
                                 </p>
-                                <h2 className="mt-4 font-serif text-4xl font-light tracking-wide text-[#112A46] dark:text-[#FDFBF7]">
+                                <h2 className="mt-4 font-serif text-4xl font-light tracking-wide text-[#112A46] dark:text-white">
                                     Villa Amenities
                                 </h2>
                                 <div className="mx-auto mt-6 h-[1px] w-12 bg-[#fcd34d]/50" />
-                                <p className="mx-auto mt-6 max-w-md font-light text-[#112A46]/70 dark:text-[#FDFBF7]/60">
+                                <p className="mx-auto mt-6 max-w-md font-light text-[#112A46]/70 dark:text-neutral-400">
                                     Tailored amenities crafted for groups of 8 to 12 guests.
                                 </p>
                             </div>
@@ -182,11 +182,11 @@ export default function AboutPage() {
                                 {mainAmenities.map((item) => (
                                     <StaggerItem key={item.label}>
                                         <ScaleIn>
-                                            <Card className="group flex h-full cursor-default flex-col items-center justify-center gap-4 border-[#fcd34d]/10 bg-white/40 dark:bg-[#173454]/40 p-8 backdrop-blur-md transition-all duration-500 hover:-translate-y-1 hover:border-[#fcd34d]/30 hover:bg-white/80 hover:shadow-xl hover:shadow-[#fcd34d]/5 dark:hover:bg-[#173454]/80">
+                                            <Card className="group flex h-full cursor-default flex-col items-center justify-center gap-4 border-[#fcd34d]/10 bg-white/40 dark:bg-neutral-900/50 p-8 backdrop-blur-md transition-all duration-500 hover:-translate-y-1 hover:border-[#fcd34d]/30 hover:bg-white/80 hover:shadow-xl hover:shadow-[#fcd34d]/5 dark:hover:bg-neutral-900/80">
                                                 <div className="flex h-14 w-14 items-center justify-center rounded-full border border-[#fcd34d]/30 bg-transparent text-[#fcd34d] transition-colors duration-500 group-hover:bg-[#fcd34d] group-hover:text-[#112A46]">
                                                     <item.icon className="h-6 w-6 stroke-[1.5]" />
                                                 </div>
-                                                <span className="text-center text-sm font-light tracking-wide text-[#112A46] dark:text-[#FDFBF7]">
+                                                <span className="text-center text-sm font-light tracking-wide text-[#112A46] dark:text-white">
                                                     {item.label}
                                                 </span>
                                             </Card>
@@ -207,26 +207,26 @@ export default function AboutPage() {
                             <div className="flex flex-col">
                                 <div className="mb-8 flex items-center gap-4 border-b border-[#fcd34d]/30 pb-4">
                                     <Clock className="h-5 w-5 stroke-[1.5] text-[#fcd34d]" />
-                                    <h3 className="font-serif text-2xl font-light tracking-wide text-[#112A46] dark:text-[#FDFBF7]">
+                                    <h3 className="font-serif text-2xl font-light tracking-wide text-[#112A46] dark:text-white">
                                         Rules & Timings
                                     </h3>
                                 </div>
-                                <div className="space-y-4 text-sm font-light text-[#112A46]/80 dark:text-[#FDFBF7]/80">
-                                    <div className="flex justify-between border-b border-[#112A46]/5 pb-3 dark:border-[#FDFBF7]/5">
-                                        <span className="uppercase tracking-widest text-[#112A46]/60 dark:text-[#FDFBF7]/60 text-xs">Check-in</span>
+                                <div className="space-y-4 text-sm font-light text-[#112A46]/80 dark:text-neutral-400">
+                                    <div className="flex justify-between border-b border-[#112A46]/5 pb-3 dark:border-white/10">
+                                        <span className="uppercase tracking-widest text-[#112A46]/60 dark:text-neutral-500 text-xs">Check-in</span>
                                         <span className="font-medium text-[#fcd34d]">2:00 PM</span>
                                     </div>
-                                    <div className="flex justify-between border-b border-[#112A46]/5 pb-3 dark:border-[#FDFBF7]/5">
-                                        <span className="uppercase tracking-widest text-[#112A46]/60 dark:text-[#FDFBF7]/60 text-xs">Check-out</span>
+                                    <div className="flex justify-between border-b border-[#112A46]/5 pb-3 dark:border-white/10">
+                                        <span className="uppercase tracking-widest text-[#112A46]/60 dark:text-neutral-500 text-xs">Check-out</span>
                                         <span className="font-medium text-[#fcd34d]">11:00 AM</span>
                                     </div>
-                                    <div className="flex justify-between border-b border-[#112A46]/5 pb-3 dark:border-[#FDFBF7]/5">
-                                        <span className="uppercase tracking-widest text-[#112A46]/60 dark:text-[#FDFBF7]/60 text-xs">Kitchen</span>
-                                        <span className="font-medium text-[#112A46] dark:text-[#FDFBF7]">7:00 AM – 11:00 PM</span>
+                                    <div className="flex justify-between border-b border-[#112A46]/5 pb-3 dark:border-white/10">
+                                        <span className="uppercase tracking-widest text-[#112A46]/60 dark:text-neutral-500 text-xs">Kitchen</span>
+                                        <span className="font-medium text-[#112A46] dark:text-white">7:00 AM – 11:00 PM</span>
                                     </div>
                                     <div className="flex justify-between pb-1">
-                                        <span className="uppercase tracking-widest text-[#112A46]/60 dark:text-[#FDFBF7]/60 text-xs">Support</span>
-                                        <span className="font-medium text-[#112A46] dark:text-[#FDFBF7]">24 Hours Caretaker</span>
+                                        <span className="uppercase tracking-widest text-[#112A46]/60 dark:text-neutral-500 text-xs">Support</span>
+                                        <span className="font-medium text-[#112A46] dark:text-white">24 Hours Caretaker</span>
                                     </div>
                                 </div>
                             </div>
@@ -235,13 +235,13 @@ export default function AboutPage() {
                             <div className="flex flex-col">
                                 <div className="mb-8 flex items-center gap-4 border-b border-[#fcd34d]/30 pb-4">
                                     <Flame className="h-5 w-5 stroke-[1.5] text-[#fcd34d]" />
-                                    <h3 className="font-serif text-2xl font-light tracking-wide text-[#112A46] dark:text-[#FDFBF7]">
+                                    <h3 className="font-serif text-2xl font-light tracking-wide text-[#112A46] dark:text-white">
                                         Optional Services
                                     </h3>
                                 </div>
                                 <div className="space-y-4 text-sm font-light">
                                     {paidAddons.map((addon) => (
-                                        <div key={addon.name} className="flex justify-between border-b border-[#112A46]/5 pb-3 text-[#112A46]/80 dark:border-[#FDFBF7]/5 dark:text-[#FDFBF7]/80">
+                                        <div key={addon.name} className="flex justify-between border-b border-[#112A46]/5 pb-3 text-[#112A46]/80 dark:border-white/10 dark:text-neutral-400">
                                             <span>{addon.name}</span>
                                             <span className="font-medium tracking-wide text-[#fcd34d]">{addon.price}</span>
                                         </div>
@@ -253,17 +253,17 @@ export default function AboutPage() {
                             <div className="flex flex-col">
                                 <div className="mb-8 flex items-center gap-4 border-b border-[#fcd34d]/30 pb-4">
                                     <Dices className="h-5 w-5 stroke-[1.5] text-[#fcd34d]" />
-                                    <h3 className="font-serif text-2xl font-light tracking-wide text-[#112A46] dark:text-[#FDFBF7]">
+                                    <h3 className="font-serif text-2xl font-light tracking-wide text-[#112A46] dark:text-white">
                                         On-site Activities
                                     </h3>
                                 </div>
                                 <div className="flex flex-col space-y-6">
-                                    <p className="text-sm font-light leading-relaxed text-[#112A46]/70 dark:text-[#FDFBF7]/70">
+                                    <p className="text-sm font-light leading-relaxed text-[#112A46]/70 dark:text-neutral-400">
                                         Indoor & outdoor recreation options available on site for your entertainment:
                                     </p>
                                     <ul className="grid grid-cols-2 gap-y-4 gap-x-2 text-sm font-light">
                                         {activities.map((act) => (
-                                            <li key={act} className="flex items-center gap-3 text-[#112A46] dark:text-[#FDFBF7]">
+                                            <li key={act} className="flex items-center gap-3 text-[#112A46] dark:text-white">
                                                 <span className="block h-[1px] w-3 shrink-0 bg-[#fcd34d]" /> 
                                                 <span>{act}</span>
                                             </li>
@@ -288,7 +288,7 @@ export default function AboutPage() {
                                     <StaggerItem key={item.label}>
                                         <ScaleIn>
                                             <div className="flex flex-col items-center justify-center text-center">
-                                                <h3 className="font-serif text-5xl font-light tracking-widest text-[#112A46] dark:text-[#FDFBF7] md:text-6xl">
+                                                <h3 className="font-serif text-5xl font-light tracking-widest text-[#112A46] dark:text-white md:text-6xl">
                                                     {item.value}
                                                 </h3>
                                                 <div className="my-5 h-[1px] w-8 bg-[#fcd34d]" />
@@ -304,7 +304,6 @@ export default function AboutPage() {
                     </section>
                 </FadeUp>
 
-                {/* CTA BANNER */}
               {/* CTA BANNER */}
                 <FadeUp>
                     <section className="container mx-auto px-6 pb-32">
@@ -317,7 +316,7 @@ export default function AboutPage() {
                                     className="object-cover"
                                 />
                                 {/* Reduced the opacity from /95 and /80 to /80 and /40 so the image is much more visible */}
-                                <div className="absolute inset-0 bg-gradient-to-r from-[#112A46]/80 via-[#112A46]/40 to-transparent dark:from-[#112A46]/90 dark:via-[#112A46]/50" />
+                                <div className="absolute inset-0 bg-gradient-to-r from-[#112A46]/80 via-[#112A46]/40 to-transparent dark:from-[#1E1E1E]/90 dark:via-[#1E1E1E]/50" />
                             </div>
 
                             <div className="relative z-10 flex min-h-[450px] max-w-3xl flex-col items-start justify-center p-10 md:p-20">
