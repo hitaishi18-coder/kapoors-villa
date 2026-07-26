@@ -10,6 +10,37 @@ import Footer from "@/components/Footer";
 import { HeroReveal, FadeUp, FadeLeft, FadeRight } from "@/components/animations";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Wifi, Tv, Bath, Coffee, Waves, Car, Trees, UtensilsCrossed } from "lucide-react";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Rooms & Suites | Kapoor's Villa",
+  description: "Luxury suites with private pool views, AC comfort, and stunning valley vistas. 4 bedrooms, 5 bathrooms, accommodates 8-12 guests in Panchgani near Mahabaleshwar.",
+  keywords: [
+    "Luxury Suites Panchgani",
+    "Villa Rooms Mahabaleshwar",
+    "AC Suites near Mapro Garden",
+    "Private Pool Villa Rooms",
+  ],
+  alternates: {
+    canonical: "./",
+  },
+  openGraph: {
+    title: "Luxury Rooms & Suites | Kapoor's Villa",
+    description: "Spacious suites with valley views, private pool access, and modern amenities.",
+    url: "https://kapoorsvilla.com/room",
+    siteName: "Kapoor's Villa",
+    images: [
+      {
+        url: "/bedroom/room-1.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Kapoor's Villa Luxury Suite with Pool View",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+};
 
 const roomImages = [
     "/rooms/room.jpg", "/rooms/room-2.jpg", "/rooms/room-3.jpg",
@@ -95,6 +126,18 @@ export default function RoomsPage() {
   return (
     <>
       <Navbar />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbJsonLd).replace(/</g, "\\u003c"),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(roomJsonLd).replace(/</g, "\\u003c"),
+        }}
+      />
       <main>
         {/* HERO */}
         <section className="relative h-[75vh] overflow-hidden">
