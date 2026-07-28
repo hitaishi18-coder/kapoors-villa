@@ -105,4 +105,4 @@ npm run build
 
 # Start Production Server
 npm run start
-Crafted with elegance for Kapoor's Villa.
+Crafted with elegance for Kapoor's Villa ❤️.
