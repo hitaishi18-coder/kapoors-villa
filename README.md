@@ -1,4 +1,4 @@
-# Kapoor's Villa 🌅
+# Kapoor's Villa 
 
 A high-performance, visually stunning web application for **Kapoor's Villa**, a luxury boutique homestay located in the serene Panchgani-Mahabaleshwar belt of Satara, Maharashtra. 
 
