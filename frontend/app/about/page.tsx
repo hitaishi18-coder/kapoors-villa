@@ -148,7 +148,7 @@ export default function AboutPage() {
                                 <div className="group relative mx-auto h-[420px] w-full max-w-md overflow-hidden rounded-t-full rounded-b-md border border-[#fcd34d]/20 bg-[#fcd34d]/5 p-2 dark:bg-[#fcd34d]/5 shadow-2xl shadow-[#112A46]/5">
                                     <div className="relative h-full w-full overflow-hidden rounded-t-full rounded-b-sm">
                                         <Image
-                                            src="/outdoor/sunset-view.webp"
+                                            src="/outdoor/outdoor-3.webp"
                                             alt="Kapoor Villa Sunset View"
                                             fill
                                             className="object-cover transition-transform duration-1000 group-hover:scale-110"

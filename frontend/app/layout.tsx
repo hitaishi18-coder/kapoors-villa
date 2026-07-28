@@ -1,7 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
-import { cn } from "@/lib/utils";
 import { Playfair_Display, Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
@@ -81,19 +80,34 @@ export default function RootLayout({
     telephone: "+91-XXXXXXXXXX", // Add actual phone number
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Your Street Address",
-      addressLocality: "City Name",
-      addressRegion: "State Name",
-      postalCode: "Zip Code",
+      streetAddress: "Panchgani-Mahabaleshwar Road",
+      addressLocality: "Panchgani",
+      addressRegion: "Satara, Maharashtra",
+      postalCode: "412805",
       addressCountry: "IN",
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: 31.634, // Add exact latitude
-      longitude: 74.872, // Add exact longitude
+      latitude: 17.9216, // Panchgani coordinates
+      longitude: 73.79,
     },
     priceRange: "$$$",
     amenityFeature: [
+      {
+        "@type": "LocationFeatureSpecification",
+        name: "Private Pool",
+        value: true,
+      },
+      {
+        "@type": "LocationFeatureSpecification",
+        name: "Gourmet Dining",
+        value: true,
+      },
+      {
+        "@type": "LocationFeatureSpecification",
+        name: "AC Suites",
+        value: true,
+      },
       {
         "@type": "LocationFeatureSpecification",
         name: "Free Wi-Fi",
@@ -101,17 +115,12 @@ export default function RootLayout({
       },
       {
         "@type": "LocationFeatureSpecification",
-        name: "Swimming Pool",
+        name: "Lawn",
         value: true,
       },
       {
         "@type": "LocationFeatureSpecification",
-        name: "Private Dining / Restaurant Menu",
-        value: true,
-      },
-      {
-        "@type": "LocationFeatureSpecification",
-        name: "Air Conditioning",
+        name: "24/7 Concierge",
         value: true,
       },
     ],

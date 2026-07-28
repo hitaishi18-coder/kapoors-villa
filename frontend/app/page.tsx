@@ -6,6 +6,8 @@ import { Button } from "@/components/ui/button";
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import FAQSection from "@/components/FAQsection";
+import LocationSection from "@/components/LocationSection";
 
 import {
     HeroReveal,
@@ -433,6 +435,9 @@ export default function HomePage() {
                     </div>
                 </section>
             </FadeUp>
+
+            <LocationSection />
+            <FAQSection />
 
             <Footer />
         </>
