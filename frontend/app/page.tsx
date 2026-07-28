@@ -25,6 +25,7 @@ import {
     Star,
     Trees,
     Car,
+    Droplets,
 } from "lucide-react";
 
 const amenities = [
@@ -39,7 +40,7 @@ const amenities = [
         icon: Trees,
     },
     {
-        title: "7-Car Parking",
+        title: "Ample Car Parking",
         description: "Secure and spacious dedicated parking for you and your guests.",
         icon: Car,
     },
@@ -48,6 +49,11 @@ const amenities = [
         description: "Fully equipped chef-grade kitchen for culinary excellence.",
         icon: ChefHat,
     },
+    {
+        title: "Rain Dance",
+        description: "Experience a lively rain dance area with refreshing showers and music, making your stay fun and memorable.",
+        icon: Droplets,
+    }
 ];
 
 const testimonials = [
