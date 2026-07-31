@@ -177,9 +177,9 @@ export default function ContactPage() {
                       <div>
                         <h3 className="font-serif text-2xl">Distances</h3>
                         <ul className="mt-3 leading-7 text-muted-foreground">
-                          <li>Nirwana - 2 km</li>
-                          <li>Bhillar - 12 km</li>
-                          <li>Mepro - 16 km</li>
+                          <li>Nirvana - 2 km</li>
+                          <li>Bhilar - 12 km</li>
+                          <li>Mapro - 16 km</li>
                           <li>Panchgani - 17 km</li>
                           <li>Mahabaleshwar - 26 km</li>
                         </ul>
