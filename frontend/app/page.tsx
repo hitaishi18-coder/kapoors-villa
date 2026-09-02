@@ -81,9 +81,9 @@ export default function HomePage() {
         <>
             <Navbar />
 
-            <main>
+           <main className="w-full min-w-0 overflow-x-hidden">
                 {/* HERO */}
-                <section className="relative min-h-screen overflow-hidden">
+               <section className="relative min-h-screen w-full overflow-hidden">
                     {/* Background Image */}
                     <Image
                         src="/outer/hero.webp"
