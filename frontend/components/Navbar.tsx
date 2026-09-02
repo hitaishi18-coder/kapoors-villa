@@ -27,6 +27,7 @@ const links = [
   { title: "Rooms", href: "/room" },
   { title: "Gallery", href: "/gallery" },
   { title: "Menu", href: "/menu" },
+  { title: "Experience", href: "/experience" },
   { title: "Contact", href: "/contact" },
 ];
 
