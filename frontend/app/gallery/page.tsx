@@ -199,21 +199,25 @@ export default function GalleryPage() {
     <>
       <Navbar />
 
-      <main className="overflow-x-hidden">
-        {/* Hero */}
-        <section className="relative h-[65vh] min-h-[450px] sm:h-[75vh] overflow-hidden">
+      <main className="w-full min-w-0 overflow-x-hidden">
+        {/* =========================================================
+            HERO
+        ========================================================= */}
+        <section className="relative h-[65svh] min-h-[450px] w-full overflow-hidden sm:h-[75svh]">
           <Image
             src="/outdoor/outdoor-3.webp"
             alt="Kapoor's Villa Gallery"
             fill
             priority
-            className="object-cover transition-transform duration-10000 hover:scale-105"
+            sizes="100vw"
+            className="object-cover object-center transition-transform duration-10000 hover:scale-105"
           />
 
           <div className="absolute inset-0 bg-black/30" />
+
           <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/90" />
 
-          <HeroReveal className="relative z-10 flex h-full flex-col items-center justify-center px-4 text-center sm:px-6">
+          <HeroReveal className="relative z-10 flex h-full w-full flex-col items-center justify-center px-4 text-center sm:px-6">
             <p className="mb-3 text-xs uppercase tracking-[0.35em] text-amber-500 sm:mb-4 sm:tracking-[0.45em]">
               EXQUISITE COLLECTION
             </p>
@@ -229,30 +233,37 @@ export default function GalleryPage() {
           </HeroReveal>
         </section>
 
-        {/* GALLERY GRID */}
+        {/* =========================================================
+            GALLERY GRID
+        ========================================================= */}
         <FadeUp>
-          <section className="container mx-auto px-4 py-12 sm:px-6 sm:pb-32">
-            <Stagger className="columns-1 gap-4 sm:columns-2 sm:gap-6 xl:columns-3">
+          <section className="w-full px-4 py-12 sm:px-6 sm:py-16 lg:py-24 xl:pb-32">
+            <Stagger className="mx-auto w-full max-w-7xl columns-1 gap-4 sm:columns-2 sm:gap-6 xl:columns-3">
               {gallery.map((item) => (
                 <StaggerItem key={item.title}>
                   <ScaleIn>
                     <Card
-                      className={`group relative mb-4 sm:mb-6 break-inside-avoid overflow-hidden rounded-2xl sm:rounded-3xl border border-amber-500/10 bg-background/40 backdrop-blur transition-all duration-500 hover:border-amber-500/40 hover:shadow-2xl hover:shadow-amber-500/10 ${item.height}`}
+                      className={`group relative mb-4 block w-full break-inside-avoid overflow-hidden rounded-2xl border border-amber-500/10 bg-background/40 backdrop-blur transition-all duration-500 hover:border-amber-500/40 hover:shadow-2xl hover:shadow-amber-500/10 sm:mb-6 sm:rounded-3xl ${item.height}`}
                     >
                       {/* Image */}
                       <Image
                         src={item.image}
                         alt={item.title}
                         fill
-                        sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 33vw"
-                        className="object-cover transition-all duration-700 group-hover:scale-105"
+                        sizes="
+                          (max-width: 640px) 100vw,
+                          (max-width: 1024px) 50vw,
+                          (max-width: 1536px) 33vw,
+                          400px
+                        "
+                        className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
                       />
 
                       {/* Gradient Overlay */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 sm:via-black/20 to-transparent" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent sm:via-black/20" />
 
                       {/* Hover Glow Effect */}
-                      <div className="absolute inset-0 opacity-0 transition-all duration-500 group-hover:opacity-100 hidden sm:block">
+                      <div className="absolute inset-0 hidden opacity-0 transition-all duration-500 group-hover:opacity-100 sm:block">
                         <div className="absolute inset-0 border border-amber-500/40" />
                         <div className="absolute inset-0 bg-amber-500/5 backdrop-blur-[1px]" />
                       </div>
@@ -287,17 +298,19 @@ export default function GalleryPage() {
           </section>
         </FadeUp>
 
-        {/* LUXURY QUOTE */}
+        {/* =========================================================
+            LUXURY QUOTE
+        ========================================================= */}
         <FadeUp>
-          <section className="relative overflow-hidden border-y border-amber-500/10 py-16 sm:py-32">
+          <section className="relative w-full overflow-hidden border-y border-amber-500/10 py-16 sm:py-32">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(245,158,11,0.08),transparent_60%)]" />
 
-            <div className="container relative mx-auto max-w-5xl px-4 text-center sm:px-6">
+            <div className="container relative mx-auto w-full max-w-5xl px-4 text-center sm:px-6">
               <p className="text-xs uppercase tracking-[0.35em] text-amber-500 sm:tracking-[0.45em]">
                 Timeless Luxury
               </p>
 
-              <h2 className="mt-4 font-serif text-2xl leading-snug sm:mt-8 sm:text-4xl md:text-6xl sm:leading-tight">
+              <h2 className="mt-4 font-serif text-2xl leading-snug sm:mt-8 sm:text-4xl sm:leading-tight md:text-6xl">
                 Every photograph captures more than a destination—it preserves
                 moments of elegance, comfort and unforgettable memories.
               </h2>
@@ -313,21 +326,25 @@ export default function GalleryPage() {
           </section>
         </FadeUp>
 
-        {/* PRIMARY CTA */}
+        {/* =========================================================
+            PRIMARY CTA
+        ========================================================= */}
         <FadeUp>
-          <section className="container mx-auto px-4 py-16 sm:px-6 sm:py-32">
-            <Card className="relative overflow-hidden rounded-2xl sm:rounded-3xl border-amber-500/20">
+          <section className="w-full px-4 py-16 sm:px-6 sm:py-32">
+            <Card className="relative mx-auto w-full max-w-7xl overflow-hidden rounded-2xl border-amber-500/20 sm:rounded-3xl">
               <Image
                 src="/gallery/gallery-cta.jpg"
                 alt="Luxury Villa"
                 fill
-                className="object-cover"
+                sizes="100vw"
+                className="object-cover object-center"
               />
 
               <div className="absolute inset-0 bg-black/40 sm:bg-black/10" />
+
               <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/40" />
 
-              <div className="relative flex min-h-[400px] sm:min-h-[500px] flex-col items-center justify-center p-6 text-center sm:p-8">
+              <div className="relative flex min-h-[400px] flex-col items-center justify-center p-6 text-center sm:min-h-[500px] sm:p-8">
                 <p className="text-xs uppercase tracking-[0.35em] text-amber-500 sm:tracking-[0.45em]">
                   Reserve Your Escape
                 </p>
@@ -355,6 +372,63 @@ export default function GalleryPage() {
             </Card>
           </section>
         </FadeUp>
+
+        {/* =========================================================
+            SECONDARY BOOKING CTA
+        ========================================================= */}
+        <section className="w-full px-4 pb-16 sm:px-6 sm:pb-32">
+          <Card className="mx-auto w-full max-w-7xl overflow-hidden border-amber-500/20">
+            <div className="grid min-w-0 lg:grid-cols-2">
+              {/* Left */}
+              <div className="flex min-w-0 flex-col justify-center p-6 sm:p-10 md:p-16">
+                <p className="text-xs uppercase tracking-[0.35em] text-amber-500 sm:tracking-[0.4em]">
+                  Reserve Your Escape
+                </p>
+
+                <h2 className="mt-2 font-serif text-3xl font-bold sm:mt-4 sm:text-4xl md:text-5xl">
+                  Luxury Awaits
+                </h2>
+
+                <p className="mt-4 text-sm leading-6 text-muted-foreground sm:mt-6 sm:text-base sm:leading-8">
+                  Experience breathtaking views, curated interiors, personalized
+                  hospitality and unforgettable moments at Kapoor&apos;s Villa.
+                </p>
+
+                <div className="mt-8 flex flex-wrap gap-3 sm:mt-10 sm:gap-4">
+                  <Button
+                    asChild
+                    size="lg"
+                    className="bg-amber-500 text-black hover:bg-amber-400"
+                  >
+                    <Link href="/book">Book Now</Link>
+                  </Button>
+
+                  <Button
+                    asChild
+                    size="lg"
+                    variant="outline"
+                    className="border-amber-500/40 hover:border-amber-500"
+                  >
+                    <Link href="/contact">Contact Us</Link>
+                  </Button>
+                </div>
+              </div>
+
+              {/* Right */}
+              <div className="relative min-h-[260px] min-w-0 sm:min-h-[420px]">
+                <Image
+                  src="/gallery/gallery-cta.jpg"
+                  alt="Luxury Villa"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover object-center"
+                />
+
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent lg:bg-gradient-to-l lg:from-transparent lg:to-black/20" />
+              </div>
+            </div>
+          </Card>
+        </section>
       </main>
 
       <Footer />

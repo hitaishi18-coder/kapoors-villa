@@ -253,8 +253,8 @@ export default function MenuPage() {
             </h1>
 
             <p className="mt-6 max-w-2xl text-xl leading-relaxed text-neutral-200">
-              Freshly prepared delicacies crafted with premium
-              ingredients, authentic Indian spices, and warm homely hospitality.
+              Freshly prepared delicacies crafted with premium ingredients,
+              authentic Indian spices, and warm homely hospitality.
             </p>
 
             {/* ACTION BUTTONS */}
@@ -279,13 +279,20 @@ export default function MenuPage() {
                 <DownloadIcon className="h-5 w-5" />
               </div>
               <div>
-                <h3 className="font-serif text-xl font-bold text-[#112A46] dark:text-white">Looking for a printable copy?</h3>
-                <p className="text-base text-[#112A46]/70 dark:text-neutral-400">Download our complete Pure Veg menu card in PDF format.</p>
+                <h3 className="font-serif text-xl font-bold text-[#112A46] dark:text-white">
+                  Looking for a printable copy?
+                </h3>
+                <p className="text-base text-[#112A46]/70 dark:text-neutral-400">
+                  Download our complete Pure Veg menu card in PDF format.
+                </p>
               </div>
             </div>
 
             <a href="/kapoors_villa_menu.pdf" download="Kapoor_Villa_Menu.pdf">
-              <Button variant="default" className="gap-2 bg-[#fcd34d]/90 text-black hover:bg-[#fcd34d] font-medium">
+              <Button
+                variant="default"
+                className="gap-2 bg-[#fcd34d]/90 text-black hover:bg-[#fcd34d] font-medium"
+              >
                 <DownloadIcon className="h-4 w-4" /> Download PDF (2 Pages)
               </Button>
             </a>
@@ -304,7 +311,8 @@ export default function MenuPage() {
             </h2>
 
             <p className="mx-auto mt-4 max-w-2xl text-base text-[#112A46]/70 dark:text-neutral-400">
-              Browse through our structured menu options. Every dish is cooked fresh to order after your arrival confirmation.
+              Browse through our structured menu options. Every dish is cooked
+              fresh to order after your arrival confirmation.
             </p>
           </div>
 
@@ -324,7 +332,9 @@ export default function MenuPage() {
                       </span>
                       <h3
                         className={`mt-1 font-serif text-3xl font-bold ${
-                          section.isDark ? "text-white" : "text-[#112A46] dark:text-white"
+                          section.isDark
+                            ? "text-white"
+                            : "text-[#112A46] dark:text-white"
                         }`}
                       >
                         {section.title}
@@ -357,7 +367,9 @@ export default function MenuPage() {
                       >
                         <span
                           className={`font-medium transition-colors hover:text-[#fcd34d]/90 ${
-                            section.isDark ? "text-neutral-200" : "text-[#112A46] dark:text-neutral-200"
+                            section.isDark
+                              ? "text-neutral-200"
+                              : "text-[#112A46] dark:text-neutral-200"
                           }`}
                         >
                           {item.name}
@@ -378,93 +390,240 @@ export default function MenuPage() {
           </div>
         </section>
 
-        {/* ================= BENTO GALLERY SECTION ================= */}
-        <section className="container mx-auto px-6 py-20 border-t border-[#112A46]/10 dark:border-white/10">
-          <div className="text-center">
-            <p className="text-sm uppercase tracking-[0.45em] text-[#fcd34d]/90">
-              Behind Every Delicious Meal
-            </p>
-            <h2 className="mt-3 font-serif text-5xl font-bold text-[#112A46] dark:text-white">Our Kitchen & Dining</h2>
-            <p className="mx-auto mt-4 max-w-2xl text-base text-[#112A46]/70 dark:text-neutral-400">
-              Hygienic, freshly sourced ingredients prepared by experienced cooks in a sparkling clean environment.
-            </p>
-          </div>
+        {/* ================= KITCHEN & DINING BENTO ================= */}
+        <section className="w-full overflow-hidden border-t border-[#112A46]/10 py-24 dark:border-white/10">
+          <div className="mx-auto w-full max-w-7xl px-4 sm:px-6">
+            {/* Heading */}
+            <div className="text-center">
+              <p className="text-sm font-semibold uppercase tracking-[0.45em] text-[#fcd34d]/90">
+                Behind Every Delicious Meal
+              </p>
 
-          <div className="mt-14 grid grid-cols-1 md:grid-cols-4 auto-rows-[250px] gap-4">
-            {galleryLayout.map((image, index) => (
+              <h2 className="mt-3 font-serif text-4xl font-bold text-[#112A46] dark:text-white sm:text-5xl">
+                Our Kitchen & Dining
+              </h2>
+
+              <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-[#112A46]/70 dark:text-neutral-400 sm:text-base">
+                Hygienic, freshly sourced ingredients prepared by experienced
+                cooks in a sparkling clean environment.
+              </p>
+            </div>
+
+            {/* ================= TRUE BENTO ================= */}
+            <div className="mt-14 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:grid-rows-4">
+              {/* 01 — MAIN KITCHEN */}
               <div
-                key={index}
-                className={`group relative overflow-hidden rounded-2xl border border-[#fcd34d]/20 shadow-md ${image.classes}`}
+                className="
+          group relative overflow-hidden rounded-[2rem]
+          border border-[#fcd34d]/20
+          shadow-xl
+          sm:col-span-2
+          lg:col-span-2
+          lg:row-span-2
+          min-h-[420px]
+        "
               >
                 <Image
-                  src={image.src}
-                  alt={image.title}
+                  src="/kitchen/kitchen.jpg"
+                  alt="Main Kitchen"
                   fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-110"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 50vw"
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80 group-hover:opacity-100 transition-opacity" />
-                <div className="absolute bottom-5 left-5">
-                  <h3 className="font-serif text-2xl font-bold text-white">
-                    {image.title}
+
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
+
+                <div className="absolute bottom-0 left-0 p-7 sm:p-9">
+                  <span className="text-[10px] font-semibold uppercase tracking-[0.4em] text-[#fcd34d]">
+                    Kitchen
+                  </span>
+
+                  <h3 className="mt-2 font-serif text-3xl font-bold text-white sm:text-4xl">
+                    Main Kitchen
                   </h3>
-                  <p className="text-sm text-neutral-300 tracking-wider">Fresh • Hygienic • Pure</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
 
-        {/* ================= DINING INFORMATION (Redesigned Split Layout) ================= */}
-        <section className="relative overflow-hidden border-y border-[#112A46]/10 dark:border-white/10 py-24 bg-[#fcd34d]/5 dark:bg-[#1E1E1E]">
-          <div className="container mx-auto px-6">
-            <div className="grid items-center gap-16 lg:grid-cols-2">
-              
-              {/* Left Side: Content & Cards */}
-              <div>
-                <div className="text-left">
-                  <p className="text-sm uppercase tracking-[0.45em] text-[#fcd34d]/90">
-                    Dining Guidelines
+                  <p className="mt-2 max-w-sm text-sm text-white/70">
+                    Freshly prepared with care.
                   </p>
-                  <h2 className="mt-2 font-serif text-4xl font-bold text-[#112A46] dark:text-white md:text-6xl">
-                    Important Information
-                  </h2>
-                  <p className="mt-6 text-base leading-relaxed text-[#112A46]/70 dark:text-neutral-400">
-                    Experience seamless dining with our dedicated culinary team. We prioritize your health, taste, and overall satisfaction by ensuring every meal meets our highest standards.
-                  </p>
-                </div>
-
-                <div className="mt-10 flex flex-col gap-6">
-                  <div className="rounded-2xl border border-[#fcd34d]/20 bg-white/60 dark:bg-neutral-900/60 p-6 shadow-sm backdrop-blur">
-                    <h3 className="font-serif text-2xl font-bold text-[#fcd34d]/90">
-                      👨‍🍳 Fresh Preparation
-                    </h3>
-                    <p className="mt-2 text-base leading-relaxed text-[#112A46]/70 dark:text-neutral-400">
-                      All meals are cooked fresh after confirmation to guarantee maximum flavor, warmth, and high nutrition.
-                    </p>
-                  </div>
-
-                  <div className="rounded-2xl border border-[#fcd34d]/20 bg-white/60 dark:bg-neutral-900/60 p-6 shadow-sm backdrop-blur">
-                    <h3 className="font-serif text-2xl font-bold text-[#fcd34d]/90">
-                      📅 Advance Confirmation
-                    </h3>
-                    <p className="mt-2 text-base leading-relaxed text-[#112A46]/70 dark:text-neutral-400">
-                      Kindly share your menu selections 1 day prior to arrival to allow us to source fresh ingredients.
-                    </p>
-                  </div>
                 </div>
               </div>
 
-              {/* Right Side: Chef Image */}
-              <div className="relative h-[450px] w-full overflow-hidden rounded-3xl shadow-2xl shadow-[#112A46]/10 border border-[#fcd34d]/20">
+              {/* 02 — DINING SETUP / TALL */}
+              <div
+                className="
+          group relative min-h-[360px] overflow-hidden rounded-[2rem]
+          border border-[#fcd34d]/20
+          shadow-xl
+          sm:col-span-1
+          lg:col-span-1
+          lg:row-span-2
+        "
+              >
                 <Image
-                  src="/extraas/chef.png"
-                  alt="Our Chef"
+                  src="/dining/dining3.jpg"
+                  alt="Dining Setup"
                   fill
-                  className="object-cover"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-80" />
+
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
+
+                <div className="absolute bottom-0 left-0 p-6">
+                  <span className="text-[10px] uppercase tracking-[0.35em] text-[#fcd34d]">
+                    Dining
+                  </span>
+
+                  <h3 className="mt-2 font-serif text-2xl font-bold text-white">
+                    Dining Setup
+                  </h3>
+                </div>
               </div>
 
+              {/* 03 — PREP AREA */}
+              <div
+                className="
+          group relative min-h-[220px] overflow-hidden rounded-[2rem]
+          border border-[#fcd34d]/20
+          shadow-lg
+          lg:col-span-1
+          lg:row-span-1
+        "
+              >
+                <Image
+                  src="/kitchen/kitchen1.jpg"
+                  alt="Prep Area"
+                  fill
+                  sizes="(max-width: 1024px) 50vw, 25vw"
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-transparent" />
+
+                <div className="absolute bottom-0 left-0 p-5">
+                  <h3 className="font-serif text-xl font-bold text-white">
+                    Prep Area
+                  </h3>
+                </div>
+              </div>
+
+              {/* 04 — COOKING STATION */}
+              <div
+                className="
+          group relative min-h-[220px] overflow-hidden rounded-[2rem]
+          border border-[#fcd34d]/20
+          shadow-lg
+          lg:col-span-1
+          lg:row-span-1
+        "
+              >
+                <Image
+                  src="/kitchen/kitchen2.jpg"
+                  alt="Cooking Station"
+                  fill
+                  sizes="(max-width: 1024px) 50vw, 25vw"
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-transparent" />
+
+                <div className="absolute bottom-0 left-0 p-5">
+                  <h3 className="font-serif text-xl font-bold text-white">
+                    Cooking Station
+                  </h3>
+                </div>
+              </div>
+
+              {/* 05 — DINING AMBIENCE / WIDE */}
+              <div
+                className="
+          group relative min-h-[260px] overflow-hidden rounded-[2rem]
+          border border-[#fcd34d]/20
+          shadow-xl
+          sm:col-span-2
+          lg:col-span-3
+          lg:row-span-1
+        "
+              >
+                <Image
+                  src="/dining/dining6.jpg"
+                  alt="Dining Ambience"
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 75vw"
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/10 to-transparent" />
+
+                <div className="absolute bottom-0 left-0 p-6 sm:p-7">
+                  <span className="text-[10px] uppercase tracking-[0.35em] text-[#fcd34d]">
+                    Experience
+                  </span>
+
+                  <h3 className="mt-2 font-serif text-2xl font-bold text-white sm:text-3xl">
+                    Dining Ambience
+                  </h3>
+                </div>
+              </div>
+
+              {/* 06 — FRESH INGREDIENTS */}
+              <div
+                className="
+          group relative min-h-[260px] overflow-hidden rounded-[2rem]
+          border border-[#fcd34d]/20
+          shadow-lg
+          lg:col-span-1
+          lg:row-span-1
+        "
+              >
+                <Image
+                  src="/kitchen/kitchen3.jpg"
+                  alt="Fresh Ingredients"
+                  fill
+                  sizes="(max-width: 1024px) 50vw, 25vw"
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent" />
+
+                <div className="absolute bottom-0 left-0 p-5">
+                  <h3 className="font-serif text-xl font-bold text-white">
+                    Fresh Ingredients
+                  </h3>
+                </div>
+              </div>
+
+              {/* 07 — TABLE VIEW / WIDE */}
+              <div
+                className="
+          group relative min-h-[300px] overflow-hidden rounded-[2rem]
+          border border-[#fcd34d]/20
+          shadow-xl
+          sm:col-span-2
+          lg:col-span-2
+          lg:row-span-1
+        "
+              >
+                <Image
+                  src="/dining/dining7.jpg"
+                  alt="Table View"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/10 to-transparent" />
+
+                <div className="absolute bottom-0 left-0 p-6">
+                  <span className="text-[10px] uppercase tracking-[0.35em] text-[#fcd34d]">
+                    Dining
+                  </span>
+
+                  <h3 className="mt-2 font-serif text-2xl font-bold text-white">
+                    Table View
+                  </h3>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -487,12 +646,19 @@ export default function MenuPage() {
               Good Food. Great Memories.
             </h2>
             <p className="mx-auto mt-6 max-w-2xl text-lg text-neutral-300">
-              Download our menu or reach out to reserve your private dining dates for family gatherings, vacations, and celebrations.
+              Download our menu or reach out to reserve your private dining
+              dates for family gatherings, vacations, and celebrations.
             </p>
 
             <div className="mt-10 flex flex-wrap justify-center gap-4">
-              <a href="/kapoors_villa_menu.pdf" download="Kapoor_Villa_Menu.pdf">
-                <Button size="lg" className="gap-2 bg-[#fcd34d]/90 text-black hover:bg-[#fcd34d] font-semibold px-8">
+              <a
+                href="/kapoors_villa_menu.pdf"
+                download="Kapoor_Villa_Menu.pdf"
+              >
+                <Button
+                  size="lg"
+                  className="gap-2 bg-[#fcd34d]/90 text-black hover:bg-[#fcd34d] font-semibold px-8"
+                >
                   <DownloadIcon className="h-4 w-4" /> Download PDF Menu
                 </Button>
               </a>

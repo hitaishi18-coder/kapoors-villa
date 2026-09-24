@@ -134,7 +134,7 @@ export default function ExperiencesPage() {
               ESTATE & MOMENTS
             </p>
             <h1 className="font-serif text-2xl font-bold text-white sm:text-3xl md:text-4xl">
-              Guest Review
+              Guest Reviews
             </h1>
             <p className="mt-4 max-w-3xl text-sm leading-6 text-neutral-200 sm:mt-8 sm:max-w-3xl sm:text-base sm:leading-8">
               Explore the intricate details, grand architecture, and peaceful corners 
