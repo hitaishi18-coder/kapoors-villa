@@ -173,13 +173,13 @@ export default function ExperiencesPage() {
                       {item.description}
                     </p>
 
-                    <Button
+                    {/* <Button
                       asChild
                       size="sm"
                       className="mt-4 bg-amber-500 text-black hover:bg-amber-400 sm:mt-6 sm:translate-y-6 sm:opacity-0 sm:transition-all sm:duration-500 sm:group-hover:translate-y-0 sm:group-hover:opacity-100"
                     >
                       <Link href="/book">Reserve Stay</Link>
-                    </Button>
+                    </Button> */}
                   </div>
                 </Card>
               </div>

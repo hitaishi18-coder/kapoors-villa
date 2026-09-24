@@ -177,64 +177,12 @@ export default function ContactPage() {
                       <div>
                         <h3 className="font-serif text-2xl">Distances</h3>
                         <ul className="mt-3 leading-7 text-muted-foreground">
-                         <ul className="space-y-2">
-
-
-  <li>
-    <a
-      href="https://www.google.com/maps/search/?api=1&query=Bhilar%2C%20Panchgani"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="transition-colors duration-300 hover:text-[#D4A017]"
-    >
-      Bhilar - 12 km
-    </a>
-  </li>
-
-  <li>
-    <a
-      href="https://www.google.com/maps/search/?api=1&query=Mapro%2C%20Panchgani"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="transition-colors duration-300 hover:text-[#D4A017]"
-    >
-      Mapro - 16 km
-    </a>
-  </li>
-
-  <li>
-    <a
-      href="https://www.google.com/maps/search/?api=1&query=Panchgani"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="transition-colors duration-300 hover:text-[#D4A017]"
-    >
-      Panchgani - 17 km
-    </a>
-  </li>
-
-  <li>
-    <a
-      href="https://www.google.com/maps/search/?api=1&query=Mahabaleshwar"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="transition-colors duration-300 hover:text-[#D4A017]"
-    >
-      Mahabaleshwar - 26 km
-    </a>
-  </li>
-
-  <li>
-    <a
-      href="https://www.google.com/maps/search/?api=1&query=Kaas%20Plateau"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="transition-colors duration-300 hover:text-[#D4A017]"
-    >
-      Kas Plateau - 33 km
-    </a>
-  </li>
-</ul>
+                          <li>Nirvana - 2 km</li>
+                          <li>Bhilar - 12 km</li>
+                          <li>Mapro - 16 km</li>
+                          <li>Panchgani - 17 km</li>
+                          <li>Mahabaleshwar - 26 km</li>
+                          <li>Kas Plateau - 33 Km</li>
                         </ul>
                       </div>
 

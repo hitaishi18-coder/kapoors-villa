@@ -69,7 +69,7 @@ export default function AboutPage() {
         <div className="min-h-screen bg-[#FDFBF7] text-[#112A46] selection:bg-[#fcd34d] selection:text-[#112A46] dark:bg-[#1E1E1E] dark:text-white transition-colors duration-300">
             <Navbar />
 
-            <main>
+           <main className="w-full min-w-0 overflow-x-hidden">
                 {/* HERO SECTION */}
                 <section className="relative h-[85vh] overflow-hidden">
                     <Image
