@@ -168,7 +168,7 @@ export default function Navbar() {
                                 hover:shadow-[#fcd34d]/30
                             "
                         >
-                            <Link href="/contact">
+                            <Link href="https://wa.me/918355992830">
                                 Book Now
                             </Link>
                         </Button>
