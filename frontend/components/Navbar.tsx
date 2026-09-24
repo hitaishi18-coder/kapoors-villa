@@ -22,22 +22,13 @@ import {
 import { ModeToggle } from "./ModeToggle";
 
 const links = [
-<<<<<<< HEAD
-  { title: "Home", href: "/" },
-  { title: "About", href: "/about" },
-  { title: "Gallery", href: "/gallery" },
-  { title: "Menu", href: "/menu" },
-  { title: "Experience", href: "/experience" },
-  { title: "Contact", href: "/contact" },
-=======
     { title: "Home", href: "/" },
     { title: "About", href: "/about" },
-    { title: "Rooms", href: "/room" },
+    // { title: "Rooms", href: "/room" },
     { title: "Gallery", href: "/gallery" },
     { title: "Menu", href: "/menu" },
     { title: "Experience", href: "/experience" },
     { title: "Contact", href: "/contact" },
->>>>>>> f86b3f99b389801aebc8d2a849a2173b7d06c284
 ];
 
 export default function Navbar() {
@@ -82,15 +73,7 @@ export default function Navbar() {
                     md:px-6
                 "
             >
-<<<<<<< HEAD
-              <Link href="https://wa.me/918355992830" target="_blank" rel="noopener noreferrer">
-              Book Now</Link>
-            </Button>
-          </motion.div>
-        </div>
-=======
                 {/* LOGO */}
->>>>>>> f86b3f99b389801aebc8d2a849a2173b7d06c284
 
                 <Link
                     href="/"
