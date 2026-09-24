@@ -133,10 +133,10 @@ export default function ExperiencesPage() {
             <p className="mb-3 text-xs uppercase tracking-[0.35em] text-amber-500 sm:mb-4 sm:tracking-[0.45em]">
               ESTATE & MOMENTS
             </p>
-            <h1 className="font-serif text-xl font-bold text-white sm:text-3xl md:text-4xl">
+            <h1 className="font-serif text-2xl font-bold text-white sm:text-3xl md:text-4xl">
               User Experiences
             </h1>
-            <p className="mt-4 max-w-2xl text-sm leading-6 text-neutral-200 sm:mt-8 sm:max-w-3xl sm:text-base sm:leading-8">
+            <p className="mt-4 max-w-3xl text-sm leading-6 text-neutral-200 sm:mt-8 sm:max-w-3xl sm:text-base sm:leading-8">
               Explore the intricate details, grand architecture, and peaceful corners 
               that define Kapoor&apos;s Villa.
             </p>
@@ -145,15 +145,6 @@ export default function ExperiencesPage() {
 
         {/* MASONRY GRID */}
         <section className="container mx-auto px-4 py-12 sm:px-6 sm:pb-32">
-          <div className="mb-10 text-center">
-            <h2 className="font-serif text-3xl font-bold sm:text-4xl">
-              Visual Showcase
-            </h2>
-            <p className="mt-2 text-sm text-muted-foreground sm:text-base">
-              From the grand front facade to personalized name plate details.
-            </p>
-          </div>
-
           <div className="columns-1 gap-4 sm:columns-2 sm:gap-6 xl:columns-3">
             {userExperiences.map((item) => (
               <div key={item.title} className="mb-4 sm:mb-6 break-inside-avoid">
@@ -243,15 +234,6 @@ export default function ExperiencesPage() {
                   className="w-full sm:w-auto bg-amber-500 px-8 py-5 text-sm font-semibold text-black transition-all duration-300 hover:bg-amber-400 hover:shadow-lg hover:shadow-amber-500/20"
                 >
                   <Link href="/book">Reserve Your Private Escape</Link>
-                </Button>
-
-                <Button
-                  asChild
-                  variant="outline"
-                  size="lg"
-                  className="w-full sm:w-auto border-amber-500/50 bg-black/50 px-6 py-5 text-sm font-medium text-white backdrop-blur-md transition-all duration-300 hover:border-amber-500 hover:bg-black/70"
-                >
-                  <Link href="/contact">Inquire with Concierge</Link>
                 </Button>
               </div>
 

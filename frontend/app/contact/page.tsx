@@ -38,15 +38,15 @@ export default function ContactPage() {
             <div className="absolute inset-0 bg-linear-to-b from-black/10 via-transparent to-black/60" />
 
             <HeroReveal className="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center">
-              <p className="text-xs uppercase tracking-[0.45em] text-[#fcd34d]/90">
+              <p className="text-1xl uppercase tracking-[0.45em] text-[#fcd34d]/90">
                 GET IN TOUCH
               </p>
 
-              <h1 className="mt-6 font-serif text-3xl font-bold text-white md:text-5xl">
+              <h1 className="mt-6 font-serif text-4xl font-bold text-white md:text-5xl">
                 Contact Us
               </h1>
 
-              <p className="mt-8 max-w-3xl leading-8 text-neutral-200">
+              <p className="mt-8 max-w-4xl leading-8 text-neutral-200">
                 Whether you&apos;re planning a romantic getaway, family vacation
                 or celebration, our concierge team is here to help.
               </p>
@@ -177,11 +177,64 @@ export default function ContactPage() {
                       <div>
                         <h3 className="font-serif text-2xl">Distances</h3>
                         <ul className="mt-3 leading-7 text-muted-foreground">
-                          <li>Nirvana - 2 km</li>
-                          <li>Bhilar - 12 km</li>
-                          <li>Mapro - 16 km</li>
-                          <li>Panchgani - 17 km</li>
-                          <li>Mahabaleshwar - 26 km</li>
+                         <ul className="space-y-2">
+
+
+  <li>
+    <a
+      href="https://www.google.com/maps/search/?api=1&query=Bhilar%2C%20Panchgani"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="transition-colors duration-300 hover:text-[#D4A017]"
+    >
+      Bhilar - 12 km
+    </a>
+  </li>
+
+  <li>
+    <a
+      href="https://www.google.com/maps/search/?api=1&query=Mapro%2C%20Panchgani"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="transition-colors duration-300 hover:text-[#D4A017]"
+    >
+      Mapro - 16 km
+    </a>
+  </li>
+
+  <li>
+    <a
+      href="https://www.google.com/maps/search/?api=1&query=Panchgani"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="transition-colors duration-300 hover:text-[#D4A017]"
+    >
+      Panchgani - 17 km
+    </a>
+  </li>
+
+  <li>
+    <a
+      href="https://www.google.com/maps/search/?api=1&query=Mahabaleshwar"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="transition-colors duration-300 hover:text-[#D4A017]"
+    >
+      Mahabaleshwar - 26 km
+    </a>
+  </li>
+
+  <li>
+    <a
+      href="https://www.google.com/maps/search/?api=1&query=Kaas%20Plateau"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="transition-colors duration-300 hover:text-[#D4A017]"
+    >
+      Kas Plateau - 33 km
+    </a>
+  </li>
+</ul>
                         </ul>
                       </div>
 
@@ -205,14 +258,6 @@ export default function ContactPage() {
                         </p>
                       </div>
                     </div>
-
-                    <Button
-                      asChild
-                      size="lg"
-                      className="mt-12 bg-[#fcd34d]/90 text-black hover:bg-[#fcd34d]"
-                    >
-                      <Link href="#contact-top">Contact Concierge</Link>
-                    </Button>
                   </div>
                 </div>
               </div>

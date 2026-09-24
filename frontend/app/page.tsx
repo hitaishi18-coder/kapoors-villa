@@ -191,11 +191,11 @@ export default function HomePage() {
                             <p className="text-xs font-medium uppercase tracking-[0.4em] text-[#fcd34d]">
                                 World Class Amenities
                             </p>
-                            <h2 className="mt-4 font-serif text-4xl font-light tracking-wide text-[#112A46] dark:text-white">
+                            <h2 className="mt-4 font-serif text-5xl font-light tracking-wide text-[#112A46] dark:text-white">
                                 Curated Luxury Experience
                             </h2>
                             <div className="mx-auto mt-6 h-[1px] w-12 bg-[#fcd34d]/50" />
-                            <p className="mx-auto mt-6 max-w-2xl font-light leading-loose text-[#112A46]/70 dark:text-neutral-400">
+                            <p className="mx-auto mt-6 max-w-3xl font-light leading-loose text-[#112A46]/70 dark:text-neutral-400">
                                 Every stay is thoughtfully designed to provide
                                 comfort, elegance and unforgettable experiences.
                             </p>
@@ -211,11 +211,11 @@ export default function HomePage() {
                                                 <item.icon className="h-6 w-6 stroke-[1.5] text-[#fcd34d]" />
                                             </div>
 
-                                            <h3 className="font-serif text-2xl font-light text-[#112A46] dark:text-white">
+                                            <h3 className="font-serif text-3xl font-light text-[#112A46] dark:text-white">
                                                 {item.title}
                                             </h3>
 
-                                            <p className="mt-4 text-sm font-light leading-loose text-[#112A46]/70 dark:text-neutral-400">
+                                            <p className="mt-4 text-2xl font-light leading-loose text-[#112A46]/70 dark:text-neutral-400">
                                                 {item.description}
                                             </p>
                                         </div>
@@ -234,10 +234,10 @@ export default function HomePage() {
 
                         <div className="container relative z-10 mx-auto px-6">
                             <div className="mb-20 text-center">
-                                <p className="text-xs font-medium uppercase tracking-[0.4em] text-[#fcd34d]">
+                                <p className="text-xl font-medium uppercase tracking-[0.4em] text-[#fcd34d]">
                                     Guest Reviews
                                 </p>
-                                <h2 className="mt-4 font-serif text-4xl font-light tracking-wide text-[#112A46] dark:text-white">
+                                <h2 className="mt-4 font-serif text-5xl font-light tracking-wide text-[#112A46] dark:text-white">
                                     Echoes of Excellence
                                 </h2>
                                 <div className="mx-auto mt-6 h-[1px] w-12 bg-[#fcd34d]/50" />
@@ -285,15 +285,15 @@ export default function HomePage() {
                 <FadeUp>
                     <section className="container mx-auto px-6 py-32">
                         <div className="mb-16 text-center">
-                            <p className="text-xs uppercase tracking-[0.45em] text-[#fcd34d]">
+                            <p className="text-1xl uppercase tracking-[0.45em] text-[#fcd34d]">
                                 Discover
                             </p>
 
-                            <h2 className="mt-4 font-serif text-5xl font-bold dark:text-white">
+                            <h2 className="mt-4 font-serif text-6xl font-bold dark:text-white">
                                 Signature Experiences
                             </h2>
 
-                            <p className="mx-auto mt-6 max-w-2xl leading-8 text-muted-foreground dark:text-neutral-400">
+                            <p className="mx-auto mt-7 max-w-3xl leading-8 text-muted-foreground dark:text-neutral-400">
                                 From luxurious suites to breathtaking outdoor
                                 spaces, every corner of Kapoor&apos;s Villa has
                                 been thoughtfully designed to elevate your stay.
@@ -329,13 +329,6 @@ export default function HomePage() {
                                                 a private sanctuary unlike any
                                                 other.
                                             </p>
-
-                                            <Button
-                                                variant="secondary"
-                                                className="mt-8 w-fit"
-                                            >
-                                                Explore Rooms
-                                            </Button>
                                         </div>
                                     </div>
                                 </Link>
@@ -368,13 +361,6 @@ export default function HomePage() {
                                                 peaceful open spaces designed
                                                 for unforgettable moments.
                                             </p>
-
-                                            <Button
-                                                variant="secondary"
-                                                className="mt-8 w-fit"
-                                            >
-                                                View Gallery
-                                            </Button>
                                         </div>
                                     </div>
                                 </Link>
@@ -427,7 +413,7 @@ export default function HomePage() {
                                 size="lg"
                                 variant="outline"
                                 /* Forced text-white instead of allowing text-black in light mode */
-                                className="border-white/40 text-white hover:bg-white/10 text-black"
+                                className="border-white/40 text-white hover:bg-white/10 text-cyan-50"
                             >
                                 <Link href="/gallery">Explore Gallery</Link>
                             </Button>

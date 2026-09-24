@@ -254,7 +254,7 @@ export default function MenuPage() {
             </h1>
 
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-neutral-200">
-              Freshly prepared 100% Pure Veg delicacies crafted with premium
+              Freshly prepared delicacies crafted with premium
               ingredients, authentic Indian spices, and warm homely hospitality.
             </p>
 
@@ -511,15 +511,6 @@ export default function MenuPage() {
                   <DownloadIcon className="h-4 w-4" /> Download PDF Menu
                 </Button>
               </a>
-
-              <Button
-                asChild
-                variant="outline"
-                size="lg"
-                className="border-white/40 bg-transparent px-8 text-white hover:bg-white/10"
-              >
-                <Link href="/contact">Reserve Your Table</Link>
-              </Button>
             </div>
           </div>
         </section>

@@ -24,7 +24,6 @@ import { ModeToggle } from "./ModeToggle";
 const links = [
   { title: "Home", href: "/" },
   { title: "About", href: "/about" },
-  { title: "Rooms", href: "/room" },
   { title: "Gallery", href: "/gallery" },
   { title: "Menu", href: "/menu" },
   { title: "Experience", href: "/experience" },
@@ -126,7 +125,8 @@ export default function Navbar() {
               asChild
               className="bg-[#fcd34d] px-7 text-black shadow-lg shadow-[#fcd34d]/20 transition-all duration-300 hover:bg-[#fcd34d]/80 hover:shadow-xl hover:shadow-[#fcd34d]/30"
             >
-              <Link href="/contact">Book Now</Link>
+              <Link href="https://wa.me/918355992830" target="_blank" rel="noopener noreferrer">
+              Book Now</Link>
             </Button>
           </motion.div>
         </div>

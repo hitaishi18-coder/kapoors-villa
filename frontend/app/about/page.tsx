@@ -56,10 +56,12 @@ const activities = ["Cricket", "Carrom Board", "Chess", "Ludo & Board Games"];
 const paidAddons = [
     { name: "Sound System", price: "₹500 / day" },
     { name: "Bonfire Setup", price: "₹1,000" },
-    { name: "Veg Barbeque (1 kg)", price: "₹1,800" },
-    { name: "Non-Veg Barbeque (1 kg)", price: "₹2,000" },
     { name: "Extra Mattress Set", price: "₹1,000" },
-    { name: "Meals (Veg / Non-Veg)", price: "As per Menu Card" },
+    { name: "Veg Barbeque (1 kg)" },
+    { name: "Non-Veg Barbeque (1 kg)" },
+    { name: "Meals (Veg / Non-Veg)" },
+    { name: "Power Backup 24/7" },
+    { name: "Spacious Hall" }
 ];
 
 export default function AboutPage() {
@@ -96,14 +98,11 @@ export default function AboutPage() {
                         <h1 className="font-serif text-5xl font-light tracking-widest text-[#fcd34d] md:text-7xl drop-shadow-lg">
                             KAPOOR&apos;S VILLA
                         </h1>
-
-                        <p className="mt-5 font-serif text-sm uppercase tracking-[0.4em] text-[#fcd34d]/80">
-                            Luxury Sunset Sanctuary
-                        </p>
-
-                        <p className="mt-8 max-w-2xl text-sm font-light leading-loose text-[#FDFBF7]/90 md:text-base">
-                            Where architectural grandeur meets the warmth of Panchgani sunsets. Enjoy 10,000 sq. ft. of lush lawns, private poolside indulgence, and unforgettable mountain vistas.
-                        </p>
+<p className="mt-3 font-serif text-xs uppercase tracking-[0.4em] text-[#f0f00e] drop-shadow-[0_2px_3px_rgba(0,0,0,0.55)]">
+    Luxury Sunset Sanctuary
+    <br />
+    10,000 Sq. Ft. of Private Luxury · Poolside Indulgence · Mountain Vistas
+</p>
                     </HeroReveal>
                 </section>
 
@@ -134,13 +133,6 @@ export default function AboutPage() {
                                     <p className="mt-5 font-light leading-loose text-[#112A46]/60 dark:text-neutral-400">
                                         Designed to comfortably host 8–12 guests, every feature—from evening bonfires and barbeques under the stars to indoor games—is tailored for seamless comfort.
                                     </p>
-
-                                    <Button
-                                        asChild
-                                        className="mt-10 rounded-none border border-[#fcd34d] bg-transparent text-[#112A46] dark:text-[#fcd34d] uppercase tracking-[0.2em] hover:bg-[#fcd34d] hover:text-[#112A46] px-10 py-7 transition-all duration-500"
-                                    >
-                                        <Link href="/room">Explore Suites</Link>
-                                    </Button>
                                 </div>
                             </FadeLeft>
 
@@ -166,10 +158,10 @@ export default function AboutPage() {
                     <section className="border-y border-[#fcd34d]/10 bg-gradient-to-b from-[#FDFBF7] to-[#fcd34d]/5 dark:from-[#1E1E1E] dark:to-neutral-900 py-24 md:py-32 relative">
                         <div className="container mx-auto px-6">
                             <div className="mb-16 text-center">
-                                <p className="text-xs font-medium uppercase tracking-[0.4em] text-[#fcd34d]">
+                                <p className="text-1xl font-medium uppercase tracking-[0.4em] text-[#fcd34d]">
                                     Exclusive Features
                                 </p>
-                                <h2 className="mt-4 font-serif text-4xl font-light tracking-wide text-[#112A46] dark:text-white">
+                                <h2 className="mt-4 font-serif text-5xl font-light tracking-wide text-[#112A46] dark:text-white">
                                     Villa Amenities
                                 </h2>
                                 <div className="mx-auto mt-6 h-[1px] w-12 bg-[#fcd34d]/50" />
@@ -186,7 +178,7 @@ export default function AboutPage() {
                                                 <div className="flex h-14 w-14 items-center justify-center rounded-full border border-[#fcd34d]/30 bg-transparent text-[#fcd34d] transition-colors duration-500 group-hover:bg-[#fcd34d] group-hover:text-[#112A46]">
                                                     <item.icon className="h-6 w-6 stroke-[1.5]" />
                                                 </div>
-                                                <span className="text-center text-sm font-light tracking-wide text-[#112A46] dark:text-white">
+                                                <span className="text-center text-2xl font-light tracking-wide text-[#112A46] dark:text-white">
                                                     {item.label}
                                                 </span>
                                             </Card>
@@ -211,7 +203,7 @@ export default function AboutPage() {
                                         Rules & Timings
                                     </h3>
                                 </div>
-                                <div className="space-y-4 text-sm font-light text-[#112A46]/80 dark:text-neutral-400">
+                                <div className="space-y-4 text-1xl font-light text-[#112A46]/80 dark:text-neutral-400">
                                     <div className="flex justify-between border-b border-[#112A46]/5 pb-3 dark:border-white/10">
                                         <span className="uppercase tracking-widest text-[#112A46]/60 dark:text-neutral-500 text-xs">Check-in</span>
                                         <span className="font-medium text-[#fcd34d]">2:00 PM</span>
@@ -227,6 +219,7 @@ export default function AboutPage() {
                                     <div className="flex justify-between pb-1">
                                         <span className="uppercase tracking-widest text-[#112A46]/60 dark:text-neutral-500 text-xs">Support</span>
                                         <span className="font-medium text-[#112A46] dark:text-white">24 Hours Caretaker</span>
+                                        {/* <span className="font-medium text-[#112A46] dark:text-white">24/7 Power Backup</span> */}
                                     </div>
                                 </div>
                             </div>
@@ -288,7 +281,7 @@ export default function AboutPage() {
                                     <StaggerItem key={item.label}>
                                         <ScaleIn>
                                             <div className="flex flex-col items-center justify-center text-center">
-                                                <h3 className="font-serif text-5xl font-light tracking-widest text-[#112A46] dark:text-white md:text-6xl">
+                                                <h3 className="font-serif text-6xl font-light tracking-widest text-[#112A46] dark:text-white md:text-6xl">
                                                     {item.value}
                                                 </h3>
                                                 <div className="my-5 h-[1px] w-8 bg-[#fcd34d]" />
@@ -304,62 +297,53 @@ export default function AboutPage() {
                     </section>
                 </FadeUp>
 
-              {/* CTA BANNER */}
                 <FadeUp>
-                    <section className="container mx-auto px-6 pb-32">
-                        <div className="relative overflow-hidden rounded-sm shadow-2xl shadow-[#112A46]/10">
-                            <div className="absolute inset-0">
-                                <Image
-                                    src="/outer/about-story.jpg"
-                                    alt="Kapoor Villa Experience"
-                                    fill
-                                    className="object-cover"
-                                />
-                                {/* Reduced the opacity from /95 and /80 to /80 and /40 so the image is much more visible */}
-                                <div className="absolute inset-0 bg-gradient-to-r from-[#112A46]/80 via-[#112A46]/40 to-transparent dark:from-[#1E1E1E]/90 dark:via-[#1E1E1E]/50" />
-                            </div>
+    <section className="container mx-auto px-6 pb-32">
+        <div className="relative overflow-hidden rounded-sm bg-[#112A46] shadow-2xl shadow-[#112A46]/20 dark:bg-black">
+            <div className="relative z-10 flex min-h-[450px] max-w-3xl flex-col items-start justify-center p-10 md:p-20">
+                
+                <div className="mb-6 flex items-center gap-4 opacity-90">
+                    <span className="h-[1px] w-12 bg-gradient-to-r from-transparent to-[#D4A017]" />
+                    <span className="text-xs font-serif font-medium uppercase tracking-[0.5em] text-[#D4A017]">
+                        Reserve Your Dates
+                    </span>
+                </div>
 
-                            <div className="relative z-10 flex min-h-[450px] max-w-3xl flex-col items-start justify-center p-10 md:p-20">
-                                <div className="mb-6 flex items-center gap-4 opacity-90">
-                                    <span className="h-[1px] w-12 bg-gradient-to-r from-transparent to-[#fcd34d]" />
-                                    <span className="text-xs font-serif uppercase tracking-[0.5em] text-[#fcd34d] font-medium">
-                                        Reserve Your Dates
-                                    </span>
-                                </div>
+                <h2 className="font-serif text-4xl font-light leading-tight tracking-wide text-white md:text-5xl">
+                    Your Panchgani Gateway <br className="hidden md:block" />
+                    <span className="font-medium text-[#D4A017] italic">
+                        Awaits
+                    </span>
+                </h2>
 
-                                <h2 className="font-serif text-4xl font-light leading-tight tracking-wide text-white md:text-5xl">
-                                    Your Panchgani Gateway <br className="hidden md:block" />
-                                    <span className="font-medium text-[#fcd34d] italic">Awaits</span>
-                                </h2>
+                <p className="mt-6 text-sm font-light leading-loose text-[#FDFBF7]/90 md:text-base">
+                    Plan your luxury staycation or family celebration at
+                    Kapoor&apos;s Villa today. Escape into comfort and create
+                    timeless memories.
+                </p>
 
-                                <p className="mt-6 text-sm font-light leading-loose text-[#FDFBF7]/90 md:text-base">
-                                    Plan your luxury staycation or family celebration at Kapoor&apos;s Villa today. Escape into comfort and create timeless memories.
-                                </p>
+                <div className="mt-10 flex flex-wrap gap-5">
+                    <Button
+                        asChild
+                        size="lg"
+                        className="rounded-none bg-[#D4A017] px-10 py-6 uppercase tracking-[0.2em] text-[#112A46] transition-all duration-500 hover:bg-[#FDFBF7]"
+                    >
+                        <Link href="/contact">Book Your Stay</Link>
+                    </Button>
 
-                                <div className="mt-10 flex flex-wrap gap-5">
-                                    <Button
-                                        asChild
-                                        size="lg"
-                                        className="rounded-none bg-[#fcd34d] px-10 py-6 uppercase tracking-[0.2em] text-[#112A46] transition-all duration-500 hover:bg-[#FDFBF7]"
-                                    >
-                                        <Link href="/contact">Book Your Stay</Link>
-                                    </Button>
-
-                                    <Button
-                                        asChild
-                                        size="lg"
-                                        variant="outline"
-                                        className="rounded-none border-[#fcd34d]/40 bg-transparent px-10 py-6 uppercase tracking-[0.2em] text-[#fcd34d] transition-all duration-500 hover:bg-[#fcd34d]/10 hover:text-[#fcd34d]"
-                                    >
-                                        <Link href="/gallery">View Gallery</Link>
-                                    </Button>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                </FadeUp>
-                <LocationSection />
-                <FAQSection />
+                    <Button
+                        asChild
+                        size="lg"
+                        variant="outline"
+                        className="rounded-none border-[#D4A017]/50 bg-transparent px-10 py-6 uppercase tracking-[0.2em] text-[#D4A017] transition-all duration-500 hover:bg-[#D4A017]/10 hover:text-[#D4A017]"
+                    >
+                        <Link href="/gallery">View Gallery</Link>
+                    </Button>
+                </div>
+            </div>
+        </div>
+    </section>
+</FadeUp>
             </main>
 
             <Footer />

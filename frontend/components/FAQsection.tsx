@@ -1,7 +1,5 @@
 "use client";
 
-import { useState } from "react";
-
 const faqs = [
   {
     question: "What are the check-in and check-out times at Kapoor's Villa?",
@@ -26,9 +24,7 @@ const faqs = [
 ];
 
 export default function FAQSection() {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
-
-  // Schema structured data generated dynamically for AI search engines
+  // FAQ structured data for search engines
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -43,8 +39,8 @@ export default function FAQSection() {
   };
 
   return (
-    <section className="py-12 max-w-4xl mx-auto px-4">
-      {/* Invisible Schema injected for ChatGPT, Gemini & Google AI */}
+    <section className="mx-auto max-w-4xl px-4 py-12">
+      {/* FAQ Schema */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -52,30 +48,31 @@ export default function FAQSection() {
         }}
       />
 
-      <h2 className="text-3xl font-bold text-center mb-8 dark:text-white">
+      {/* Heading */}
+      <h2 className="mb-10 text-center font-serif text-4xl font-medium text-[#112A46] dark:text-white">
         Frequently Asked Questions
       </h2>
 
+      {/* FAQ List */}
       <div className="space-y-4">
         {faqs.map((faq, index) => (
           <div
             key={index}
-            className="border border-slate-200 dark:border-neutral-800 rounded-lg overflow-hidden"
+            className="overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm dark:border-neutral-800 dark:bg-black"
           >
-            <button
-              onClick={() => setOpenIndex(openIndex === index ? null : index)}
-              className="w-full text-left p-4 font-semibold flex justify-between items-center bg-slate-50 dark:bg-neutral-900/50 hover:bg-slate-100 dark:hover:bg-neutral-900/80 transition-colors dark:text-white"
-            >
-              <span>{faq.question}</span>
-              <span className="text-xl font-bold">
-                {openIndex === index ? "−" : "+"}
-              </span>
-            </button>
-            {openIndex === index && (
-              <div className="p-4 text-slate-600 dark:text-neutral-400 bg-white dark:bg-[#1E1E1E] border-t border-slate-200 dark:border-neutral-800">
+            {/* Question */}
+            <div className="bg-slate-50 px-6 py-5 dark:bg-neutral-900">
+              <h3 className="font-serif text-lg font-semibold text-[#112A46] dark:text-white">
+                {faq.question}
+              </h3>
+            </div>
+
+            {/* Answer */}
+            <div className="border-t border-slate-200 bg-white px-6 py-5 dark:border-neutral-800 dark:bg-black">
+              <p className="text-sm leading-7 text-slate-600 dark:text-neutral-400">
                 {faq.answer}
-              </div>
-            )}
+              </p>
+            </div>
           </div>
         ))}
       </div>
