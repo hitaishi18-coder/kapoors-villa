@@ -58,24 +58,6 @@ const amenities = [
     }
 ];
 
-const testimonials = [
-    {
-        name: "Aman & Rhea Malhotra",
-        text: `"An unparalleled sanctuary of privacy and luxury."`,
-        date: "December 2023",
-    },
-    {
-        name: "Dr. Vikram Singh",
-        text: `"The concierge service was exceptional from arrival to departure."`,
-        date: "January 2024",
-    },
-    {
-        name: "Sonia D'Souza",
-        text: `"Every corner reflects elegance and thoughtful hospitality."`,
-        date: "February 2024",
-    },
-];
-
 export default function HomePage() {
     return (
         <>
@@ -226,61 +208,6 @@ export default function HomePage() {
                     </section>
                 </FadeUp>
 
-                {/* TESTIMONIALS */}
-                <FadeUp>
-                    <section className="relative overflow-hidden border-y border-[#fcd34d]/10 bg-gradient-to-b from-[#FDFBF7] to-[#fcd34d]/5 py-24 dark:from-[#1E1E1E] dark:to-neutral-900 md:py-32">
-                        {/* Subtle glow */}
-                        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#fcd34d]/10 via-transparent to-transparent" />
-
-                        <div className="container relative z-10 mx-auto px-6">
-                            <div className="mb-20 text-center">
-                                <p className="text-xl font-medium uppercase tracking-[0.4em] text-[#fcd34d]">
-                                    Guest Reviews
-                                </p>
-                                <h2 className="mt-4 font-serif text-5xl font-light tracking-wide text-[#112A46] dark:text-white">
-                                    Echoes of Excellence
-                                </h2>
-                                <div className="mx-auto mt-6 h-[1px] w-12 bg-[#fcd34d]/50" />
-                            </div>
-
-                            <Stagger className="grid gap-12 lg:grid-cols-3 lg:gap-8">
-                                {testimonials.map((review) => (
-                                    <StaggerItem key={review.name}>
-                                        <ScaleIn>
-                                            <div className="group flex h-full flex-col justify-between border-l border-[#fcd34d]/20 pl-8 transition-all duration-500 hover:border-[#fcd34d]">
-                                                <div>
-                                                    {/* Refined Stars */}
-                                                    <div className="mb-6 flex gap-1.5 opacity-80 transition-opacity duration-500 group-hover:opacity-100">
-                                                        {Array.from({ length: 5 }).map((_, index) => (
-                                                            <Star
-                                                                key={index}
-                                                                className="h-4 w-4 fill-[#fcd34d] text-[#fcd34d]"
-                                                            />
-                                                        ))}
-                                                    </div>
-
-                                                    {/* Quote */}
-                                                    <p className="text-lg font-light italic leading-loose text-[#112A46]/80 dark:text-neutral-400">
-                                                        {review.text}
-                                                    </p>
-                                                </div>
-
-                                                <div className="mt-10">
-                                                    <h4 className="font-serif text-xl tracking-wide text-[#112A46] dark:text-white">
-                                                        {review.name}
-                                                    </h4>
-                                                    <p className="mt-2 text-xs font-medium uppercase tracking-[0.3em] text-[#fcd34d]">
-                                                        {review.date}
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </ScaleIn>
-                                    </StaggerItem>
-                                ))}
-                            </Stagger>
-                        </div>
-                    </section>
-                </FadeUp>
                 {/* FEATURED SPACES */}
                 <FadeUp>
                     <section className="container mx-auto px-6 py-32">
