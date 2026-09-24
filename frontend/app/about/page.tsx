@@ -28,10 +28,9 @@ import {
     Trees, 
     Waves, 
     Sparkles,
-    Users
+    Users,
+    BatteryCharging,
 } from "lucide-react";
-import FAQSection from "@/components/FAQsection";
-import LocationSection from "@/components/LocationSection";
 
 const stats = [
     { value: "10+", label: "Years of Excellence" },
@@ -41,14 +40,15 @@ const stats = [
 ];
 
 const mainAmenities = [
-    { icon: BedDouble, label: "4 Bedrooms & 5 Bathrooms" },
-    { icon: Waves, label: "Private Swimming Pool" },
-    { icon: Trees, label: "10,000 sq.ft Natural Lawn" },
-    { icon: Utensils, label: "1 Hall with Dining & Kitchen" },
-    { icon: Car, label: "7 Car Parking Spaces" },
-    { icon: Wifi, label: "Free Wi-Fi & Common TV" },
-    { icon: Sparkles, label: "3 Balconies & 1 Large Terrace" },
-    { icon: Users, label: "Accommodates 8 to 12 Guests" },
+  { icon: BedDouble, label: "4 Bedrooms & 5 Bathrooms" },
+  { icon: Waves, label: "Private Swimming Pool" },
+  { icon: Trees, label: "10,000 sq.ft Natural Lawn" },
+  { icon: Utensils, label: "Spacious Hall with Dining & Kitchen" },
+  { icon: Car, label: "Ample Car Parking" },
+  { icon: Wifi, label: "Free Wi-Fi & Common TV" },
+  { icon: Sparkles, label: "3 Balconies & 1 Large Terrace" },
+  { icon: Users, label: "Accommodates 8 to 12 Guests" },
+  { icon: BatteryCharging, label: "24/7 Power Backup" },
 ];
 
 const activities = ["Cricket", "Carrom Board", "Chess", "Ludo & Board Games"];
@@ -59,9 +59,7 @@ const paidAddons = [
     { name: "Extra Mattress Set", price: "₹1,000" },
     { name: "Veg Barbeque (1 kg)" },
     { name: "Non-Veg Barbeque (1 kg)" },
-    { name: "Meals (Veg / Non-Veg)" },
-    { name: "Power Backup 24/7" },
-    { name: "Spacious Hall" }
+    { name: "Meals (Veg / Non-Veg)" }
 ];
 
 export default function AboutPage() {

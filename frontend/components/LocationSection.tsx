@@ -31,6 +31,13 @@ const nearbyLandmarks = [
     driveTime: "~45 mins",
     tag: "Touristic Hub",
   },
+ {
+  name: "Kas Plateau",
+  distance: "33 km",
+  driveTime: "~1 hr",
+  tag: "Valley of Flowers",
+},
+  
 ];
 
 export default function LocationSection() {

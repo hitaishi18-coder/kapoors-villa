@@ -355,59 +355,6 @@ export default function GalleryPage() {
             </Card>
           </section>
         </FadeUp>
-
-        {/* SECONDARY BOOKING CTA */}
-        <section className="container mx-auto px-4 pb-16 sm:px-6 sm:pb-32">
-          <Card className="overflow-hidden border-amber-500/20">
-            <div className="grid lg:grid-cols-2">
-              {/* Left */}
-              <div className="flex flex-col justify-center p-6 sm:p-10 md:p-16">
-                <p className="text-xs uppercase tracking-[0.35em] text-amber-500 sm:tracking-[0.4em]">
-                  Reserve Your Escape
-                </p>
-
-                <h2 className="mt-2 font-serif text-3xl font-bold sm:mt-4 sm:text-4xl md:text-5xl">
-                  Luxury Awaits
-                </h2>
-
-                <p className="mt-4 text-sm leading-6 text-muted-foreground sm:mt-6 sm:text-base sm:leading-8">
-                  Experience breathtaking views, curated interiors, personalized
-                  hospitality and unforgettable moments at Kapoor&apos;s Villa.
-                </p>
-
-                <div className="mt-8 flex flex-wrap gap-3 sm:mt-10 sm:gap-4">
-                  <Button
-                    asChild
-                    size="lg"
-                    className="bg-amber-500 text-black hover:bg-amber-400"
-                  >
-                    <Link href="/book">Book Now</Link>
-                  </Button>
-
-                  <Button
-                    asChild
-                    size="lg"
-                    variant="outline"
-                    className="border-amber-500/40 hover:border-amber-500"
-                  >
-                    <Link href="/contact">Contact Us</Link>
-                  </Button>
-                </div>
-              </div>
-
-              {/* Right */}
-              <div className="relative min-h-[260px] sm:min-h-[420px]">
-                <Image
-                  src="/gallery/gallery-cta.jpg"
-                  alt="Luxury Villa"
-                  fill
-                  className="object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent lg:bg-gradient-to-l lg:from-transparent lg:to-black/20" />
-              </div>
-            </div>
-          </Card>
-        </section>
       </main>
 
       <Footer />
