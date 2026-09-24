@@ -340,7 +340,7 @@ export default function HomePage() {
                                 size="lg"
                                 variant="outline"
                                 /* Forced text-white instead of allowing text-black in light mode */
-                                className="border-white/40 text-white hover:bg-white/10 text-cyan-50"
+                                className="border-white/40 text-black"
                             >
                                 <Link href="/gallery">Explore Gallery</Link>
                             </Button>

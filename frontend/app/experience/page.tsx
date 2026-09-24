@@ -6,6 +6,8 @@ import Footer from "@/components/Footer";
 
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { FadeUp, ScaleIn, Stagger, StaggerItem } from "@/components/animations";
+import { Star } from "lucide-react";
 
 interface ExperienceItem {
   title: string;
@@ -111,6 +113,24 @@ const userExperiences: ExperienceItem[] = [
   }
 ];
 
+const testimonials = [
+    {
+        name: "Aman & Rhea Malhotra",
+        text: `"An unparalleled sanctuary of privacy and luxury."`,
+        date: "December 2023",
+    },
+    {
+        name: "Dr. Vikram Singh",
+        text: `"The concierge service was exceptional from arrival to departure."`,
+        date: "January 2024",
+    },
+    {
+        name: "Sonia D'Souza",
+        text: `"Every corner reflects elegance and thoughtful hospitality."`,
+        date: "February 2024",
+    },
+];
+
 export default function ExperiencesPage() {
   return (
     <>
@@ -133,15 +153,69 @@ export default function ExperiencesPage() {
             <p className="mb-3 text-xs uppercase tracking-[0.35em] text-amber-500 sm:mb-4 sm:tracking-[0.45em]">
               ESTATE & MOMENTS
             </p>
-            <h1 className="font-serif text-2xl font-bold text-white sm:text-3xl md:text-4xl">
+            <h1 className="font-serif text-3xl font-bold text-white sm:text-4xl md:text-5xl">
               Guest Reviews
             </h1>
-            <p className="mt-4 max-w-3xl text-sm leading-6 text-neutral-200 sm:mt-8 sm:max-w-3xl sm:text-base sm:leading-8">
+            <p className="mt-4 max-w-4xl text-sm leading-6 text-neutral-200 sm:mt-9 sm:max-w-4xl sm:text-base sm:leading-8">
               Explore the intricate details, grand architecture, and peaceful corners 
               that define Kapoor&apos;s Villa.
             </p>
           </div>
         </section>
+
+         {/* TESTIMONIALS */}
+                        <FadeUp>
+                            <section className="relative overflow-hidden border-y border-[#fcd34d]/10 bg-gradient-to-b from-[#FDFBF7] to-[#fcd34d]/5 py-24 dark:from-[#1E1E1E] dark:to-neutral-900 md:py-32">
+                                {/* Subtle glow */}
+                                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#fcd34d]/10 via-transparent to-transparent" />
+        
+                                <div className="container relative z-10 mx-auto px-6">
+                                    <div className="mb-20 text-center">
+                                        <h2 className="mt-4 font-serif text-5xl font-light tracking-wide text-[#112A46] dark:text-white">
+                                            Echoes of Excellence
+                                        </h2>
+                                        <div className="mx-auto mt-6 h-[1px] w-12 bg-[#fcd34d]/50" />
+                                    </div>
+        
+                                    <Stagger
+                                     className="grid gap-12 lg:grid-cols-3 lg:gap-8">
+                                        {testimonials.map((review) => (
+                                            <StaggerItem key={review.name}>
+                                                <ScaleIn>
+                                                    <div className="group flex h-full flex-col justify-between border-l border-[#fcd34d]/20 pl-8 transition-all duration-500 hover:border-[#fcd34d]">
+                                                        <div>
+                                                            {/* Refined Stars */}
+                                                            <div className="mb-6 flex gap-1.5 opacity-80 transition-opacity duration-500 group-hover:opacity-100">
+                                                                {Array.from({ length: 5 }).map((_, index) => (
+                                                                    <Star
+                                                                        key={index}
+                                                                        className="h-4 w-4 fill-[#fcd34d] text-[#fcd34d]"
+                                                                    />
+                                                                ))}
+                                                            </div>
+        
+                                                            {/* Quote */}
+                                                            <p className="text-lg font-light italic leading-loose text-[#112A46]/80 dark:text-neutral-400">
+                                                                {review.text}
+                                                            </p>
+                                                        </div>
+        
+                                                        <div className="mt-10">
+                                                            <h4 className="font-serif text-xl tracking-wide text-[#112A46] dark:text-white">
+                                                                {review.name}
+                                                            </h4>
+                                                            <p className="mt-2 text-xs font-medium uppercase tracking-[0.3em] text-[#fcd34d]">
+                                                                {review.date}
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </ScaleIn>
+                                            </StaggerItem>
+                                        ))}
+                                    </Stagger>
+                                </div>
+                            </section>
+                        </FadeUp>
 
         {/* MASONRY GRID */}
         <section className="container mx-auto px-4 py-12 sm:px-6 sm:pb-32">
