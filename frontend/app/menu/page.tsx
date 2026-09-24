@@ -60,20 +60,20 @@ const menuSections = [
     gridClass: "md:col-span-2 lg:col-span-2",
     accent: "border-[#fcd34d]/30 bg-[#fcd34d]/5 dark:bg-[#fcd34d]/10",
     items: [
-      { name: "Poha", price: "₹80" },
-      { name: "Upma", price: "₹70" },
-      { name: "Idli", price: "₹100" },
-      { name: "Aloo Paratha (Curd & Pickle)", price: "₹130" },
-      { name: "Gobhi Paratha", price: "₹130" },
-      { name: "Paneer Paratha", price: "₹150" },
-      { name: "Bread Butter / Jam", price: "₹60" },
-      { name: "Misal Pav", price: "₹110" },
-      { name: "Vada Pav", price: "₹30" },
-      { name: "Kanda / Batata Bhaji", price: "₹90" },
-      { name: "Paneer Pakoda", price: "₹130" },
-      { name: "Paneer Special Pakoda", price: "₹150" },
-      { name: "Puri Bhaji", price: "₹160" },
-      { name: "Maggi", price: "₹60" },
+      { name: "Poha" },
+      { name: "Upma" },
+      { name: "Idli" },
+      { name: "Aloo Paratha (Curd & Pickle)" },
+      { name: "Gobhi Paratha" },
+      { name: "Paneer Paratha" },
+      { name: "Bread Butter / Jam" },
+      { name: "Misal Pav" },
+      { name: "Vada Pav" },
+      { name: "Kanda / Batata Bhaji" },
+      { name: "Paneer Pakoda" },
+      { name: "Paneer Special Pakoda" },
+      { name: "Puri Bhaji" },
+      { name: "Maggi" },
     ],
   },
   {
@@ -84,9 +84,9 @@ const menuSections = [
     gridClass: "md:col-span-1 lg:col-span-1",
     accent: "border-[#fcd34d]/20 bg-white/70 dark:bg-neutral-900/70",
     items: [
-      { name: "Veg Sandwich", price: "₹80" },
-      { name: "Veg Grill Sandwich", price: "₹120" },
-      { name: "French Toast", price: "₹100" },
+      { name: "Veg Sandwich" },
+      { name: "Veg Grill Sandwich" },
+      { name: "French Toast" },
     ],
   },
   {
@@ -97,9 +97,9 @@ const menuSections = [
     gridClass: "md:col-span-1 lg:col-span-1",
     accent: "border-[#fcd34d]/20 bg-white/70 dark:bg-neutral-900/70",
     items: [
-      { name: "Plain Papad", price: "₹35" },
-      { name: "Masala Papad", price: "₹60" },
-      { name: "Peanut Chaat", price: "₹110" },
+      { name: "Plain Papad" },
+      { name: "Masala Papad" },
+      { name: "Peanut Chaat" },
     ],
   },
   {
@@ -111,18 +111,18 @@ const menuSections = [
     accent: "border-[#fcd34d]/40 bg-gradient-to-br from-[#fcd34d]/10 via-white to-white dark:via-neutral-900 dark:to-neutral-900",
     isFeatured: true,
     items: [
-      { name: "Dal Fry", price: "₹150" },
-      { name: "Dal Tadka", price: "₹170" },
-      { name: "Akha Masoor Dal", price: "₹170" },
-      { name: "Jeera / Shimla / Matar Aloo", price: "₹220" },
-      { name: "Bhindi Fry", price: "₹220" },
-      { name: "Baingan Masala / Bharta", price: "₹220" },
-      { name: "Gobhi Aloo / Mix Veg", price: "₹240" },
-      { name: "Veg Kolhapuri", price: "₹240" },
-      { name: "Matar Paneer", price: "₹240" },
-      { name: "Paneer Masala / Bhurji", price: "₹270" },
-      { name: "Palak Paneer", price: "₹270" },
-      { name: "Kaju Masala", price: "₹270" },
+      { name: "Dal Fry" },
+      { name: "Dal Tadka" },
+      { name: "Akha Masoor Dal" },
+      { name: "Jeera / Shimla / Matar Aloo" },
+      { name: "Bhindi Fry" },
+      { name: "Baingan Masala / Bharta" },
+      { name: "Gobhi Aloo / Mix Veg" },
+      { name: "Veg Kolhapuri" },
+      { name: "Matar Paneer" },
+      { name: "Paneer Masala / Bhurji" },
+      { name: "Palak Paneer" },
+      { name: "Kaju Masala" },
     ],
   },
   {
@@ -133,10 +133,10 @@ const menuSections = [
     gridClass: "md:col-span-1 lg:col-span-1",
     accent: "border-[#fcd34d]/20 bg-white/70 dark:bg-neutral-900/70",
     items: [
-      { name: "Chapati", price: "₹25" },
-      { name: "Butter Chapati", price: "₹30" },
-      { name: "Bhakri (Rice)", price: "₹35" },
-      { name: "Bhakri (Jowar)", price: "₹35" },
+      { name: "Chapati" },
+      { name: "Butter Chapati" },
+      { name: "Bhakri (Rice)" },
+      { name: "Bhakri (Jowar)" },
     ],
   },
   {
@@ -147,12 +147,12 @@ const menuSections = [
     gridClass: "md:col-span-2 lg:col-span-2",
     accent: "border-[#fcd34d]/20 bg-white/70 dark:bg-neutral-900/70",
     items: [
-      { name: "Indrani Rice", price: "₹160" },
-      { name: "Steam Rice", price: "₹170" },
-      { name: "Jeera Rice", price: "₹180" },
-      { name: "Dal Khichdi Tadka", price: "₹220" },
-      { name: "Veg Pulao", price: "₹270" },
-      { name: "Veg Biryani", price: "₹320" },
+      { name: "Indrani Rice" },
+      { name: "Steam Rice" },
+      { name: "Jeera Rice" },
+      { name: "Dal Khichdi Tadka" },
+      { name: "Veg Pulao" },
+      { name: "Veg Biryani" },
     ],
   },
   {
@@ -164,9 +164,8 @@ const menuSections = [
     accent: "border-[#fcd34d]/50 bg-[#112A46] text-white shadow-xl dark:bg-neutral-800",
     isDark: true,
     items: [
-      { name: "BBQ Veg (Per Person)", price: "₹600" },
-      { name: "BBQ Veg (Per Kg)", price: "₹1750" },
-      { name: "3 Course Meal Veg (Per Person)", price: "₹1500" },
+      { name: "Veg Barbeque" },
+      { name: "Non Veg Barbeque" },
     ],
     note: "Includes Masala Bhat / Pulao / Dal Khichdi",
   },
@@ -178,9 +177,9 @@ const menuSections = [
     gridClass: "md:col-span-1 lg:col-span-1",
     accent: "border-[#fcd34d]/20 bg-white/70 dark:bg-neutral-900/70",
     items: [
-      { name: "Sadhi Veg Thali", price: "₹220" },
-      { name: "Pithale Bhakri Thali", price: "₹230" },
-      { name: "Veg Thali", price: "₹270" },
+      { name: "Sadhi Veg Thali" },
+      { name: "Pithale Bhakri Thali" },
+      { name: "Veg Thali" },
     ],
   },
   {
@@ -191,10 +190,10 @@ const menuSections = [
     gridClass: "md:col-span-1 lg:col-span-1",
     accent: "border-[#fcd34d]/20 bg-white/70 dark:bg-neutral-900/70",
     items: [
-      { name: "Sevai Kheer", price: "₹45" },
-      { name: "Gulab Jamun (2 Pcs)", price: "₹65" },
-      { name: "Gajar Halwa", price: "₹85" },
-      { name: "Sweet Sheera", price: "₹85" },
+      { name: "Sevai Kheer" },
+      { name: "Gulab Jamun (2 Pcs)" },
+      { name: "Gajar Halwa" },
+      { name: "Sweet Sheera" },
     ],
   },
   {
@@ -205,10 +204,10 @@ const menuSections = [
     gridClass: "md:col-span-2 lg:col-span-2",
     accent: "border-[#fcd34d]/20 bg-white/70 dark:bg-neutral-900/70",
     items: [
-      { name: "Tea / Black Tea / Black Coffee", price: "₹25 - ₹30" },
-      { name: "Coffee / Milk / Fresh Lime Water", price: "₹50" },
-      { name: "Bournvita", price: "₹60" },
-      { name: "Mineral Water", price: "₹25" },
+      { name: "Tea / Black Tea / Black Coffee" },
+      { name: "Coffee / Milk / Fresh Lime Water" },
+      { name: "Bournvita" },
+      { name: "Mineral Water" },
     ],
   },
 ];
@@ -245,27 +244,21 @@ export default function MenuPage() {
           <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/80" />
 
           <div className="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center">
-            <span className="inline-flex items-center gap-2 rounded-full border border-[#fcd34d]/40 bg-[#fcd34d]/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.35em] text-[#fcd34d]/90 backdrop-blur-md">
-              <SparklesIcon className="h-3.5 w-3.5" /> PRIVATE DINING EXPERIENCE
+            <span className="inline-flex items-center gap-2 rounded-full border border-[#fcd34d]/40 bg-[#fcd34d]/10 px-4 py-1.5 text-sm font-semibold uppercase tracking-[0.35em] text-[#fcd34d]/90 backdrop-blur-md">
+              <SparklesIcon className="h-4 w-4" /> PRIVATE DINING EXPERIENCE
             </span>
 
-            <h1 className="mt-6 font-serif text-3xl font-bold text-white md:text-5xl">
+            <h1 className="mt-6 font-serif text-4xl font-bold text-white md:text-6xl">
               Our Food Menu
             </h1>
 
-            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-neutral-200">
+            <p className="mt-6 max-w-2xl text-xl leading-relaxed text-neutral-200">
               Freshly prepared delicacies crafted with premium
               ingredients, authentic Indian spices, and warm homely hospitality.
             </p>
 
             {/* ACTION BUTTONS */}
             <div className="mt-10 flex flex-wrap justify-center gap-4">
-              {/* <a href="/kapoors_villa_menu.pdf" download="Kapoor_Villa_Menu.pdf">
-                <Button size="lg" className="gap-2.5 bg-[#fcd34d]/90 text-black hover:bg-[#fcd34d] font-semibold px-7 shadow-lg shadow-[#fcd34d]/20">
-                  <DownloadIcon className="h-4 w-4" /> Download PDF Menu
-                </Button>
-              </a> */}
-
               <Button
                 asChild
                 variant="outline"
@@ -286,8 +279,8 @@ export default function MenuPage() {
                 <DownloadIcon className="h-5 w-5" />
               </div>
               <div>
-                <h3 className="font-serif text-lg font-bold text-[#112A46] dark:text-white">Looking for a printable copy?</h3>
-                <p className="text-sm text-[#112A46]/70 dark:text-neutral-400">Download our complete Pure Veg menu card in PDF format.</p>
+                <h3 className="font-serif text-xl font-bold text-[#112A46] dark:text-white">Looking for a printable copy?</h3>
+                <p className="text-base text-[#112A46]/70 dark:text-neutral-400">Download our complete Pure Veg menu card in PDF format.</p>
               </div>
             </div>
 
@@ -302,15 +295,15 @@ export default function MenuPage() {
         {/* ================= BENTO GRID MENU SECTION ================= */}
         <section id="menu-bento" className="container mx-auto px-6 py-24">
           <div className="text-center">
-            <p className="text-xs font-semibold uppercase tracking-[0.45em] text-[#fcd34d]/90">
+            <p className="text-sm font-semibold uppercase tracking-[0.45em] text-[#fcd34d]/90">
               OUR SPECIALITIES
             </p>
 
-            <h2 className="mt-3 font-serif text-4xl font-bold md:text-5xl text-[#112A46] dark:text-white">
+            <h2 className="mt-3 font-serif text-5xl font-bold md:text-6xl text-[#112A46] dark:text-white">
               Curated Menu
             </h2>
 
-            <p className="mx-auto mt-4 max-w-2xl text-[#112A46]/70 dark:text-neutral-400">
+            <p className="mx-auto mt-4 max-w-2xl text-base text-[#112A46]/70 dark:text-neutral-400">
               Browse through our structured menu options. Every dish is cooked fresh to order after your arrival confirmation.
             </p>
           </div>
@@ -326,11 +319,11 @@ export default function MenuPage() {
                   {/* Category Header */}
                   <div className="flex items-start justify-between gap-4 border-b border-[#112A46]/10 dark:border-white/10 pb-5">
                     <div>
-                      <span className="text-[11px] font-bold uppercase tracking-widest text-[#fcd34d]/90">
+                      <span className="text-xs font-bold uppercase tracking-widest text-[#fcd34d]/90">
                         {section.subtitle}
                       </span>
                       <h3
-                        className={`mt-1 font-serif text-2xl font-bold ${
+                        className={`mt-1 font-serif text-3xl font-bold ${
                           section.isDark ? "text-white" : "text-[#112A46] dark:text-white"
                         }`}
                       >
@@ -339,7 +332,7 @@ export default function MenuPage() {
                     </div>
 
                     <span
-                      className={`rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-wider ${
+                      className={`rounded-full px-3 py-1 text-[11px] font-bold uppercase tracking-wider ${
                         section.isDark
                           ? "bg-[#fcd34d]/20 text-[#fcd34d]/90 border border-[#fcd34d]/30"
                           : "bg-[#fcd34d]/10 text-[#fcd34d]/90"
@@ -360,7 +353,7 @@ export default function MenuPage() {
                     {section.items.map((item) => (
                       <div
                         key={item.name}
-                        className="group flex items-baseline justify-between gap-3 text-sm"
+                        className="group flex items-baseline justify-between gap-3 text-base"
                       >
                         <span
                           className={`font-medium transition-colors hover:text-[#fcd34d]/90 ${
@@ -369,21 +362,13 @@ export default function MenuPage() {
                         >
                           {item.name}
                         </span>
-
-                        <span className="grow border-b border-dotted border-[#112A46]/20 dark:border-white/20" />
-
-                        <span
-                          className={`font-bold font-mono text-[#fcd34d]/90`}
-                        >
-                          {item.price}
-                        </span>
                       </div>
                     ))}
                   </div>
 
                   {/* Special Note for BBQ or Featured Cards */}
                   {section.note && (
-                    <div className="mt-6 rounded-xl border border-[#fcd34d]/30 bg-[#fcd34d]/10 p-3 text-xs text-[#fcd34d]/90 italic">
+                    <div className="mt-6 rounded-xl border border-[#fcd34d]/30 bg-[#fcd34d]/10 p-3 text-sm text-[#fcd34d]/90 italic">
                       💡 {section.note}
                     </div>
                   )}
@@ -396,11 +381,11 @@ export default function MenuPage() {
         {/* ================= BENTO GALLERY SECTION ================= */}
         <section className="container mx-auto px-6 py-20 border-t border-[#112A46]/10 dark:border-white/10">
           <div className="text-center">
-            <p className="text-xs uppercase tracking-[0.45em] text-[#fcd34d]/90">
+            <p className="text-sm uppercase tracking-[0.45em] text-[#fcd34d]/90">
               Behind Every Delicious Meal
             </p>
-            <h2 className="mt-3 font-serif text-4xl font-bold text-[#112A46] dark:text-white">Our Kitchen & Dining</h2>
-            <p className="mx-auto mt-4 max-w-2xl text-[#112A46]/70 dark:text-neutral-400">
+            <h2 className="mt-3 font-serif text-5xl font-bold text-[#112A46] dark:text-white">Our Kitchen & Dining</h2>
+            <p className="mx-auto mt-4 max-w-2xl text-base text-[#112A46]/70 dark:text-neutral-400">
               Hygienic, freshly sourced ingredients prepared by experienced cooks in a sparkling clean environment.
             </p>
           </div>
@@ -419,10 +404,10 @@ export default function MenuPage() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80 group-hover:opacity-100 transition-opacity" />
                 <div className="absolute bottom-5 left-5">
-                  <h3 className="font-serif text-xl font-bold text-white">
+                  <h3 className="font-serif text-2xl font-bold text-white">
                     {image.title}
                   </h3>
-                  <p className="text-xs text-neutral-300 tracking-wider">Fresh • Hygienic • Pure</p>
+                  <p className="text-sm text-neutral-300 tracking-wider">Fresh • Hygienic • Pure</p>
                 </div>
               </div>
             ))}
@@ -437,32 +422,32 @@ export default function MenuPage() {
               {/* Left Side: Content & Cards */}
               <div>
                 <div className="text-left">
-                  <p className="text-xs uppercase tracking-[0.45em] text-[#fcd34d]/90">
+                  <p className="text-sm uppercase tracking-[0.45em] text-[#fcd34d]/90">
                     Dining Guidelines
                   </p>
-                  <h2 className="mt-2 font-serif text-3xl font-bold text-[#112A46] dark:text-white md:text-5xl">
+                  <h2 className="mt-2 font-serif text-4xl font-bold text-[#112A46] dark:text-white md:text-6xl">
                     Important Information
                   </h2>
-                  <p className="mt-6 text-sm leading-relaxed text-[#112A46]/70 dark:text-neutral-400">
+                  <p className="mt-6 text-base leading-relaxed text-[#112A46]/70 dark:text-neutral-400">
                     Experience seamless dining with our dedicated culinary team. We prioritize your health, taste, and overall satisfaction by ensuring every meal meets our highest standards.
                   </p>
                 </div>
 
                 <div className="mt-10 flex flex-col gap-6">
                   <div className="rounded-2xl border border-[#fcd34d]/20 bg-white/60 dark:bg-neutral-900/60 p-6 shadow-sm backdrop-blur">
-                    <h3 className="font-serif text-xl font-bold text-[#fcd34d]/90">
+                    <h3 className="font-serif text-2xl font-bold text-[#fcd34d]/90">
                       👨‍🍳 Fresh Preparation
                     </h3>
-                    <p className="mt-2 text-sm leading-relaxed text-[#112A46]/70 dark:text-neutral-400">
+                    <p className="mt-2 text-base leading-relaxed text-[#112A46]/70 dark:text-neutral-400">
                       All meals are cooked fresh after confirmation to guarantee maximum flavor, warmth, and high nutrition.
                     </p>
                   </div>
 
                   <div className="rounded-2xl border border-[#fcd34d]/20 bg-white/60 dark:bg-neutral-900/60 p-6 shadow-sm backdrop-blur">
-                    <h3 className="font-serif text-xl font-bold text-[#fcd34d]/90">
+                    <h3 className="font-serif text-2xl font-bold text-[#fcd34d]/90">
                       📅 Advance Confirmation
                     </h3>
-                    <p className="mt-2 text-sm leading-relaxed text-[#112A46]/70 dark:text-neutral-400">
+                    <p className="mt-2 text-base leading-relaxed text-[#112A46]/70 dark:text-neutral-400">
                       Kindly share your menu selections 1 day prior to arrival to allow us to source fresh ingredients.
                     </p>
                   </div>
@@ -495,13 +480,13 @@ export default function MenuPage() {
           <div className="absolute inset-0 bg-black/80" />
 
           <div className="relative container mx-auto text-center px-6">
-            <p className="text-xs uppercase tracking-[0.45em] text-[#fcd34d]/90">
+            <p className="text-sm uppercase tracking-[0.45em] text-[#fcd34d]/90">
               Kapoor's Villa Experience
             </p>
-            <h2 className="mt-4 font-serif text-4xl font-bold text-white md:text-6xl">
+            <h2 className="mt-4 font-serif text-5xl font-bold text-white md:text-7xl">
               Good Food. Great Memories.
             </h2>
-            <p className="mx-auto mt-6 max-w-2xl text-neutral-300">
+            <p className="mx-auto mt-6 max-w-2xl text-lg text-neutral-300">
               Download our menu or reach out to reserve your private dining dates for family gatherings, vacations, and celebrations.
             </p>
 
