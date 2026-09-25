@@ -267,7 +267,7 @@ export default function GalleryPage() {
           <div className="mx-auto w-full max-w-7xl px-4 sm:px-16 md:px-24 flex flex-col items-center">
             
             {/* Heading */}
-            <div className="text-center mb-12">
+            <div id="rooms" className="text-center mb-12">
               <p className="text-sm font-semibold uppercase tracking-[0.45em] text-[#fcd34d]/90">
                 Uncompromising Comfort
               </p>
@@ -280,7 +280,7 @@ export default function GalleryPage() {
             <div className="relative w-full flex items-center justify-center max-w-6xl mx-auto">
               
               {/* ================= OUTER NAVIGATION ARROWS ================= */}
-              <button
+              <button 
                 onClick={goToPrevRoom}
                 className="absolute left-0 sm:-left-8 md:-left-12 top-1/2 -translate-y-1/2 bg-white hover:bg-slate-100 dark:hover:bg-neutral-200 text-black border border-slate-200 dark:border-transparent rounded-full p-3 sm:p-4 transition-transform hover:scale-105 z-10 shadow-lg"
                 aria-label="Previous image"

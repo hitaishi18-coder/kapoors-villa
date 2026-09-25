@@ -8,7 +8,7 @@ import { FaWhatsapp, FaInstagram } from "react-icons/fa6";
 const quickLinks = [
     { title: "Home", href: "/" },
     { title: "About", href: "/about" },
-    { title: "Rooms", href: "/rooms" },
+    { title: "Rooms", href: "/gallery#rooms" },
     { title: "Gallery", href: "/gallery" },
     { title: "Menu", href: "/menu" },
     { title: "Contact", href: "/contact" },
