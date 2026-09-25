@@ -131,16 +131,16 @@ const gallery: GalleryItem[] = [
     description:
       "Catch the golden hour light as day breaks over the serene poolside horizon.",
   },
+ {
+  title: "Dining View",
+  category: "Interior",
+  image: "/lawn/lawn-view.jpg",
+  height: "h-[340px] sm:h-[460px]",
+  description:
+    "Elegant dining space designed for comfortable meals, gatherings, and memorable moments with family and friends.",
+},
   {
-    title: "Lawn View",
-    category: "Exterior",
-    image: "/lawn/lawn-view.jpg",
-    height: "h-[340px] sm:h-[460px]",
-    description:
-      "Expansive green spaces ideal for morning yoga, outdoor games, or events.",
-  },
-  {
-    title: "Balcony View",
+    title: "Terrace View",
     category: "Rooms",
     image: "/outdoor/balcony-view.jpg",
     height: "h-[360px] sm:h-[520px]",
@@ -148,7 +148,7 @@ const gallery: GalleryItem[] = [
       "Step outside your bedroom onto a private balcony with serene landscape views.",
   },
   {
-    title: "Balcony View 2",
+    title: "Balcony View ",
     category: "Rooms",
     image: "/outdoor/balcony-view-2.jpg",
     height: "h-[320px] sm:h-[380px]",
@@ -164,7 +164,7 @@ const gallery: GalleryItem[] = [
       "Ambient outdoor lighting creates a romantic dinner atmosphere under the stars.",
   },
   {
-    title: "Sofa Area",
+    title: "Dining Area",
     category: "Rooms",
     image: "/dining/dining7.jpg",
     height: "h-[340px] sm:h-[400px]",
@@ -180,7 +180,7 @@ const gallery: GalleryItem[] = [
       "Watch dusk paint the sky in shades of crimson and violet right by the water.",
   },
   {
-    title: "Night View Villa",
+    title: "Night View ",
     category: "Exterior",
     image: "/outer/night-view-villa.jpg",
     height: "h-[340px] sm:h-[480px]",
