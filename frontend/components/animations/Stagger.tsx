@@ -24,7 +24,7 @@ export default function Stagger({ children, className }: StaggerProps) {
             whileInView="show"
             viewport={{
                 once: true,
-                amount: 0.2,
+                amount: 0,
             }}
         >
             {children}
@@ -32,8 +32,14 @@ export default function Stagger({ children, className }: StaggerProps) {
     );
 }
 
-export const StaggerItem = ({ children }: { children: ReactNode }) => (
+interface StaggerItemProps {
+    children: ReactNode;
+    className?: string;
+}
+
+export const StaggerItem = ({ children, className }: StaggerItemProps) => (
     <motion.div
+        className={className}
         variants={{
             hidden: {
                 opacity: 0,

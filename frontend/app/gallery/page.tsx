@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -194,7 +197,33 @@ const gallery: GalleryItem[] = [
   },
 ];
 
+const roomGallery = [
+  { src: "/rooms/room.jpg", title: "Suite Ambience" },
+  { src: "/rooms/room-2.jpg", title: "Plush King Bed" },
+  { src: "/rooms/room-3.jpg", title: "Elegant Interiors" },
+  { src: "/rooms/room-4.jpg", title: "Scenic Window Views" },
+  { src: "/rooms/room-5.jpg", title: "Spacious Layout" },
+  { src: "/rooms/room-6.jpg", title: "Natural Light" },
+  { src: "/rooms/room-7.jpg", title: "Cozy Seating Area" },
+  { src: "/rooms/room-8.jpg", title: "Warm Lighting" },
+  { src: "/rooms/room-9.jpg", title: "Evening Retreat" },
+];
+
 export default function GalleryPage() {
+  const [currentRoomIndex, setCurrentRoomIndex] = useState(0);
+
+  const goToPrevRoom = () => {
+    setCurrentRoomIndex((prevIndex) =>
+      prevIndex === 0 ? roomGallery.length - 1 : prevIndex - 1
+    );
+  };
+
+  const goToNextRoom = () => {
+    setCurrentRoomIndex((prevIndex) =>
+      prevIndex === roomGallery.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
   return (
     <>
       <Navbar />
@@ -232,6 +261,128 @@ export default function GalleryPage() {
             </p>
           </HeroReveal>
         </section>
+
+
+              {/* ================= ROOMS CAROUSEL (Light/Dark mode) ================= */}
+        <section className="relative w-full bg-[#FDFBF7] dark:bg-black py-24 border-y border-[#112A46]/10 dark:border-white/10 transition-colors duration-300">
+          <div className="mx-auto w-full max-w-7xl px-4 sm:px-16 md:px-24 flex flex-col items-center">
+            
+            {/* Heading */}
+            <div className="text-center mb-12">
+              <p className="text-sm font-semibold uppercase tracking-[0.45em] text-[#fcd34d]/90">
+                Uncompromising Comfort
+              </p>
+              <h2 className="mt-3 font-serif text-4xl font-bold text-[#112A46] dark:text-white sm:text-5xl transition-colors duration-300">
+                Our Luxury Suites
+              </h2>
+            </div>
+
+            {/* Carousel Container */}
+            <div className="relative w-full flex items-center justify-center max-w-6xl mx-auto">
+              
+              {/* ================= OUTER NAVIGATION ARROWS ================= */}
+              <button
+                onClick={goToPrevRoom}
+                className="absolute left-0 sm:-left-8 md:-left-12 top-1/2 -translate-y-1/2 bg-white hover:bg-slate-100 dark:hover:bg-neutral-200 text-black border border-slate-200 dark:border-transparent rounded-full p-3 sm:p-4 transition-transform hover:scale-105 z-10 shadow-lg"
+                aria-label="Previous image"
+              >
+                <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+                </svg>
+              </button>
+
+              <button
+                onClick={goToNextRoom}
+                className="absolute right-0 sm:-right-8 md:-right-12 top-1/2 -translate-y-1/2 bg-white hover:bg-slate-100 dark:hover:bg-neutral-200 text-black border border-slate-200 dark:border-transparent rounded-full p-3 sm:p-4 transition-transform hover:scale-105 z-10 shadow-lg"
+                aria-label="Next image"
+              >
+                <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+
+              {/* ================= CENTRAL CONTAINER ================= */}
+              <div className="w-full bg-white dark:bg-[#1A1B1E] border border-slate-200 dark:border-transparent rounded-2xl p-4 sm:p-6 flex flex-col gap-4 shadow-xl dark:shadow-2xl transition-colors duration-300">
+                
+                {/* Main Large Image */}
+                <div className="relative w-full aspect-video sm:aspect-[21/9] bg-slate-100 dark:bg-[#0F0F11] rounded-xl overflow-hidden transition-colors duration-300">
+                  <Image
+                    src={roomGallery[currentRoomIndex].src}
+                    alt={roomGallery[currentRoomIndex].title}
+                    fill
+                    className="object-contain transition-opacity duration-500"
+                  />
+
+                  {/* Bottom Left Caption Overlay */}
+                  <div className="absolute bottom-3 left-4 text-slate-800 dark:text-white/90 text-sm md:text-base font-medium drop-shadow-sm dark:drop-shadow-lg bg-white/90 dark:bg-black/60 px-3 py-1.5 rounded-md backdrop-blur-sm border border-slate-200 dark:border-white/10 transition-colors duration-300">
+                    {currentRoomIndex + 1}/{roomGallery.length} - {roomGallery[currentRoomIndex].title}
+                  </div>
+                </div>
+
+                {/* Thumbnail Strip */}
+                <div className="relative w-full">
+                  <div className="flex items-center gap-3 overflow-x-auto py-2 px-1 scrollbar-hide snap-x justify-start lg:justify-center">
+                    {roomGallery.map((img, index) => (
+                      <button
+                        key={index}
+                        onClick={() => setCurrentRoomIndex(index)}
+                        className={`
+                          relative flex-shrink-0 w-24 h-16 sm:w-32 sm:h-20 rounded-md overflow-hidden 
+                          transition-all duration-200 snap-center
+                          ${
+                            currentRoomIndex === index
+                              ? "ring-2 ring-[#112A46] dark:ring-white scale-[1.02] opacity-100" 
+                              : "opacity-40 hover:opacity-100"
+                          }
+                        `}
+                      >
+                        <Image
+                          src={img.src}
+                          alt={`Thumbnail ${index + 1}`}
+                          fill
+                          className="object-cover"
+                        />
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+      
+
+          {/* =========================================================
+            LUXURY QUOTE
+        ========================================================= */}
+        <FadeUp>
+          <section className="relative w-full overflow-hidden border-y border-amber-500/10 py-16 sm:py-32">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(245,158,11,0.08),transparent_60%)]" />
+
+            <div className="container relative mx-auto w-full max-w-5xl px-4 text-center sm:px-6">
+              <p className="text-xs uppercase tracking-[0.35em] text-amber-500 sm:tracking-[0.45em]">
+                Timeless Luxury
+              </p>
+
+              <h2 className="mt-4 font-serif text-2xl leading-snug sm:mt-8 sm:text-4xl sm:leading-tight md:text-6xl">
+                Every photograph captures more than a destination—it preserves
+                moments of elegance, comfort and unforgettable memories.
+              </h2>
+
+              <div className="mx-auto mt-8 h-px w-24 bg-amber-500/40 sm:mt-12 sm:w-40" />
+
+              <p className="mx-auto mt-6 max-w-3xl text-sm leading-6 text-muted-foreground sm:mt-10 sm:text-base sm:leading-8">
+                Every sunrise, every evening by the pool and every carefully
+                crafted space has been designed to create experiences worth
+                remembering.
+              </p>
+            </div>
+          </section>
+        </FadeUp>
+
+
+
 
         {/* =========================================================
             GALLERY GRID
@@ -298,34 +449,7 @@ export default function GalleryPage() {
           </section>
         </FadeUp>
 
-        {/* =========================================================
-            LUXURY QUOTE
-        ========================================================= */}
-        <FadeUp>
-          <section className="relative w-full overflow-hidden border-y border-amber-500/10 py-16 sm:py-32">
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(245,158,11,0.08),transparent_60%)]" />
-
-            <div className="container relative mx-auto w-full max-w-5xl px-4 text-center sm:px-6">
-              <p className="text-xs uppercase tracking-[0.35em] text-amber-500 sm:tracking-[0.45em]">
-                Timeless Luxury
-              </p>
-
-              <h2 className="mt-4 font-serif text-2xl leading-snug sm:mt-8 sm:text-4xl sm:leading-tight md:text-6xl">
-                Every photograph captures more than a destination—it preserves
-                moments of elegance, comfort and unforgettable memories.
-              </h2>
-
-              <div className="mx-auto mt-8 h-px w-24 bg-amber-500/40 sm:mt-12 sm:w-40" />
-
-              <p className="mx-auto mt-6 max-w-3xl text-sm leading-6 text-muted-foreground sm:mt-10 sm:text-base sm:leading-8">
-                Every sunrise, every evening by the pool and every carefully
-                crafted space has been designed to create experiences worth
-                remembering.
-              </p>
-            </div>
-          </section>
-        </FadeUp>
-
+    
         {/* =========================================================
             PRIMARY CTA
         ========================================================= */}
@@ -372,63 +496,6 @@ export default function GalleryPage() {
             </Card>
           </section>
         </FadeUp>
-
-        {/* =========================================================
-            SECONDARY BOOKING CTA
-        ========================================================= */}
-        <section className="w-full px-4 pb-16 sm:px-6 sm:pb-32">
-          <Card className="mx-auto w-full max-w-7xl overflow-hidden border-amber-500/20">
-            <div className="grid min-w-0 lg:grid-cols-2">
-              {/* Left */}
-              <div className="flex min-w-0 flex-col justify-center p-6 sm:p-10 md:p-16">
-                <p className="text-xs uppercase tracking-[0.35em] text-amber-500 sm:tracking-[0.4em]">
-                  Reserve Your Escape
-                </p>
-
-                <h2 className="mt-2 font-serif text-3xl font-bold sm:mt-4 sm:text-4xl md:text-5xl">
-                  Luxury Awaits
-                </h2>
-
-                <p className="mt-4 text-sm leading-6 text-muted-foreground sm:mt-6 sm:text-base sm:leading-8">
-                  Experience breathtaking views, curated interiors, personalized
-                  hospitality and unforgettable moments at Kapoor&apos;s Villa.
-                </p>
-
-                <div className="mt-8 flex flex-wrap gap-3 sm:mt-10 sm:gap-4">
-                  <Button
-                    asChild
-                    size="lg"
-                    className="bg-amber-500 text-black hover:bg-amber-400"
-                  >
-                    <Link href="/book">Book Now</Link>
-                  </Button>
-
-                  <Button
-                    asChild
-                    size="lg"
-                    variant="outline"
-                    className="border-amber-500/40 hover:border-amber-500"
-                  >
-                    <Link href="/contact">Contact Us</Link>
-                  </Button>
-                </div>
-              </div>
-
-              {/* Right */}
-              <div className="relative min-h-[260px] min-w-0 sm:min-h-[420px]">
-                <Image
-                  src="/gallery/gallery-cta.jpg"
-                  alt="Luxury Villa"
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                  className="object-cover object-center"
-                />
-
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent lg:bg-gradient-to-l lg:from-transparent lg:to-black/20" />
-              </div>
-            </div>
-          </Card>
-        </section>
       </main>
 
       <Footer />

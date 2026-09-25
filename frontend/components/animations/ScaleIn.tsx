@@ -27,7 +27,7 @@ export default function ScaleIn({
             }}
             viewport={{
                 once: true,
-                amount: 0.2,
+                amount: 0,
             }}
             transition={{
                 duration: 0.6,
