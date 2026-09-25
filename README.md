@@ -1,6 +1,6 @@
-# Kapoor's Villa 
+# 🏡 Kapoor's Villa | Luxury Boutique Homestay
 
-A high-performance, visually stunning web application for **Kapoor's Villa**, a luxury boutique homestay located in the serene Panchgani-Mahabaleshwar belt of Satara, Maharashtra. 
+> **A high-performance, visually stunning web application for Kapoor's Villa, a luxury boutique homestay located in the serene Panchgani-Mahabaleshwar belt of Satara, Maharashtra.**
 
 This project is built with a focus on luxury aesthetics, seamless user experience, traditional Search Engine Optimization (SEO), and Generative Engine Optimization (GEO) for AI search engines like Perplexity, ChatGPT, and Google AI Overviews.
 
@@ -13,7 +13,7 @@ This project is built with a focus on luxury aesthetics, seamless user experienc
 * **Fluid Animations:** Custom reveal, scroll, and stagger animations powered by Framer Motion.
 * **Interactive Components:** Accessible and highly polished UI components using Shadcn UI and Radix Primitives.
 * **Media-Rich Galleries:** Touch-friendly image carousels using Embla Carousel to showcase rooms, outdoor spaces, and dining.
-* **SEO & GEO Optimized:** Automated sitemaps, robots.txt, dynamic OpenGraph images, and injected JSON-LD schema markup (`LodgingBusiness`, `FAQPage`, `HotelRoom`) for maximum visibility.
+* **SEO & GEO Optimized:** Automated sitemaps, `robots.txt`, dynamic OpenGraph images, and injected JSON-LD schema markup (`LodgingBusiness`, `FAQPage`, `HotelRoom`) for maximum visibility.
 * **AI Readiness:** Includes a `public/llms.txt` file serving as a direct context feed for AI web crawlers.
 
 ---
@@ -30,6 +30,7 @@ This project is built with a focus on luxury aesthetics, seamless user experienc
 * [Shadcn UI](https://ui.shadcn.com/) (Radix Primitives)
 * [Framer Motion](https://motion.dev/)
 * [Lucide React](https://lucide.dev/) (Icons)
+* [Embla Carousel](https://www.embla-carousel.com/)
 
 ---
 
@@ -47,7 +48,7 @@ kapoors-villa/
 │   ├── layout.tsx        # Global layout, fonts, and JSON-LD
 │   └── page.tsx          # Landing page
 ├── components/           # Reusable React components
-│   ├── animations/       # Framer Motion animation wrappers (FadeIn, ScaleIn, etc.)
+│   ├── animations/       # Framer Motion wrappers (FadeIn, ScaleIn, etc.)
 │   ├── ui/               # Shadcn UI primitive components
 │   ├── Navbar.tsx        # Responsive top navigation
 │   ├── Footer.tsx        # Global footer
@@ -60,16 +61,16 @@ Prerequisites
 Ensure you have Node.js (v20 or higher) and npm installed on your machine.
 
 Installation
-Clone the repository:
+1. Clone the repository:
 
 Bash
 git clone [https://github.com/your-username/kapoors-villa.git](https://github.com/your-username/kapoors-villa.git)
 cd kapoors-villa/frontend
-Install dependencies:
+2. Install dependencies:
 
 Bash
 npm install
-Start the development server:
+3. Start the development server:
 
 Bash
 npm run dev
@@ -89,15 +90,17 @@ Distance Benchmarks: Maintain absolute consistency with the official property di
 LLM Context: If adding new features or routes, ensure public/llms.txt is updated to reflect the changes.
 
 🚢 Deployment
-This project is optimized for deployment on Vercel.
+This project is optimized for seamless deployment on Vercel.
 
 To deploy:
 
-Push your code to a Git repository (GitHub/GitLab/Bitbucket).
+Push your code to a Git repository (GitHub / GitLab / Bitbucket).
 
 Import the project into your Vercel dashboard.
 
 Vercel will automatically detect Next.js and configure the build settings.
+
+Manual Build & Start:
 
 Bash
 # Manual Build Command
