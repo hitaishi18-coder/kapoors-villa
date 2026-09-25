@@ -27,175 +27,174 @@ interface GalleryItem {
 }
 
 const gallery: GalleryItem[] = [
-  {
-    title: "Royal Suite",
-    category: "Rooms",
-    image: "/gallery/room-1.jpg",
-    height: "h-[340px] sm:h-[420px]",
-    description:
-      "Immerse yourself in regal comfort featuring plush furnishings and panoramic views.",
-  },
-  {
-    title: "Infinity Pool",
-    category: "Pool",
-    image: "/gallery/pool.jpg",
-    height: "h-[380px] sm:h-[560px]",
-    description:
-      "Swim right to the edge with pristine water overlooking lush green hills.",
-  },
-  {
-    title: "Luxury Bedroom",
-    category: "Rooms",
-    image: "/gallery/room-2.jpg",
-    height: "h-[320px] sm:h-[360px]",
-    description:
-      "Elegantly styled interiors designed for maximum relaxation and peaceful sleep.",
-  },
-  {
-    title: "Outdoor Lounge",
-    category: "Exterior",
-    image: "/gallery/outdoor.webp",
-    height: "h-[360px] sm:h-[520px]",
-    description:
-      "Unwind under open skies with comfortable seating made for sunset conversations.",
-  },
-  {
-    title: "Private Dining",
-    category: "Dining",
-    image: "/gallery/dining.jpg",
-    height: "h-[320px] sm:h-[380px]",
-    description:
-      "Savor exquisite gourmet meals prepared by our in-house culinary masters.",
-  },
-  {
-    title: "Bonfire Evening",
-    category: "Experiences",
-    image: "/gallery/bonfire.jpg",
-    height: "h-[340px] sm:h-[460px]",
-    description:
-      "Warm up around a crackling fire under a starry sky with signature refreshments.",
-  },
-  {
-    title: "Garden Walk",
-    category: "Exterior",
-    image: "/gallery/garden.webp",
-    height: "h-[360px] sm:h-[520px]",
-    description:
-      "Stroll through manicured lawns and vibrant botanical pathways.",
-  },
-  {
-    title: "Premium Suite",
-    category: "Rooms",
-    image: "/gallery/room-3.jpg",
-    height: "h-[320px] sm:h-[380px]",
-    description:
-      "Sophisticated decor paired with modern amenities for a lavish stay.",
-  },
-  {
-    title: "Rain Dance",
-    category: "Exterior",
-    image: "/extraas/rain-dance.png",
-    height: "h-[340px] sm:h-[460px]",
-    description:
-      "Experience refreshing outdoor fun and music in our dedicated rain dance zone.",
-  },
-  {
-    title: "Hill Top View",
-    category: "Exterior",
-    image: "/extraas/hill-top-view.jpeg",
-    height: "h-[340px] sm:h-[420px]",
-    description:
-      "Breath-taking 360-degree views of surrounding valleys and distant mountain ranges.",
-  },
-  {
-    title: "Pool Side Walk",
-    category: "Pool",
-    image: "/extraas/pool-side-walk.jpeg",
-    height: "h-[380px] sm:h-[560px]",
-    description:
-      "A peaceful illuminated deck perfect for tranquil evening strolls.",
-  },
-  {
-    title: "Roof Top View",
-    category: "Exterior",
-    image: "/extraas/roof-top-view.jpeg",
-    height: "h-[320px] sm:h-[360px]",
-    description:
-      "Elevated vantage point to enjoy morning tea or stargazing at night.",
-  },
-  {
-    title: "Sunrise View Pool Side",
-    category: "Experiences",
-    image: "/outdoor/sunrise-view-pool-side.jpg",
-    height: "h-[320px] sm:h-[380px]",
-    description:
-      "Catch the golden hour light as day breaks over the serene poolside horizon.",
-  },
  {
+  title: "Royal Suite",
+  category: "Rooms",
+  image: "/gallery/room-1.jpg",
+  height: "h-[340px] sm:h-[420px]",
+  description:
+    "Immerse yourself in regal comfort with elegant interiors, plush furnishings, and a relaxing atmosphere.",
+},
+{
+  title: "Infinity Pool",
+  category: "Pool",
+  image: "/gallery/pool.jpg",
+  height: "h-[380px] sm:h-[560px]",
+  description:
+    "Enjoy a refreshing swim in our stunning infinity pool surrounded by beautiful natural views.",
+},
+{
+  title: "Luxury Bedroom",
+  category: "Rooms",
+  image: "/gallery/room-2.jpg",
+  height: "h-[320px] sm:h-[360px]",
+  description:
+    "Elegantly styled interiors with a comfortable setting designed for a peaceful and relaxing stay.",
+},
+{
+  title: "Outdoor Lounge",
+  category: "Exterior",
+  image: "/gallery/outdoor.webp",
+  height: "h-[360px] sm:h-[520px]",
+  description:
+    "Relax in a spacious outdoor setting with comfortable seating, fresh air, and beautiful surroundings.",
+},
+{
+  title: "Private Dining",
+  category: "Dining",
+  image: "/gallery/dining.jpg",
+  height: "h-[320px] sm:h-[380px]",
+  description:
+    "Enjoy comfortable private dining in an elegant setting, perfect for meals and special gatherings.",
+},
+{
+  title: "Bonfire Evening",
+  category: "Experiences",
+  image: "/gallery/bonfire.jpg",
+  height: "h-[340px] sm:h-[460px]",
+  description:
+    "Gather around the warm bonfire and enjoy a memorable evening with family and friends under the open sky.",
+},
+{
+  title: "Garden Walk",
+  category: "Exterior",
+  image: "/gallery/garden.webp",
+  height: "h-[360px] sm:h-[520px]",
+  description:
+    "Take a peaceful stroll through the lush green gardens and beautifully maintained outdoor spaces.",
+},
+{
+  title: "Premium Suite",
+  category: "Rooms",
+  image: "/gallery/room-3.jpg",
+  height: "h-[320px] sm:h-[380px]",
+  description:
+    "Stay in a spacious premium suite featuring elegant interiors and modern comforts for a relaxing getaway.",
+},
+{
+  title: "Rain Dance",
+  category: "Experiences",
+  image: "/extraas/rain-dance.png",
+  height: "h-[340px] sm:h-[460px]",
+  description:
+    "Have fun with friends and family in our dedicated rain dance area, perfect for an energetic outdoor experience.",
+},
+{
+  title: "Hill Top View",
+  category: "Exterior",
+  image: "/extraas/hill-top-view.jpeg",
+  height: "h-[340px] sm:h-[420px]",
+  description:
+    "Take in beautiful panoramic views of the surrounding hills, valleys, and natural landscape.",
+},
+{
+  title: "Pool Side Walk",
+  category: "Pool",
+  image: "/extraas/pool-side-walk.jpeg",
+  height: "h-[380px] sm:h-[560px]",
+  description:
+    "Enjoy a peaceful walk along the poolside while taking in the relaxing outdoor surroundings.",
+},
+{
+  title: "Roof Top View",
+  category: "Exterior",
+  image: "/extraas/roof-top-view.jpeg",
+  height: "h-[320px] sm:h-[360px]",
+  description:
+    "Enjoy an elevated view of the surrounding landscape, perfect for relaxing mornings and peaceful evenings.",
+},
+{
+  title: "Sunrise View Pool Side",
+  category: "Pool",
+  image: "/outdoor/sunrise-view-pool-side.jpg",
+  height: "h-[320px] sm:h-[380px]",
+  description:
+    "Watch the beautiful sunrise from the poolside as the morning light fills the surroundings.",
+},
+{
   title: "Dining View",
   category: "Interior",
   image: "/lawn/lawn-view.jpg",
   height: "h-[340px] sm:h-[460px]",
   description:
-    "Elegant dining space designed for comfortable meals, gatherings, and memorable moments with family and friends.",
+    "Elegant dining interiors designed for comfortable meals, gatherings, and memorable moments with family and friends.",
 },
-  {
-    title: "Terrace View",
-    category: "Rooms",
-    image: "/outdoor/balcony-view.jpg",
-    height: "h-[360px] sm:h-[520px]",
-    description:
-      "Step outside your bedroom onto a private balcony with serene landscape views.",
-  },
-  {
-    title: "Balcony View ",
-    category: "Rooms",
-    image: "/outdoor/balcony-view-2.jpg",
-    height: "h-[320px] sm:h-[380px]",
-    description:
-      "Another vantage point offering cozy seating and crisp mountain air.",
-  },
-  {
-    title: "Dining Area for Dinner",
-    category: "Dining",
-    image: "/outdoor/dining-2.jpg",
-    height: "h-[340px] sm:h-[460px]",
-    description:
-      "Ambient outdoor lighting creates a romantic dinner atmosphere under the stars.",
-  },
-  {
-    title: "Dining Area",
-    category: "Rooms",
-    image: "/dining/dining7.jpg",
-    height: "h-[340px] sm:h-[400px]",
-    description:
-      "A plush, stylish indoor living lounge designed for deep relaxation.",
-  },
-  {
-    title: "Sunset View Pool Side",
-    category: "Pool",
-    image: "/outdoor/pool.jpg",
-    height: "h-[360px] sm:h-[500px]",
-    description:
-      "Watch dusk paint the sky in shades of crimson and violet right by the water.",
-  },
-  {
-    title: "Night View ",
-    category: "Exterior",
-    image: "/outer/night-view-villa.jpg",
-    height: "h-[340px] sm:h-[480px]",
-    description:
-      "Dramatically lit architecture showcases the estate's beauty after sundown.",
-  },
-  {
-    title: "Pool Side Chairs",
-    category: "Pool",
-    image: "/outer/pool-side-chairs.jpg",
-    height: "h-[320px] sm:h-[380px]",
-    description:
-      "Relax on luxury loungers with personal service just a call away.",
-  },
-];
+{
+  title: "Terrace View",
+  category: "Exterior",
+  image: "/outdoor/balcony-view.jpg",
+  height: "h-[360px] sm:h-[520px]",
+  description:
+    "Step outside onto the terrace and enjoy a peaceful outdoor space with beautiful landscape views.",
+},
+{
+  title: "Balcony View",
+  category: "Exterior",
+  image: "/outdoor/balcony-view-2.jpg",
+  height: "h-[320px] sm:h-[380px]",
+  description:
+    "Enjoy a cozy private balcony with refreshing outdoor views and a peaceful atmosphere.",
+},
+{
+  title: "Dining Area for Dinner",
+  category: "Dining",
+  image: "/outdoor/dining-2.jpg",
+  height: "h-[340px] sm:h-[460px]",
+  description:
+    "A beautiful dining setup perfect for enjoying dinner and spending quality time together in a relaxed outdoor setting.",
+},
+{
+  title: "Dining Area",
+  category: "Dining",
+  image: "/dining/dining7.jpg",
+  height: "h-[340px] sm:h-[400px]",
+  description:
+    "A stylish and comfortable dining space designed for relaxed meals and enjoyable gatherings.",
+},
+{
+  title: "Sunset View Pool Side",
+  category: "Pool",
+  image: "/outdoor/pool.jpg",
+  height: "h-[360px] sm:h-[500px]",
+  description:
+    "Relax by the pool and enjoy beautiful sunset views as the evening sky transforms around you.",
+},
+{
+  title: "Night View",
+  category: "Exterior",
+  image: "/outer/night-view-villa.jpg",
+  height: "h-[340px] sm:h-[480px]",
+  description:
+    "Experience the villa's beautiful exterior illuminated at night, creating a warm and inviting atmosphere.",
+},
+{
+  title: "Pool Side Chairs",
+  category: "Pool",
+  image: "/outer/pool-side-chairs.jpg",
+  height: "h-[320px] sm:h-[380px]",
+  description:
+    "Relax by the pool on comfortable chairs and loungers while enjoying the peaceful outdoor surroundings.",
+}]
 
 const roomGallery = [
   { src: "/rooms/room.jpg", title: "Suite Ambience" },
