@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
+import React from "react";
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -214,30 +214,16 @@ const menuSections = [
 
 // Kitchen gallery images
 const galleryLayout = [
-  { src: "/kitchen/kitchen.jpg", title: "Main Kitchen" }, 
-  { src: "/dining/dining3.jpg", title: "Dining Setup" },  
-  { src: "/kitchen/kitchen1.jpg", title: "Prep Area" },   
-  { src: "/kitchen/kitchen2.jpg", title: "Cooking Station" }, 
-  { src: "/dining/dining6.jpg", title: "Ambience" },      
-  { src: "/kitchen/kitchen3.jpg", title: "Fresh Ingredients" }, 
-  { src: "/dining/dining7.jpg", title: "Table View" },    
+  { src: "/kitchen/kitchen.jpg", title: "Main Kitchen", classes: "md:col-span-2 md:row-span-2" }, 
+  { src: "/dining/dining3.jpg", title: "Dining Setup", classes: "md:col-span-2 md:row-span-1" },  
+  { src: "/kitchen/kitchen1.jpg", title: "Prep Area", classes: "md:col-span-1 md:row-span-1" },   
+  { src: "/kitchen/kitchen2.jpg", title: "Cooking Station", classes: "md:col-span-1 md:row-span-1" }, 
+  { src: "/dining/dining6.jpg", title: "Ambience", classes: "md:col-span-2 md:row-span-1" },      
+  { src: "/kitchen/kitchen3.jpg", title: "Fresh Ingredients", classes: "md:col-span-1 md:row-span-1" }, 
+  { src: "/dining/dining7.jpg", title: "Table View", classes: "md:col-span-1 md:row-span-1" },    
 ];
 
 export default function MenuPage() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const goToPrevious = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? galleryLayout.length - 1 : prevIndex - 1
-    );
-  };
-
-  const goToNext = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === galleryLayout.length - 1 ? 0 : prevIndex + 1
-    );
-  };
-
   return (
     <>
       <Navbar />
@@ -404,92 +390,241 @@ export default function MenuPage() {
           </div>
         </section>
 
-        {/* ================= KITCHEN & DINING CAROUSEL (Light/Dark mode) ================= */}
-        <section className="relative w-full bg-[#FDFBF7] dark:bg-black py-24 border-t border-[#112A46]/10 dark:border-white/10 transition-colors duration-300">
-          <div className="mx-auto w-full max-w-7xl px-4 sm:px-16 md:px-24 flex flex-col items-center">
-            
+        {/* ================= KITCHEN & DINING BENTO ================= */}
+        <section className="w-full overflow-hidden border-t border-[#112A46]/10 py-24 dark:border-white/10">
+          <div className="mx-auto w-full max-w-7xl px-4 sm:px-6">
             {/* Heading */}
-            <div className="text-center mb-12">
+            <div className="text-center">
               <p className="text-sm font-semibold uppercase tracking-[0.45em] text-[#fcd34d]/90">
                 Behind Every Delicious Meal
               </p>
-              <h2 className="mt-3 font-serif text-4xl font-bold text-[#112A46] dark:text-white sm:text-5xl transition-colors duration-300">
+
+              <h2 className="mt-3 font-serif text-4xl font-bold text-[#112A46] dark:text-white sm:text-5xl">
                 Our Kitchen & Dining
               </h2>
+
+              <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-[#112A46]/70 dark:text-neutral-400 sm:text-base">
+                Hygienic, freshly sourced ingredients prepared by experienced
+                cooks in a sparkling clean environment.
+              </p>
             </div>
 
-            {/* Carousel Container */}
-            <div className="relative w-full flex items-center justify-center max-w-6xl mx-auto">
-              
-              {/* ================= OUTER NAVIGATION ARROWS ================= */}
-              <button
-                onClick={goToPrevious}
-                className="absolute left-0 sm:-left-8 md:-left-12 top-1/2 -translate-y-1/2 bg-white hover:bg-slate-100 dark:hover:bg-neutral-200 text-black border border-slate-200 dark:border-transparent rounded-full p-3 sm:p-4 transition-transform hover:scale-105 z-10 shadow-lg"
-                aria-label="Previous image"
+            {/* ================= TRUE BENTO ================= */}
+            <div className="mt-14 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:grid-rows-4">
+              {/* 01 — MAIN KITCHEN */}
+              <div
+                className="
+          group relative overflow-hidden rounded-[2rem]
+          border border-[#fcd34d]/20
+          shadow-xl
+          sm:col-span-2
+          lg:col-span-2
+          lg:row-span-2
+          min-h-[420px]
+        "
               >
-                <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
-                </svg>
-              </button>
+                <Image
+                  src="/kitchen/kitchen.jpg"
+                  alt="Main Kitchen"
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 50vw"
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                />
 
-              <button
-                onClick={goToNext}
-                className="absolute right-0 sm:-right-8 md:-right-12 top-1/2 -translate-y-1/2 bg-white hover:bg-slate-100 dark:hover:bg-neutral-200 text-black border border-slate-200 dark:border-transparent rounded-full p-3 sm:p-4 transition-transform hover:scale-105 z-10 shadow-lg"
-                aria-label="Next image"
-              >
-                <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-                </svg>
-              </button>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
 
-              {/* ================= CENTRAL CONTAINER ================= */}
-              <div className="w-full bg-white dark:bg-[#1A1B1E] border border-slate-200 dark:border-transparent rounded-2xl p-4 sm:p-6 flex flex-col gap-4 shadow-xl dark:shadow-2xl transition-colors duration-300">
-                
-                {/* Main Large Image */}
-                <div className="relative w-full aspect-video sm:aspect-[21/9] bg-slate-100 dark:bg-[#0F0F11] rounded-xl overflow-hidden transition-colors duration-300">
-                  <Image
-                    src={galleryLayout[currentIndex].src}
-                    alt={galleryLayout[currentIndex].title}
-                    fill
-                    className="object-contain transition-opacity duration-500"
-                  />
+                <div className="absolute bottom-0 left-0 p-7 sm:p-9">
+                  <span className="text-[10px] font-semibold uppercase tracking-[0.4em] text-[#fcd34d]">
+                    Kitchen
+                  </span>
 
-                  {/* Bottom Left Caption Overlay */}
-                  <div className="absolute bottom-3 left-4 text-slate-800 dark:text-white/90 text-sm md:text-base font-medium drop-shadow-sm dark:drop-shadow-lg bg-white/90 dark:bg-black/60 px-3 py-1.5 rounded-md backdrop-blur-sm border border-slate-200 dark:border-white/10 transition-colors duration-300">
-                    {currentIndex + 1}/{galleryLayout.length} - {galleryLayout[currentIndex].title}
-                  </div>
+                  <h3 className="mt-2 font-serif text-3xl font-bold text-white sm:text-4xl">
+                    Main Kitchen
+                  </h3>
+
+                  <p className="mt-2 max-w-sm text-sm text-white/70">
+                    Freshly prepared with care.
+                  </p>
                 </div>
+              </div>
 
-                {/* Thumbnail Strip */}
-                <div className="relative w-full">
-                  <div className="flex items-center gap-3 overflow-x-auto py-2 px-1 scrollbar-hide snap-x justify-start lg:justify-center">
-                    {galleryLayout.map((img, index) => (
-                      <button
-                        key={index}
-                        onClick={() => setCurrentIndex(index)}
-                        className={`
-                          relative flex-shrink-0 w-24 h-16 sm:w-32 sm:h-20 rounded-md overflow-hidden 
-                          transition-all duration-200 snap-center
-                          ${
-                            currentIndex === index
-                              ? "ring-2 ring-[#112A46] dark:ring-white scale-[1.02] opacity-100" // Active state matches light/dark theme
-                              : "opacity-40 hover:opacity-100" // Inactive state
-                          }
-                        `}
-                      >
-                        <Image
-                          src={img.src}
-                          alt={`Thumbnail ${index + 1}`}
-                          fill
-                          className="object-cover"
-                        />
-                      </button>
-                    ))}
-                  </div>
+              {/* 02 — DINING SETUP / TALL */}
+              <div
+                className="
+          group relative min-h-[360px] overflow-hidden rounded-[2rem]
+          border border-[#fcd34d]/20
+          shadow-xl
+          sm:col-span-1
+          lg:col-span-1
+          lg:row-span-2
+        "
+              >
+                <Image
+                  src="/dining/dining3.jpg"
+                  alt="Dining Setup"
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
+
+                <div className="absolute bottom-0 left-0 p-6">
+                  <span className="text-[10px] uppercase tracking-[0.35em] text-[#fcd34d]">
+                    Dining
+                  </span>
+
+                  <h3 className="mt-2 font-serif text-2xl font-bold text-white">
+                    Dining Setup
+                  </h3>
+                </div>
+              </div>
+
+              {/* 03 — PREP AREA */}
+              <div
+                className="
+          group relative min-h-[220px] overflow-hidden rounded-[2rem]
+          border border-[#fcd34d]/20
+          shadow-lg
+          lg:col-span-1
+          lg:row-span-1
+        "
+              >
+                <Image
+                  src="/kitchen/kitchen1.jpg"
+                  alt="Prep Area"
+                  fill
+                  sizes="(max-width: 1024px) 50vw, 25vw"
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-transparent" />
+
+                <div className="absolute bottom-0 left-0 p-5">
+                  <h3 className="font-serif text-xl font-bold text-white">
+                    Prep Area
+                  </h3>
+                </div>
+              </div>
+
+              {/* 04 — COOKING STATION */}
+              <div
+                className="
+          group relative min-h-[220px] overflow-hidden rounded-[2rem]
+          border border-[#fcd34d]/20
+          shadow-lg
+          lg:col-span-1
+          lg:row-span-1
+        "
+              >
+                <Image
+                  src="/kitchen/kitchen2.jpg"
+                  alt="Cooking Station"
+                  fill
+                  sizes="(max-width: 1024px) 50vw, 25vw"
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-transparent" />
+
+                <div className="absolute bottom-0 left-0 p-5">
+                  <h3 className="font-serif text-xl font-bold text-white">
+                    Cooking Station
+                  </h3>
+                </div>
+              </div>
+
+              {/* 05 — DINING AMBIENCE / WIDE */}
+              <div
+                className="
+          group relative min-h-[260px] overflow-hidden rounded-[2rem]
+          border border-[#fcd34d]/20
+          shadow-xl
+          sm:col-span-2
+          lg:col-span-3
+          lg:row-span-1
+        "
+              >
+                <Image
+                  src="/dining/dining6.jpg"
+                  alt="Dining Ambience"
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 75vw"
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/10 to-transparent" />
+
+                <div className="absolute bottom-0 left-0 p-6 sm:p-7">
+                  <span className="text-[10px] uppercase tracking-[0.35em] text-[#fcd34d]">
+                    Experience
+                  </span>
+
+                  <h3 className="mt-2 font-serif text-2xl font-bold text-white sm:text-3xl">
+                    Dining Ambience
+                  </h3>
+                </div>
+              </div>
+
+              {/* 06 — FRESH INGREDIENTS */}
+              <div
+                className="
+          group relative min-h-[260px] overflow-hidden rounded-[2rem]
+          border border-[#fcd34d]/20
+          shadow-lg
+          lg:col-span-1
+          lg:row-span-1
+        "
+              >
+                <Image
+                  src="/kitchen/kitchen3.jpg"
+                  alt="Fresh Ingredients"
+                  fill
+                  sizes="(max-width: 1024px) 50vw, 25vw"
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent" />
+
+                <div className="absolute bottom-0 left-0 p-5">
+                  <h3 className="font-serif text-xl font-bold text-white">
+                    Fresh Ingredients
+                  </h3>
+                </div>
+              </div>
+
+              {/* 07 — TABLE VIEW / WIDE */}
+              <div
+                className="
+          group relative min-h-[300px] overflow-hidden rounded-[2rem]
+          border border-[#fcd34d]/20
+          shadow-xl
+          sm:col-span-2
+          lg:col-span-2
+          lg:row-span-1
+        "
+              >
+                <Image
+                  src="/dining/dining7.jpg"
+                  alt="Table View"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/10 to-transparent" />
+
+                <div className="absolute bottom-0 left-0 p-6">
+                  <span className="text-[10px] uppercase tracking-[0.35em] text-[#fcd34d]">
+                    Dining
+                  </span>
+
+                  <h3 className="mt-2 font-serif text-2xl font-bold text-white">
+                    Table View
+                  </h3>
                 </div>
               </div>
             </div>
-
           </div>
         </section>
 
@@ -530,7 +665,6 @@ export default function MenuPage() {
             </div>
           </div>
         </section>
-
       </main>
 
       <Footer />
