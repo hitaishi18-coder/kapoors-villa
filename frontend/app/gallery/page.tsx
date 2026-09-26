@@ -195,17 +195,21 @@ const gallery: GalleryItem[] = [
   description:
     "Relax by the pool on comfortable chairs and loungers while enjoying the peaceful outdoor surroundings.",
 }]
-
 const roomGallery = [
   { src: "/rooms/room.jpg", title: "Suite Ambience" },
   { src: "/rooms/room-2.jpg", title: "Plush King Bed" },
-  { src: "/rooms/room-3.jpg", title: "Elegant Interiors" },
-  { src: "/rooms/room-4.jpg", title: "Scenic Window Views" },
-  { src: "/rooms/room-5.jpg", title: "Spacious Layout" },
-  { src: "/rooms/room-6.jpg", title: "Natural Light" },
+  { src: "/rooms/room-3.jpg", title: "Elegant Room Interiors" },
+  { src: "/rooms/room-4.jpg", title: "Scenic Window View" },
+  { src: "/rooms/room-5.jpg", title: "Spacious Room Layout" },
+  { src: "/rooms/room-6.jpg", title: "Bright Natural Light" },
   { src: "/rooms/room-7.jpg", title: "Cozy Seating Area" },
-  { src: "/rooms/room-8.jpg", title: "Warm Lighting" },
-  { src: "/rooms/room-9.jpg", title: "Evening Retreat" },
+  { src: "/rooms/room-8.jpg", title: "Warm & Inviting Ambience" },
+  { src: "/rooms/room-9.jpg", title: "Serene Evening Retreat" },
+
+  { src: "/bathrooms/bathroom-2.jpg", title: "Elegant Bathroom" },
+  { src: "/bathrooms/bathroom-3.jpg", title: "Modern Bathroom Interior" },
+  { src: "/bathrooms/bathroom-4.jpg", title: "Spacious Bathroom" },
+  { src: "/bathrooms/bathroom-5.jpg", title: "Premium Bathroom Details" },
 ];
 
 export default function GalleryPage() {
