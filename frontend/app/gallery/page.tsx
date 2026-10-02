@@ -59,14 +59,14 @@ const gallery: GalleryItem[] = [
   description:
     "Relax in a spacious outdoor setting with comfortable seating, fresh air, and beautiful surroundings.",
 },
-{
-  title: "Private Dining",
-  category: "Dining",
-  image: "/gallery/dining.jpg",
-  height: "h-[320px] sm:h-[380px]",
-  description:
-    "Enjoy comfortable private dining in an elegant setting, perfect for meals and special gatherings.",
-},
+// {
+//   title: "Private Dining",
+//   category: "Dining",
+//   image: "/gallery/dining.jpg",
+//   height: "h-[320px] sm:h-[380px]",
+//   description:
+//     "Enjoy comfortable private dining in an elegant setting, perfect for meals and special gatherings.",
+// },
 {
   title: "Bonfire Evening",
   category: "Experiences",
@@ -132,14 +132,6 @@ const gallery: GalleryItem[] = [
     "Watch the beautiful sunrise from the poolside as the morning light fills the surroundings.",
 },
 {
-  title: "Dining View",
-  category: "Interior",
-  image: "/lawn/lawn-view.jpg",
-  height: "h-[340px] sm:h-[460px]",
-  description:
-    "Elegant dining interiors designed for comfortable meals, gatherings, and memorable moments with family and friends.",
-},
-{
   title: "Terrace View",
   category: "Exterior",
   image: "/outdoor/balcony-view.jpg",
@@ -156,7 +148,7 @@ const gallery: GalleryItem[] = [
     "Enjoy a cozy private balcony with refreshing outdoor views and a peaceful atmosphere.",
 },
 {
-  title: "Dining Area for Dinner",
+  title: "Dining Area",
   category: "Dining",
   image: "/outdoor/dining-2.jpg",
   height: "h-[340px] sm:h-[460px]",
@@ -164,12 +156,12 @@ const gallery: GalleryItem[] = [
     "A beautiful dining setup perfect for enjoying dinner and spending quality time together in a relaxed outdoor setting.",
 },
 {
-  title: "Dining Area",
-  category: "Dining",
-  image: "/dining/dining7.jpg",
+  title: "Living Area",
+  category: "Interior",
+  image: "/extraas/living.jpeg",
   height: "h-[340px] sm:h-[400px]",
   description:
-    "A stylish and comfortable dining space designed for relaxed meals and enjoyable gatherings.",
+    "A cozy and elegant living space designed for relaxation, comfort, and memorable moments.",
 },
 {
   title: "Sunset View Pool Side",
